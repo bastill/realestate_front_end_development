@@ -1,9 +1,15 @@
 #custom_footer {
-    background: #553771;
+    background: white;
 }
 
+#custom_footer_2{
+    background: white;
+    height:0px;
+}
+
+
 #custom_overflowHiddeWrapper {
-    background-color: #553771;
+    background-color:steelblue;
 }
 
 #custom_redfin_logo {
@@ -31,3 +37,8 @@
 body {
     font-family: 'Fira Sans', sans-serif !important;
 }
+
+.SavedSearchesPageGhostTown{
+    border:1px solid steelblue !important;
+}
+

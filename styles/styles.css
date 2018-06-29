@@ -1951,7 +1951,7 @@ svg.rfSvg, svg.SvgIcon {
 .button {
     box-shadow: none;
     display: inline-block;
-    background-color: #f5f5f5;
+    background-color: steelblue;
     border: 1px solid #ccc;
     text-align: center;
     vertical-align: middle;
@@ -1987,7 +1987,8 @@ svg.rfSvg, svg.SvgIcon {
 }
 
 .button span {
-    vertical-align: top
+    vertical-align: top;
+    color:white;
 }
 
 .button+.button:not(.unpadded), .button+.Button:not(.unpadded) {

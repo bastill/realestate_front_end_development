@@ -29,7 +29,10 @@
 
             window._tLAB=$LAB.wait(function(c){if(document.readyState==='complete'){c();}else{document.addEventListener('DOMContentLoaded',c);}}).wait(function(){window.NREUM||(NREUM={});NREUM.info = {"agent":"","beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ebce9ba868","applicationID":"7979036,7979037","applicationTime":8.001136,"transactionName":"blYDNUAHDENQWkYNWFccIhRBEg1dHn9TElhLWhUEQTYDV1Q=","queueTime":0,"ttGuid":"6a5174436bdfb4","agentToken":null}; window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);}).wait(function(){window.__corvairVersion="215.2.0"}).script("/corv/data/environment/9bb687aa9d68d23f9255dfe958c7f01bf4adf971/customer-pages.js").script({"src":"https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/vendor.62ce4cc3844f02ca9c16.bundle.js","crossOrigin":"anonymous"}).script({"src":"https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/common.d976d9e460954dfce899.bundle.js","crossOrigin":"anonymous"}).script({"src":"https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/FavoritesPagePage.e924f70961a85d3d23ef.bundle.js","crossOrigin":"anonymous"}).wait(function(){window.__rfBrowserClassification={"family":"Firefox","major":"60","minor":"0","patch":"0","device":{"family":"Other","major":"0","minor":"0","patch":"0"},"os":{"family":"Windows 10","major":"0","minor":"0","patch":"0"}};window.__rfVisitType=2});
         </script>
-        <title>Favorites | Redfin</title>
+        <title>Favorites | Avetiz</title>
+        <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/long-cache.2f2dfebed5be7ab2afee.styles.css" data-react-server-css="">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" media="" href="styles/styles.css" data-react-server-css="">
@@ -304,10 +307,10 @@
                             <div class="header-right">
                                 
                                 <div class="menuItemClickable verticallyCenterFlexContent menuItemAlign clickable withHoverShim withHoverBoxShadow" data-rf-test-name="BuyMenu">
-                                    <a class="inheritColor" href="#">Buy ▾</a>
+                                    <a class="inheritColor" href="#">Buy <i class="fa fa-credit-card"></i></a>
                                 </div>
                                 <div class="menuItemClickable verticallyCenterFlexContent menuItemAlign clickable withHoverShim withHoverBoxShadow" data-rf-test-name="SellMenu">
-                                    <a class="inheritColor" href="#">Sell ▾</a>
+                                    <a class="inheritColor" href="#">Sell <i class="fa fa-money"></i></a>
                                 </div>
                                 
                                 <div id="userMenu" class="UserMenu menuItemClickable menuItemAlign verticallyCenterFlexContent clickable withHoverShim withHoverBoxShadow" data-rf-test-name="UserMenu">
@@ -332,31 +335,31 @@
                         <div id='custom_overflowHiddeWrapper' class="overflowHideWrapper">
                             <ul class="SubheadNavLinks mainNavigation">
                                 <li class="SubheadLink active">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="favorites.html"><b  style='color:steelblue;' class='fa fa-star'></b> Favorites </a>
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="favorites.html"><b  style='color:whitesmoke;' class='fa fa-star'></b> Favorites </a>
                                 </li>
                                 <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="savedsearches.html"><b  style='color:steelblue;'class='fa fa-search'></b> Saved Searches</a>
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="user_saved_searches.html"><b  style='color:whitesmoke'class='fa fa-search'></b> Saved Searches</a>
                                 </li>
                                 <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="home_tour.html"> <b style='color:steelblue;' class='fa fa-home'></b>  Open House Tour</a>
-                                </li>
-
-                                <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="your_agents.html"><b style='color:steelblue;' class='fa fa-users'></b> Your Consultant</a>
-                                </li>
-                                <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="offers.html"><b style='color:steelblue;' class='fa fa-credit-card'></b> Offers</a>
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="home_tour.html"> <b style='color:whitesmoke;' class='fa fa-home'></b>  Scheduled Tour</a>
                                 </li>
 
                                 <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="owner_dashboard.html"><b style='color:steelblue;' class='fa fa-dashboard'></b>   Owner Dashboard</a>
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="your_agents.html"><b style='color:whitesmoke;' class='fa fa-users'></b> Your Consultant</a>
                                 </li>
                                 <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="Email_Settings.html"><b style='color:steelblue;'  class='fa fa-envelope-open'></b> Email Settings</a>
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="offers.html"><b style='color:whitesmoke' class='fa fa-credit-card'></b> Offers</a>
+                                </li>
+
+                                <li class="SubheadLink">
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="owner_dashboard.html"><b style='color:whitesmoke' class='fa fa-dashboard'></b>   Owner Dashboard</a>
+                                </li>
+                                <li class="SubheadLink">
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="Email_Settings.html"><b style='color:whitesmoke'  class='fa fa-envelope-open'></b> Email Settings</a>
                                 </li>
                                 
                                 <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="Settings.html"><b style='color:steelblue;' class='fa fa-wrench'> </b> Account Settings</a>
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="Settings.html"><b style='color:whitesmoke' class='fa fa-wrench'> </b> Account Settings</a>
                                 </li>
                             </ul>
                         </div>
@@ -403,7 +406,7 @@
                             <div class="favorite-data-controls">
                                 <div class="FavoritesPageFilterControl">
                                     <button type="button" class="button Button plain unpadded  text v3 filter-button" tabindex="0">
-                                        <span>Filter: Active &amp; Sold</span>
+                                        <span class="custom_style">Filter: Active &amp; Sold</span>
                                         <div class="with-text icon-right svg-icon">
                                             <svg class="SvgIcon rfSvg show-less">
                                                 <svg viewBox="0 0 24 24">
@@ -547,95 +550,89 @@
             </div>
             <div data-react-server-root-id="9" data-react-server-timing-offset="122">
                 <div id='custom_footer' class="footer main-content " data-reactroot="">
+                        <div class="legal">
+                                <div class="searchRow" data-rf-test-name="ghostTownSearchbox"><div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1"><form class="SearchBoxForm" action="?"><div data-rf-test-name="search-container" class="search-container inline-block"><div class="InputBox"><noscript></noscript><input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="NGN" title="NGN" type="search"><div role="button" class="inline-block clear-button-block"><input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button"><svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.772 8.288l-1.06-1.06a.25.25 0 0 0-.354 0L12 10.586 8.642 7.228a.25.25 0 0 0-.354 0l-1.06 1.06a.25.25 0 0 0 0 .354L10.586 12l-3.358 3.358a.25.25 0 0 0 0 .354l1.06 1.06a.25.25 0 0 0 .354 0L12 13.414l3.358 3.358a.25.25 0 0 0 .354 0l1.06-1.06a.25.25 0 0 0 0-.354L13.414 12l3.358-3.358a.25.25 0 0 0 0-.354z"></path></g></svg></svg></div></div><button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2"><svg class="SvgIcon rfSvg search"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path></g></svg></svg></button></div></form><noscript></noscript></div></div>
+                        </div>
+                    
                     <div class="links">
                         <a href="http://press.redfin.com/phoenix.zhtml?c=252734&amp;p=irol-about">About</a>
-                        <a href="http://press.redfin.com/">Press</a>
-                        <a href="http://investors.redfin.com/">Investor Relations</a>
-                        <a href="/research/">Research</a>
-                        <a href="https://www.redfin.com/blog/">Blog</a>
-                        <a href="/about/jobs">Jobs</a>
-                        <a href="/about/redfin-partner-agents-application/?src=partner-application-footer">Referrals</a>
-                        <a href="/mobile">Mobile</a>
-                        <a href="" target="feedback" rel="nofollow">Feedback</a>
-                        <a href="/about/contact-us">Contact Us</a>
-                        <a href="http://support.redfin.com/">Help</a>
+                        <a href="http://press.redfin.com/">Help</a>
+                        <a href="http://investors.redfin.com/">Investors</a>
+                        <a href="/research/">Partners</a>
+                        <a href="https://www.redfin.com/blog/">Cities</a>
+                        <a href="/about/jobs">Polices</a>
+                        <a href="/about/redfin-partner-agents-application/?src=partner-application-footer">Countries</a>
+                        <a href="/mobile">Safety</a>
+                        <a href="" target="feedback" rel="nofollow">Media</a>
+                        <a href="/about/contact-us">How it Works</a>
+                        <a href="http://support.redfin.com/">Intelligent Investing</a>
+                        <a href="http://support.redfin.com/">Insight</a>
                     </div>
-                    <div class="social">
-                        <ul class="footerSocialButtons inlineList">
-                            <li id="footerFacebookIcon">
-                                <a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/redfin" title="Redfin Facebook" alt="Redfin Facebook">
-                                    <svg class="SvgIcon rfSvg facebook">
-                                        <svg viewBox="0 0 24 24">
-                                            <path d="M21.252 1.6H2.747c-.633 0-1.147.514-1.147 1.148v18.504c0 .634.514 1.148 1.147 1.148h9.963v-8.055H9.999v-3.139h2.71V8.891c0-2.686 1.641-4.15 4.038-4.15 1.148 0 2.134.086 2.422.125v2.807h-1.662c-1.304 0-1.556.62-1.556 1.529v2.004h3.109l-.405 3.14h-2.704V22.4h5.3c.635 0 1.149-.514 1.149-1.148V2.748c0-.634-.514-1.148-1.148-1.148" fill-rule="evenodd"></path>
-                                        </svg>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li id="footerTwitterIcon">
-                                <a class="icon icon-twitter" target="_blank" href="https://twitter.com/Redfin" title="Redfin Twitter" alt="Redfin Twitter">
-                                    <svg class="SvgIcon rfSvg twitter">
-                                        <svg viewBox="0 0 25 24">
-                                            <path d="M21.863 6.828c.015.212.015.424.015.636 0 6.464-4.92 13.913-13.913 13.913-2.77 0-5.343-.802-7.508-2.195.393.045.772.061 1.18.061a9.78 9.78 0 0 0 6.07-2.09 4.896 4.896 0 0 1-4.571-3.391c.302.046.605.076.923.076.439 0 .878-.061 1.287-.167a4.89 4.89 0 0 1-3.92-4.799v-.061c.65.364 1.408.59 2.209.621a4.888 4.888 0 0 1-2.178-4.071c0-.909.24-1.741.664-2.468a13.904 13.904 0 0 0 10.084 5.116 5.426 5.426 0 0 1-.121-1.12A4.886 4.886 0 0 1 16.972 2c1.408 0 2.68.59 3.573 1.544a9.593 9.593 0 0 0 3.103-1.181 4.868 4.868 0 0 1-2.15 2.695 9.789 9.789 0 0 0 2.816-.757 10.522 10.522 0 0 1-2.451 2.527z" fill-rule="evenodd"></path>
-                                        </svg>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li id="footerGooglePlusIcon">
-                                <a class="icon icon-gplus" target="_blank" href="https://plus.google.com/+redfin/posts" title="Redfin Google Plus" alt="Redfin Google Plus">
-                                    <svg class="SvgIcon rfSvg google">
-                                        <svg viewBox="0 0 24 24">
-                                            <path d="M2.916 16.756c-1.052-2.092-1.371-4.549-.912-6.85.185-.924.487-1.825.907-2.669C4.116 4.791 6.275 2.863 8.808 1.98a10.372 10.372 0 0 1 7.015.063 10.091 10.091 0 0 1 3.354 2.115c-.324.36-.677.695-1.013 1.044l-1.915 1.95a5.652 5.652 0 0 0-2.245-1.347 6.046 6.046 0 0 0-3.058-.125 6.198 6.198 0 0 0-3.113 1.762 6.6 6.6 0 0 0-1.508 2.49l.001.002a6.505 6.505 0 0 0 0 4.127l-.01.008A6.58 6.58 0 0 0 8.7 17.323a6.17 6.17 0 0 0 2.318 1.02c.817.172 1.663.15 2.486.006a5.91 5.91 0 0 0 2.295-.923l.003.002a5.008 5.008 0 0 0 2.08-3.277h-5.677c.006-1.378.006-2.758.006-4.138h9.798c.325 1.864.252 3.808-.263 5.633-.476 1.67-1.378 3.221-2.637 4.4l-.003-.001c-1.192 1.122-2.686 1.885-4.264 2.255-1.747.405-3.594.417-5.33-.057A10.234 10.234 0 0 1 5.726 20.3a10.684 10.684 0 0 1-2.821-3.536l.01-.008z" fill-rule="evenodd"></path>
-                                        </svg>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li id="footerPinterestIcon">
-                                <a class="icon icon-pinterest" target="_blank" href="https://www.pinterest.com/redfin/" title="Redfin Pinterest" alt="Redfin Pinterest">
-                                    <svg class="SvgIcon rfSvg pinterest">
-                                        <svg viewBox="0 0 24 24">
-                                            <path d="M11.865 22.13c-1.015 0-1.978-.148-2.912-.429.387-.613.828-1.402 1.042-2.19 0 0 .118-.456.72-2.82.347.68 1.389 1.28 2.5 1.28 3.3 0 5.545-3.005 5.545-7.042 0-3.033-2.577-5.88-6.508-5.88-4.865 0-7.324 3.502-7.324 6.414 0 1.764.668 3.343 2.099 3.932.229.093.44 0 .51-.269.051-.174.157-.628.211-.815.067-.268.04-.347-.147-.574-.414-.495-.682-1.123-.682-2.02 0-2.592 1.94-4.917 5.054-4.917 2.752 0 4.276 1.683 4.276 3.944 0 2.951-1.31 5.451-3.261 5.451-1.071 0-1.872-.882-1.618-1.978.308-1.296.91-2.7.91-3.636 0-.84-.457-1.55-1.39-1.55-1.097 0-1.979 1.137-1.979 2.661 0 0 0 .976.335 1.629-1.125 4.759-1.325 5.589-1.325 5.589-.187.774-.2 1.643-.173 2.365a10.267 10.267 0 0 1-6.148-9.41C1.6 6.197 6.199 1.6 11.865 1.6S22.13 6.197 22.13 11.865 17.53 22.13 11.865 22.13" fill-rule="evenodd">
-
-                                            </path>
-                                        </svg>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li id="footerInstagramIcon">
-                                <a class="icon icon-instagram" target="_blank" href="https://www.instagram.com/redfinrealestate/" title="Redfin Instagram" alt="Redfin Instagram">
-                                    <svg class="SvgIcon rfSvg instagram">
-                                        <svg viewBox="0 0 24 24">
-                                            <path d="M12 1c-2.987 0-3.362.013-4.535.066-1.171.054-1.971.24-2.67.511a5.412 5.412 0 0 0-1.949 1.269 5.412 5.412 0 0 0-1.269 1.949c-.271.699-.457 1.499-.511 2.67C1.013 8.638 1 9.013 1 12s.013 3.362.066 4.535c.054 1.171.24 1.971.511 2.67a5.412 5.412 0 0 0 1.269 1.949 5.412 5.412 0 0 0 1.949 1.269c.699.271 1.499.457 2.67.511C8.638 22.987 9.013 23 12 23s3.362-.013 4.535-.066c1.171-.054 1.971-.24 2.67-.511a5.412 5.412 0 0 0 1.949-1.269 5.412 5.412 0 0 0 1.269-1.949c.271-.699.457-1.499.511-2.67.053-1.173.066-1.548.066-4.535s-.013-3.362-.066-4.535c-.054-1.171-.24-1.971-.511-2.67a5.412 5.412 0 0 0-1.269-1.949 5.412 5.412 0 0 0-1.949-1.269c-.699-.271-1.499-.457-2.67-.511C15.362 1.013 14.987 1 12 1m0 1.982c2.937 0 3.285.011 4.445.064 1.072.049 1.655.228 2.042.379.514.199.88.438 1.265.823.385.385.624.751.823 1.265.151.387.33.97.379 2.042.053 1.16.064 1.508.064 4.445 0 2.937-.011 3.285-.064 4.445-.049 1.072-.228 1.655-.379 2.042-.199.514-.438.88-.823 1.265a3.398 3.398 0 0 1-1.265.823c-.387.151-.97.33-2.042.379-1.16.053-1.508.064-4.445.064-2.937 0-3.285-.011-4.445-.064-1.072-.049-1.655-.228-2.042-.379a3.398 3.398 0 0 1-1.265-.823 3.398 3.398 0 0 1-.823-1.265c-.151-.387-.33-.97-.379-2.042-.053-1.16-.064-1.508-.064-4.445 0-2.937.011-3.285.064-4.445.049-1.072.228-1.655.379-2.042.199-.514.438-.88.823-1.265a3.398 3.398 0 0 1 1.265-.823c.387-.151.97-.33 2.042-.379 1.16-.053 1.508-.064 4.445-.064zm0 3.37a5.649 5.649 0 1 0 0 11.297 5.649 5.649 0 0 0 0-11.297zm0 9.315a3.667 3.667 0 1 1 0-7.335 3.667 3.667 0 0 1 0 7.335zm7.192-9.539a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0z" fill-rule="evenodd"></path>
-                                        </svg>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="legal">
-                        <p class="tos-eula">
-                            Updated February 2018: By searching, you agree to the <a href="/about/terms-of-use">Terms of Use</a>, and&nbsp;<a href="/about/privacy-policy ">Privacy Policy</a>.
-                        </p>
-                        <p class="copyright">
-                            Copyright: © <!-- -->2018<!-- --> Redfin. All rights reserved. Patent pending.
-                        </p>
-                        <p class="eho">
-                            <a class="icon ehoLogo" href="/about/terms-of-use#Equal_Housing_Opportunity" title="Equal Housing Opportunity">
-                                <svg class="SvgIcon rfSvg equal-housing">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M8.157 16.553h7.715v-2H8.157v2zm10.849 3.64V8.83l-6.982-4.522-6.976 4.516v9.114l.013 2.256h13.945zm2.008 2.001H3.024v-12.16H1v-.97L12.024 2l11.024 7.064v.97H21.03l-.016 12.16zM8.157 12.551h7.715v-2H8.157v2z" fill-rule="evenodd"></path>
-                                    </svg>
-                                </svg>
-                            </a>
-                            <span>California BRE #01521930</span>
-                        </p>
-                        <p class="trec">TREC:
-                            <a href="https://ssl.cdn-redfin.com/static-images/about/ibs-statement-texas-2015.pdf">Info About Brokerage Services</a>,
-                            <a href="https://www.trec.texas.gov/forms/consumer-protection-notice">Consumer Protection Notice</a>
-                        </p>
-                        <p class="helpReading">If you are using a screen reader, or having trouble reading this website, please call Redfin Customer Support for help at <!-- -->1-844-759-7732<!-- -->.</p>
-                    </div>
+                    
                 </div>
             </div>
+
+
+            <div data-react-server-root-id="9" data-react-server-timing-offset="122">
+                    <div id='custom_footer_2' class="footer main-content " data-reactroot="">
+                            <div class="legal" style="padding-left:15px;">
+                                <h4>AvetiZ is a service mark of AvetiZ © 2017. All Rights Reserved.</h4> 
+                            </div>
+
+                            <div class="social" style="float:right;">
+                                    <ul class="footerSocialButtons inlineList">
+                                        <li id="footerFacebookIcon">
+                                            <a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/redfin" title="Redfin Facebook" alt="Redfin Facebook">
+                                                <svg class="SvgIcon rfSvg facebook">
+                                                    <svg viewBox="0 0 24 24">
+                                                        <path d="M21.252 1.6H2.747c-.633 0-1.147.514-1.147 1.148v18.504c0 .634.514 1.148 1.147 1.148h9.963v-8.055H9.999v-3.139h2.71V8.891c0-2.686 1.641-4.15 4.038-4.15 1.148 0 2.134.086 2.422.125v2.807h-1.662c-1.304 0-1.556.62-1.556 1.529v2.004h3.109l-.405 3.14h-2.704V22.4h5.3c.635 0 1.149-.514 1.149-1.148V2.748c0-.634-.514-1.148-1.148-1.148" fill-rule="evenodd"></path>
+                                                    </svg>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li id="footerTwitterIcon">
+                                            <a class="icon icon-twitter" target="_blank" href="https://twitter.com/Redfin" title="Redfin Twitter" alt="Redfin Twitter">
+                                                <svg class="SvgIcon rfSvg twitter">
+                                                    <svg viewBox="0 0 25 24">
+                                                        <path d="M21.863 6.828c.015.212.015.424.015.636 0 6.464-4.92 13.913-13.913 13.913-2.77 0-5.343-.802-7.508-2.195.393.045.772.061 1.18.061a9.78 9.78 0 0 0 6.07-2.09 4.896 4.896 0 0 1-4.571-3.391c.302.046.605.076.923.076.439 0 .878-.061 1.287-.167a4.89 4.89 0 0 1-3.92-4.799v-.061c.65.364 1.408.59 2.209.621a4.888 4.888 0 0 1-2.178-4.071c0-.909.24-1.741.664-2.468a13.904 13.904 0 0 0 10.084 5.116 5.426 5.426 0 0 1-.121-1.12A4.886 4.886 0 0 1 16.972 2c1.408 0 2.68.59 3.573 1.544a9.593 9.593 0 0 0 3.103-1.181 4.868 4.868 0 0 1-2.15 2.695 9.789 9.789 0 0 0 2.816-.757 10.522 10.522 0 0 1-2.451 2.527z" fill-rule="evenodd"></path>
+                                                    </svg>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li id="footerGooglePlusIcon">
+                                            <a class="icon icon-gplus" target="_blank" href="https://plus.google.com/+redfin/posts" title="Redfin Google Plus" alt="Redfin Google Plus">
+                                                <svg class="SvgIcon rfSvg google">
+                                                    <svg viewBox="0 0 24 24">
+                                                        <path d="M2.916 16.756c-1.052-2.092-1.371-4.549-.912-6.85.185-.924.487-1.825.907-2.669C4.116 4.791 6.275 2.863 8.808 1.98a10.372 10.372 0 0 1 7.015.063 10.091 10.091 0 0 1 3.354 2.115c-.324.36-.677.695-1.013 1.044l-1.915 1.95a5.652 5.652 0 0 0-2.245-1.347 6.046 6.046 0 0 0-3.058-.125 6.198 6.198 0 0 0-3.113 1.762 6.6 6.6 0 0 0-1.508 2.49l.001.002a6.505 6.505 0 0 0 0 4.127l-.01.008A6.58 6.58 0 0 0 8.7 17.323a6.17 6.17 0 0 0 2.318 1.02c.817.172 1.663.15 2.486.006a5.91 5.91 0 0 0 2.295-.923l.003.002a5.008 5.008 0 0 0 2.08-3.277h-5.677c.006-1.378.006-2.758.006-4.138h9.798c.325 1.864.252 3.808-.263 5.633-.476 1.67-1.378 3.221-2.637 4.4l-.003-.001c-1.192 1.122-2.686 1.885-4.264 2.255-1.747.405-3.594.417-5.33-.057A10.234 10.234 0 0 1 5.726 20.3a10.684 10.684 0 0 1-2.821-3.536l.01-.008z" fill-rule="evenodd"></path>
+                                                    </svg>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li id="footerPinterestIcon">
+                                            <a class="icon icon-pinterest" target="_blank" href="https://www.pinterest.com/redfin/" title="Redfin Pinterest" alt="Redfin Pinterest">
+                                                <svg class="SvgIcon rfSvg pinterest">
+                                                    <svg viewBox="0 0 24 24">
+                                                        <path d="M11.865 22.13c-1.015 0-1.978-.148-2.912-.429.387-.613.828-1.402 1.042-2.19 0 0 .118-.456.72-2.82.347.68 1.389 1.28 2.5 1.28 3.3 0 5.545-3.005 5.545-7.042 0-3.033-2.577-5.88-6.508-5.88-4.865 0-7.324 3.502-7.324 6.414 0 1.764.668 3.343 2.099 3.932.229.093.44 0 .51-.269.051-.174.157-.628.211-.815.067-.268.04-.347-.147-.574-.414-.495-.682-1.123-.682-2.02 0-2.592 1.94-4.917 5.054-4.917 2.752 0 4.276 1.683 4.276 3.944 0 2.951-1.31 5.451-3.261 5.451-1.071 0-1.872-.882-1.618-1.978.308-1.296.91-2.7.91-3.636 0-.84-.457-1.55-1.39-1.55-1.097 0-1.979 1.137-1.979 2.661 0 0 0 .976.335 1.629-1.125 4.759-1.325 5.589-1.325 5.589-.187.774-.2 1.643-.173 2.365a10.267 10.267 0 0 1-6.148-9.41C1.6 6.197 6.199 1.6 11.865 1.6S22.13 6.197 22.13 11.865 17.53 22.13 11.865 22.13" fill-rule="evenodd">
+            
+                                                        </path>
+                                                    </svg>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li id="footerInstagramIcon">
+                                            <a class="icon icon-instagram" target="_blank" href="https://www.instagram.com/redfinrealestate/" title="Redfin Instagram" alt="Redfin Instagram">
+                                                <svg class="SvgIcon rfSvg instagram">
+                                                    <svg viewBox="0 0 24 24">
+                                                        <path d="M12 1c-2.987 0-3.362.013-4.535.066-1.171.054-1.971.24-2.67.511a5.412 5.412 0 0 0-1.949 1.269 5.412 5.412 0 0 0-1.269 1.949c-.271.699-.457 1.499-.511 2.67C1.013 8.638 1 9.013 1 12s.013 3.362.066 4.535c.054 1.171.24 1.971.511 2.67a5.412 5.412 0 0 0 1.269 1.949 5.412 5.412 0 0 0 1.949 1.269c.699.271 1.499.457 2.67.511C8.638 22.987 9.013 23 12 23s3.362-.013 4.535-.066c1.171-.054 1.971-.24 2.67-.511a5.412 5.412 0 0 0 1.949-1.269 5.412 5.412 0 0 0 1.269-1.949c.271-.699.457-1.499.511-2.67.053-1.173.066-1.548.066-4.535s-.013-3.362-.066-4.535c-.054-1.171-.24-1.971-.511-2.67a5.412 5.412 0 0 0-1.269-1.949 5.412 5.412 0 0 0-1.949-1.269c-.699-.271-1.499-.457-2.67-.511C15.362 1.013 14.987 1 12 1m0 1.982c2.937 0 3.285.011 4.445.064 1.072.049 1.655.228 2.042.379.514.199.88.438 1.265.823.385.385.624.751.823 1.265.151.387.33.97.379 2.042.053 1.16.064 1.508.064 4.445 0 2.937-.011 3.285-.064 4.445-.049 1.072-.228 1.655-.379 2.042-.199.514-.438.88-.823 1.265a3.398 3.398 0 0 1-1.265.823c-.387.151-.97.33-2.042.379-1.16.053-1.508.064-4.445.064-2.937 0-3.285-.011-4.445-.064-1.072-.049-1.655-.228-2.042-.379a3.398 3.398 0 0 1-1.265-.823 3.398 3.398 0 0 1-.823-1.265c-.151-.387-.33-.97-.379-2.042-.053-1.16-.064-1.508-.064-4.445 0-2.937.011-3.285.064-4.445.049-1.072.228-1.655.379-2.042.199-.514.438-.88.823-1.265a3.398 3.398 0 0 1 1.265-.823c.387-.151.97-.33 2.042-.379 1.16-.053 1.508-.064 4.445-.064zm0 3.37a5.649 5.649 0 1 0 0 11.297 5.649 5.649 0 0 0 0-11.297zm0 9.315a3.667 3.667 0 1 1 0-7.335 3.667 3.667 0 0 1 0 7.335zm7.192-9.539a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0z" fill-rule="evenodd"></path>
+                                                    </svg>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                    </div>
+            </div>
+            
             <script type="text/javascript">__displayAboveTheFold=new Date;window.performance && window.performance.mark && window.performance.mark("displayAboveTheFold.fromStart");</script>
             <script>
                 _tLAB.wait(function(){
