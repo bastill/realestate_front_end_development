@@ -738,7 +738,7 @@
                             </div>
                             <div id="headerUnifiedSearch" class="headerUnifiedSearch no-print">
                                 <div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1">
-                                    <form class="SearchBoxForm" action="?">
+                                    <div class="SearchBoxForm" action="">
                                         <div data-rf-test-name="search-container" class="search-container inline-block">
                                             <div class="InputBox">
                                                 <noscript></noscript>
@@ -758,18 +758,21 @@
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right"
-                                                type="submit" value="" title="Search" tabindex="2">
-                                                <svg class="SvgIcon rfSvg search">
-                                                    <svg viewBox="0 0 24 24">
-                                                        <g fill-rule="evenodd">
-                                                            <path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path>
-                                                        </g>
+
+                                            <a href="#">
+                                                <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" value="" title="Search" tabindex="2"
+                                                >
+                                                    <svg class="SvgIcon rfSvg search">
+                                                        <svg viewBox="0 0 24 24">
+                                                            <g fill-rule="evenodd">
+                                                                <path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path>
+                                                            </g>
+                                                        </svg>
                                                     </svg>
-                                                </svg>
-                                            </button>
+                                                </button>
+                                           </a>
                                         </div>
-                                    </form>
+                                    </div>
                                     <noscript></noscript>
                                 </div>
                             </div>
@@ -978,33 +981,33 @@
                 <div class="SubheadNav subheadOverflowShown">
                     <div id='custom_overflowHiddeWrapper' class="overflowHideWrapper">
                         <ul class="SubheadNavLinks mainNavigation">
-                            <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="favorites.html"><b  style='color:whitesmoke;' class='fa fa-star'></b> Favorites </a>
-                            </li>
-                            <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="savedsearches.html"><b  style='color:whitesmoke'class='fa fa-search'></b> Saved Searches</a>
-                            </li>
-                            <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="home_tour.html"> <b style='color:whitesmoke;' class='fa fa-home'></b>  Scheduled Tour</a>
-                            </li>
-
-                            <li class="SubheadLink active">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="your_agents.html"><b style='color:whitesmoke;' class='fa fa-users'></b> Your Consultant</a>
-                            </li>
-                            <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="offers.html"><b style='color:whitesmoke' class='fa fa-credit-card'></b> Offers</a>
-                            </li>
-
-                            <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="owner_dashboard.html"><b style='color:whitesmoke' class='fa fa-dashboard'></b>   Owner Dashboard</a>
-                            </li>
-                            <li class="SubheadLink ">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="Email_Settings.html"><b style='color:whitesmoke'  class='fa fa-envelope-open'></b> Email Settings</a>
-                            </li>
-                            
-                            <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="Settings.html"><b style='color:whitesmoke' class='fa fa-wrench'> </b> Account Settings</a>
-                            </li>
+                                <li class="SubheadLink ">
+                                        <a class="subheadLinkContent custom_subheadLinkContent" href="favorites.html"><b  style='color:whitesmoke;' class='fa fa-star'></b> Favorites </a>
+                                </li>
+                                <li class="SubheadLink">
+                                     <a class="subheadLinkContent custom_subheadLinkContent" href="user_saved_searches.html"><b  style='color:whitesmoke'class='fa fa-search'></b> Saved Searches</a>
+                                </li>
+                                <li class="SubheadLink">
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="home_tour.html"> <b style='color:whitesmoke;' class='fa fa-home'></b> Scheduled Tour</a>
+                                </li>
+        
+                                <li class="SubheadLink">
+                                        <a class="subheadLinkContent custom_subheadLinkContent" href="your_agents.html"><b style='color:whitesmoke;' class='fa fa-users'></b> Your Consultant</a>
+                                </li>
+                                <li class="SubheadLink">
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="offers.html"><b style='color:whitesmoke' class='fa fa-credit-card'></b> Offers</a>
+                                </li>
+        
+                                <li class="SubheadLink">
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="owner_dashboard.html"><b style='color:whitesmoke' class='fa fa-dashboard'></b>   Owner Dashboard</a>
+                                </li>
+                                <li class="SubheadLink">
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="Email_Settings.html"><b style='color:whitesmoke'  class='fa fa-envelope-open'></b> Email Settings</a>
+                                </li>
+        
+                                <li class="SubheadLink">
+                                    <a class="subheadLinkContent custom_subheadLinkContent" href="Settings.html"><b style='color:whitesmoke' class='fa fa-wrench'> </b> Account Settings</a>
+                                </li>
                         </ul>
                     </div>
                     <ul class="SubheadNavLinksmoreNavigation" style="left:1062px"></ul>
@@ -1023,7 +1026,7 @@
                     <p class="description font-line-height-spacious">Redfin Agents are local experts who can get you better results for lower fees.</p>
                     <div class="search-box-container">
                         <div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1">
-                            <form class="SearchBoxForm" action="?">
+                            <form class="SearchBoxForm" action="consultant_detail.html">
                                 <div data-rf-test-name="search-container" class="search-container inline-block">
                                     <div class="InputBox">
                                         <noscript></noscript>
@@ -1079,18 +1082,18 @@
                     </div>
                 
                 <div class="links">
-                    <a href="http://press.redfin.com/phoenix.zhtml?c=252734&amp;p=irol-about">About</a>
-                    <a href="http://press.redfin.com/">Help</a>
-                    <a href="http://investors.redfin.com/">Investors</a>
-                    <a href="/research/">Partners</a>
-                    <a href="https://www.redfin.com/blog/">Cities</a>
-                    <a href="/about/jobs">Polices</a>
-                    <a href="/about/redfin-partner-agents-application/?src=partner-application-footer">Countries</a>
-                    <a href="/mobile">Safety</a>
-                    <a href="" target="feedback" rel="nofollow">Media</a>
-                    <a href="/about/contact-us">How it Works</a>
-                    <a href="http://support.redfin.com/">Intelligent Investing</a>
-                    <a href="http://support.redfin.com/">Insight</a>
+                        <a href="http://press.redfin.com/phoenix.zhtml?c=252734&amp;p=irol-about">About</a>
+                        <a href="http://press.redfin.com/">Help</a>
+                        <a href="http://investors.redfin.com/">Investors</a>
+                        <a href="partners.html">Partners</a>
+                        <a href="https://www.redfin.com/blog/">Cities</a>
+                        <a href="/about/jobs">Polices</a>
+                        <a href="/about/redfin-partner-agents-application/?src=partner-application-footer">Countries</a>
+                        <a href="/mobile">Safety</a>
+                        <a href="" target="feedback" rel="nofollow">Media</a>
+                        <a href="/about/contact-us">How it Works</a>
+                        <a href="http://support.redfin.com/">Intelligent Investing</a>
+                        <a href="http://support.redfin.com/">Insight</a>
                 </div>
                 
             </div>
