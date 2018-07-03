@@ -7,8 +7,7 @@
     <script src="https://js-agent.newrelic.com/nr-1071.min.js"></script>
     <script src="https://www.google-analytics.com/cx/api.js"></script>
     <script async="" src="https://d21cvz3pxk3jih.cloudfront.net/eedBxki3dCdMi44LjI.js"></script>
-    <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.-oflFoeMflQ.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=wQ/rs=AGLTcCO3mzOGb_qPufOKJw3yeqghEbWhkg/cb=gapi.loaded_0"
-        async=""></script>
+    <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.-oflFoeMflQ.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=wQ/rs=AGLTcCO3mzOGb_qPufOKJw3yeqghEbWhkg/cb=gapi.loaded_0" async=""></script>
     <script src="https://connect.facebook.net/signals/config/851728468185585?v=2.8.18&amp;r=stable" async=""></script>
     <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
     <script type="text/javascript" async="" src="//bat.bing.com/bat.js"></script>
@@ -25,24 +24,426 @@
     <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-TZTT5H"></script>
     <script>
         /*! LAB.js (LABjs :: Loading And Blocking JavaScript)
-            v2.0.3 (c) Kyle Simpson
-            MIT License
-        */
-        !function (t) { function e(t, e) { u.push([t, +(e || 0), +new Date]) } function n(t) { var e = /^\w+\:\/\//; return /^\/\/\/?/.test(t) && (t = location.protocol + t), e.test(t) ? t : ("/" == t.charAt(0) ? s : c) + t } function i(t, n) { var i = new Date, r = "unknown", c = n; n = function () { return e("request_script.byMethod." + r, i), e("request_script.overall", i), c.apply(this, arguments) }, setTimeout(function () { var e, i = t.src; if ("item" in a) { if (!a[0]) return void setTimeout(arguments.callee, 25); a = a[0] } e = document.createElement("script"), t.type && (e.type = t.type), t.charset && (e.charset = t.charset), t.crossOrigin && (e.crossOrigin = t.crossOrigin), r = "script_async", e.async = !1, e.onload = e.onreadystatechange = function () { e.readyState && "complete" != e.readyState && "loaded" != e.readyState || (e.onload = e.onreadystatechange = null, n()) }, e.src = i, a.insertBefore(e, a.firstChild) }, 0) } function r() { function t(t) { t.finished = !0, r() } function e(e) { var r = e.script, c = r.src = n(r.src); o[c] ? e.script = o[c] : (o[c] = r, i(r, function () { t(r) })) } function r() { for (var t = a; t < s.length; t++) { if (s[t].script && (e(s[t]), s[t] = s[t].script, s[t].started = !0), t === a) { if (s[t].finished) { a++; continue } if (s[t].wait) { s[t] = s[t].wait, s[t].started = !0; var n = [], i = function (t) { return function () { t.finished = !0, r() } }(s[t]); 1 === s[t].length ? n.push(i) : setTimeout(i, 1); try { s[t].apply(this, n) } catch (t) { setTimeout(function () { throw t }, 1) } } } if (!s[t].src) break } } var c, s = [], a = 0; return c = { script: function (t) { return "string" == typeof t && (t = { src: t }), t.finished = !1, s.push({ script: t }), r(), c }, wait: function (t) { return s.push({ wait: t || function () { } }), r(), c } }, { script: c.script, wait: c.wait } } var c = (t.$LAB, /^[^?#]*\//.exec(location.href)[0]), s = /^\w+\:\/\/\/?[^\/]+/.exec(c)[0], a = document.head || document.getElementsByTagName("head"), o = {}, u = []; t.$LAB = { script: function (t) { return r().script(t) }, wait: function (t) { return r().wait(t) } }, t.$LAB.timings = u }(this);
+                    v2.0.3 (c) Kyle Simpson
+                    MIT License
+                */
+        ! function(t) {
+            function e(t, e) {
+                u.push([t, +(e || 0), +new Date])
+            }
 
-        window._tLAB = $LAB.wait(function (c) { if (document.readyState === 'complete') { c(); } else { document.addEventListener('DOMContentLoaded', c); } }).wait(function () { window.NREUM || (NREUM = {}); NREUM.info = { "agent": "", "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "ebce9ba868", "applicationID": "7979036,7979037", "applicationTime": 66.006291, "transactionName": "blYDNUAHDENQWkYNWFccIhRBEg1dHm1dEUV9UhIJUAkDQlU=", "queueTime": 0, "ttGuid": "f3f2b4d2026e48", "agentToken": null }; window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) { function r(n) { if (!t[n]) { var o = t[n] = { exports: {} }; e[n][0].call(o.exports, function (t) { var o = e[n][1][t]; return r(o || t) }, o, o.exports) } return t[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < n.length; o++)r(n[o]); return r }({ 1: [function (e, t, n) { function r() { } function o(e, t, n) { return function () { return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this } } var i = e("handle"), a = e(2), u = e(3), c = e("ee").get("tracer"), f = e("loader"), s = NREUM; "undefined" == typeof window.newrelic && (newrelic = s); var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], d = "api-", l = d + "ixn-"; a(p, function (e, t) { s[t] = o(d + t, !0, "api") }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (e, t) { var n = {}, r = this, o = "function" == typeof t; return i(l + "tracer", [f.now(), e, n], r), function () { if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try { return t.apply(this, arguments) } catch (e) { throw c.emit("fn-err", [arguments, this, e], n), e } finally { c.emit("fn-end", [f.now()], n) } } } }; a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) { m[t] = o(l + t) }), newrelic.noticeError = function (e) { "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()]) } }, {}], 2: [function (e, t, n) { function r(e, t) { var n = [], r = "", i = 0; for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1); return n } var o = Object.prototype.hasOwnProperty; t.exports = r }, {}], 3: [function (e, t, n) { function r(e, t, n) { t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0); for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;)i[r] = e[t + r]; return i } t.exports = r }, {}], 4: [function (e, t, n) { t.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (e, t, n) { function r() { } function o(e) { function t(e) { return e && e instanceof r ? e : e ? c(e, u, i) : i() } function n(n, r, o, i) { if (!d.aborted || i) { e && e(n, r, o); for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++)u[f].apply(a, r); var p = s[y[n]]; return p && p.push([b, n, r, a]), a } } function l(e, t) { v[e] = m(e).concat(t) } function m(e) { return v[e] || [] } function w(e) { return p[e] = p[e] || o(n) } function g(e, t) { f(e, function (e, n) { t = t || "feature", y[n] = t, t in s || (s[t] = []) }) } var v = {}, y = {}, b = { on: l, emit: n, get: w, listeners: m, context: t, buffer: g, abort: a, aborted: !1 }; return b } function i() { return new r } function a() { (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {}) } var u = "nr@context", c = e("gos"), f = e(2), s = {}, p = {}, d = t.exports = o(); d.backlog = s }, {}], gos: [function (e, t, n) { function r(e, t, n) { if (o.call(e, t)) return e[t]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, t, { value: r, writable: !0, enumerable: !1 }), r } catch (i) { } return e[t] = r, r } var o = Object.prototype.hasOwnProperty; t.exports = r }, {}], handle: [function (e, t, n) { function r(e, t, n, r) { o.buffer([e], r), o.emit(e, t, n) } var o = e("ee").get("handle"); t.exports = r, r.ee = o }, {}], id: [function (e, t, n) { function r(e) { var t = typeof e; return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () { return o++ }) } var o = 1, i = "nr@id", a = e("gos"); t.exports = r }, {}], loader: [function (e, t, n) { function r() { if (!x++) { var e = h.info = NREUM.info, t = d.getElementsByTagName("script")[0]; if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort(); f(y, function (t, n) { e[t] || (e[t] = n) }), c("mark", ["onload", a() + h.offset], null, "api"); var n = d.createElement("script"); n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t) } } function o() { "complete" === d.readyState && i() } function i() { c("mark", ["domContent", a() + h.offset], null, "api") } function a() { return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset } var u = (new Date).getTime(), c = e("handle"), f = e(2), s = e("ee"), p = window, d = p.document, l = "addEventListener", m = "attachEvent", w = p.XMLHttpRequest, g = w && w.prototype; NREUM.o = { ST: setTimeout, SI: p.setImmediate, CT: clearTimeout, XHR: w, REQ: p.Request, EV: p.Event, PR: p.Promise, MO: p.MutationObserver }; var v = "" + location, y = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1071.min.js" }, b = w && g && g[l] && !/CriOS/.test(navigator.userAgent), h = t.exports = { offset: u, now: a, origin: v, features: {}, xhrWrappable: b }; e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null, "api"); var x = 0, E = e(4) }, {}] }, {}, ["loader"]); }).wait(function () { window.__corvairVersion = "215.3.2" }).script("/corv/data/environment/21bb517fb6e46b85ab4d654b3d350634bc9a812d/customer-pages.js").script({ "src": "https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/vendor.cf74a1bdffd9a6f4ba30.bundle.js", "crossOrigin": "anonymous" }).script({ "src": "https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/common.9f305ba5e22a2f8478f4.bundle.js", "crossOrigin": "anonymous" }).script({ "src": "https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/TourDashboardPage.c7738afed385e0ea3da7.bundle.js", "crossOrigin": "anonymous" }).wait(function () { window.__rfBrowserClassification = { "family": "Firefox", "major": "60", "minor": "0", "patch": "0", "device": { "family": "Other", "major": "0", "minor": "0", "patch": "0" }, "os": { "family": "Mac OS X", "major": "10", "minor": "13", "patch": "0" } }; window.__rfVisitType = 1 });</script>
+            function n(t) {
+                var e = /^\w+\:\/\//;
+                return /^\/\/\/?/.test(t) && (t = location.protocol + t), e.test(t) ? t : ("/" == t.charAt(0) ? s : c) + t
+            }
+
+            function i(t, n) {
+                var i = new Date,
+                    r = "unknown",
+                    c = n;
+                n = function() {
+                    return e("request_script.byMethod." + r, i), e("request_script.overall", i), c.apply(this, arguments)
+                }, setTimeout(function() {
+                    var e, i = t.src;
+                    if ("item" in a) {
+                        if (!a[0]) return void setTimeout(arguments.callee, 25);
+                        a = a[0]
+                    }
+                    e = document.createElement("script"), t.type && (e.type = t.type), t.charset && (e.charset = t.charset), t.crossOrigin && (e.crossOrigin = t.crossOrigin), r = "script_async", e.async = !1, e.onload = e.onreadystatechange = function() {
+                        e.readyState && "complete" != e.readyState && "loaded" != e.readyState || (e.onload = e.onreadystatechange = null, n())
+                    }, e.src = i, a.insertBefore(e, a.firstChild)
+                }, 0)
+            }
+
+            function r() {
+                function t(t) {
+                    t.finished = !0, r()
+                }
+
+                function e(e) {
+                    var r = e.script,
+                        c = r.src = n(r.src);
+                    o[c] ? e.script = o[c] : (o[c] = r, i(r, function() {
+                        t(r)
+                    }))
+                }
+
+                function r() {
+                    for (var t = a; t < s.length; t++) {
+                        if (s[t].script && (e(s[t]), s[t] = s[t].script, s[t].started = !0), t === a) {
+                            if (s[t].finished) {
+                                a++;
+                                continue
+                            }
+                            if (s[t].wait) {
+                                s[t] = s[t].wait, s[t].started = !0;
+                                var n = [],
+                                    i = function(t) {
+                                        return function() {
+                                            t.finished = !0, r()
+                                        }
+                                    }(s[t]);
+                                1 === s[t].length ? n.push(i) : setTimeout(i, 1);
+                                try {
+                                    s[t].apply(this, n)
+                                } catch (t) {
+                                    setTimeout(function() {
+                                        throw t
+                                    }, 1)
+                                }
+                            }
+                        }
+                        if (!s[t].src) break
+                    }
+                }
+                var c, s = [],
+                    a = 0;
+                return c = {
+                    script: function(t) {
+                        return "string" == typeof t && (t = {
+                            src: t
+                        }), t.finished = !1, s.push({
+                            script: t
+                        }), r(), c
+                    },
+                    wait: function(t) {
+                        return s.push({
+                            wait: t || function() {}
+                        }), r(), c
+                    }
+                }, {
+                    script: c.script,
+                    wait: c.wait
+                }
+            }
+            var c = (t.$LAB, /^[^?#]*\//.exec(location.href)[0]),
+                s = /^\w+\:\/\/\/?[^\/]+/.exec(c)[0],
+                a = document.head || document.getElementsByTagName("head"),
+                o = {},
+                u = [];
+            t.$LAB = {
+                script: function(t) {
+                    return r().script(t)
+                },
+                wait: function(t) {
+                    return r().wait(t)
+                }
+            }, t.$LAB.timings = u
+        }(this);
+
+        window._tLAB = $LAB.wait(function(c) {
+            if (document.readyState === 'complete') {
+                c();
+            } else {
+                document.addEventListener('DOMContentLoaded', c);
+            }
+        }).wait(function() {
+            window.NREUM || (NREUM = {});
+            NREUM.info = {
+                "agent": "",
+                "beacon": "bam.nr-data.net",
+                "errorBeacon": "bam.nr-data.net",
+                "licenseKey": "ebce9ba868",
+                "applicationID": "7979036,7979037",
+                "applicationTime": 66.006291,
+                "transactionName": "blYDNUAHDENQWkYNWFccIhRBEg1dHm1dEUV9UhIJUAkDQlU=",
+                "queueTime": 0,
+                "ttGuid": "f3f2b4d2026e48",
+                "agentToken": null
+            };
+            window.NREUM || (NREUM = {}), __nr_require = function(e, t, n) {
+                function r(n) {
+                    if (!t[n]) {
+                        var o = t[n] = {
+                            exports: {}
+                        };
+                        e[n][0].call(o.exports, function(t) {
+                            var o = e[n][1][t];
+                            return r(o || t)
+                        }, o, o.exports)
+                    }
+                    return t[n].exports
+                }
+                if ("function" == typeof __nr_require) return __nr_require;
+                for (var o = 0; o < n.length; o++) r(n[o]);
+                return r
+            }({
+                1: [function(e, t, n) {
+                    function r() {}
+
+                    function o(e, t, n) {
+                        return function() {
+                            return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
+                        }
+                    }
+                    var i = e("handle"),
+                        a = e(2),
+                        u = e(3),
+                        c = e("ee").get("tracer"),
+                        f = e("loader"),
+                        s = NREUM;
+                    "undefined" == typeof window.newrelic && (newrelic = s);
+                    var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                        d = "api-",
+                        l = d + "ixn-";
+                    a(p, function(e, t) {
+                        s[t] = o(d + t, !0, "api")
+                    }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function() {
+                        return (new r).get()
+                    };
+                    var m = r.prototype = {
+                        createTracer: function(e, t) {
+                            var n = {},
+                                r = this,
+                                o = "function" == typeof t;
+                            return i(l + "tracer", [f.now(), e, n], r),
+                                function() {
+                                    if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try {
+                                        return t.apply(this, arguments)
+                                    } catch (e) {
+                                        throw c.emit("fn-err", [arguments, this, e], n), e
+                                    } finally {
+                                        c.emit("fn-end", [f.now()], n)
+                                    }
+                                }
+                        }
+                    };
+                    a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, t) {
+                        m[t] = o(l + t)
+                    }), newrelic.noticeError = function(e) {
+                        "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
+                    }
+                }, {}],
+                2: [function(e, t, n) {
+                    function r(e, t) {
+                        var n = [],
+                            r = "",
+                            i = 0;
+                        for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
+                        return n
+                    }
+                    var o = Object.prototype.hasOwnProperty;
+                    t.exports = r
+                }, {}],
+                3: [function(e, t, n) {
+                    function r(e, t, n) {
+                        t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
+                        for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r];
+                        return i
+                    }
+                    t.exports = r
+                }, {}],
+                4: [function(e, t, n) {
+                    t.exports = {
+                        exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                    }
+                }, {}],
+                ee: [function(e, t, n) {
+                    function r() {}
+
+                    function o(e) {
+                        function t(e) {
+                            return e && e instanceof r ? e : e ? c(e, u, i) : i()
+                        }
+
+                        function n(n, r, o, i) {
+                            if (!d.aborted || i) {
+                                e && e(n, r, o);
+                                for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++) u[f].apply(a, r);
+                                var p = s[y[n]];
+                                return p && p.push([b, n, r, a]), a
+                            }
+                        }
+
+                        function l(e, t) {
+                            v[e] = m(e).concat(t)
+                        }
+
+                        function m(e) {
+                            return v[e] || []
+                        }
+
+                        function w(e) {
+                            return p[e] = p[e] || o(n)
+                        }
+
+                        function g(e, t) {
+                            f(e, function(e, n) {
+                                t = t || "feature", y[n] = t, t in s || (s[t] = [])
+                            })
+                        }
+                        var v = {},
+                            y = {},
+                            b = {
+                                on: l,
+                                emit: n,
+                                get: w,
+                                listeners: m,
+                                context: t,
+                                buffer: g,
+                                abort: a,
+                                aborted: !1
+                            };
+                        return b
+                    }
+
+                    function i() {
+                        return new r
+                    }
+
+                    function a() {
+                        (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                    }
+                    var u = "nr@context",
+                        c = e("gos"),
+                        f = e(2),
+                        s = {},
+                        p = {},
+                        d = t.exports = o();
+                    d.backlog = s
+                }, {}],
+                gos: [function(e, t, n) {
+                    function r(e, t, n) {
+                        if (o.call(e, t)) return e[t];
+                        var r = n();
+                        if (Object.defineProperty && Object.keys) try {
+                            return Object.defineProperty(e, t, {
+                                value: r,
+                                writable: !0,
+                                enumerable: !1
+                            }), r
+                        } catch (i) {}
+                        return e[t] = r, r
+                    }
+                    var o = Object.prototype.hasOwnProperty;
+                    t.exports = r
+                }, {}],
+                handle: [function(e, t, n) {
+                    function r(e, t, n, r) {
+                        o.buffer([e], r), o.emit(e, t, n)
+                    }
+                    var o = e("ee").get("handle");
+                    t.exports = r, r.ee = o
+                }, {}],
+                id: [function(e, t, n) {
+                    function r(e) {
+                        var t = typeof e;
+                        return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function() {
+                            return o++
+                        })
+                    }
+                    var o = 1,
+                        i = "nr@id",
+                        a = e("gos");
+                    t.exports = r
+                }, {}],
+                loader: [function(e, t, n) {
+                    function r() {
+                        if (!x++) {
+                            var e = h.info = NREUM.info,
+                                t = d.getElementsByTagName("script")[0];
+                            if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort();
+                            f(y, function(t, n) {
+                                e[t] || (e[t] = n)
+                            }), c("mark", ["onload", a() + h.offset], null, "api");
+                            var n = d.createElement("script");
+                            n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t)
+                        }
+                    }
+
+                    function o() {
+                        "complete" === d.readyState && i()
+                    }
+
+                    function i() {
+                        c("mark", ["domContent", a() + h.offset], null, "api")
+                    }
+
+                    function a() {
+                        return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset
+                    }
+                    var u = (new Date).getTime(),
+                        c = e("handle"),
+                        f = e(2),
+                        s = e("ee"),
+                        p = window,
+                        d = p.document,
+                        l = "addEventListener",
+                        m = "attachEvent",
+                        w = p.XMLHttpRequest,
+                        g = w && w.prototype;
+                    NREUM.o = {
+                        ST: setTimeout,
+                        SI: p.setImmediate,
+                        CT: clearTimeout,
+                        XHR: w,
+                        REQ: p.Request,
+                        EV: p.Event,
+                        PR: p.Promise,
+                        MO: p.MutationObserver
+                    };
+                    var v = "" + location,
+                        y = {
+                            beacon: "bam.nr-data.net",
+                            errorBeacon: "bam.nr-data.net",
+                            agent: "js-agent.newrelic.com/nr-1071.min.js"
+                        },
+                        b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
+                        h = t.exports = {
+                            offset: u,
+                            now: a,
+                            origin: v,
+                            features: {},
+                            xhrWrappable: b
+                        };
+                    e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null, "api");
+                    var x = 0,
+                        E = e(4)
+                }, {}]
+            }, {}, ["loader"]);
+        }).wait(function() {
+            window.__corvairVersion = "215.3.2"
+        }).script("/corv/data/environment/21bb517fb6e46b85ab4d654b3d350634bc9a812d/customer-pages.js").script({
+            "src": "https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/vendor.cf74a1bdffd9a6f4ba30.bundle.js",
+            "crossOrigin": "anonymous"
+        }).script({
+            "src": "https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/common.9f305ba5e22a2f8478f4.bundle.js",
+            "crossOrigin": "anonymous"
+        }).script({
+            "src": "https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/TourDashboardPage.c7738afed385e0ea3da7.bundle.js",
+            "crossOrigin": "anonymous"
+        }).wait(function() {
+            window.__rfBrowserClassification = {
+                "family": "Firefox",
+                "major": "60",
+                "minor": "0",
+                "patch": "0",
+                "device": {
+                    "family": "Other",
+                    "major": "0",
+                    "minor": "0",
+                    "patch": "0"
+                },
+                "os": {
+                    "family": "Mac OS X",
+                    "major": "10",
+                    "minor": "13",
+                    "patch": "0"
+                }
+            };
+            window.__rfVisitType = 1
+        });
+    </script>
 
     <title> Settings| Avetiz</title>
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/long-cache.c39b758a4e83393ee827.styles.css"
-        data-react-server-css="">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/long-cache.c39b758a4e83393ee827.styles.css" data-react-server-css="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" media="" href="styles/styles.css" data-react-server-css="">
-    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/AccountSettingsPagePage.4d6a30c5f4c52065858f.styles.css"
-        data-react-server-css="">
-        <link rel="stylesheet" type="text/css" media="" href="custom.css">
+    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/AccountSettingsPagePage.4d6a30c5f4c52065858f.styles.css" data-react-server-css="">
+    <link rel="stylesheet" type="text/css" media="" href="custom.css">
     <link data-react-server-link="" rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
     <link data-react-server-link="" rel="apple-touch-icon" href="https://ssl.cdn-redfin.com/v215.3.2/images/logos/Touch-icon-60.png">
     <link data-react-server-link="" rel="apple-touch-icon" sizes="76x76" href="https://ssl.cdn-redfin.com/v215.3.2/images/logos/Touch-icon-76.png">
@@ -68,16 +469,16 @@
             top: -10000px;
             z-index: 10001
         }
-
+        
         .fb_reposition {
             overflow: hidden;
             position: relative
         }
-
+        
         .fb_invisible {
             display: none
         }
-
+        
         .fb_reset {
             background: none;
             border: 0;
@@ -104,15 +505,15 @@
             white-space: normal;
             word-spacing: normal
         }
-
+        
         .fb_reset>div {
             overflow: hidden
         }
-
+        
         .fb_link img {
             border: none
         }
-
+        
         @keyframes fb_transform {
             from {
                 opacity: 0;
@@ -123,32 +524,32 @@
                 transform: scale(1)
             }
         }
-
+        
         .fb_animate {
             animation: fb_transform .3s forwards
         }
-
+        
         .fb_dialog {
             background: rgba(82, 82, 82, .7);
             position: absolute;
             top: -10000px;
             z-index: 10001
         }
-
+        
         .fb_reset .fb_dialog_legacy {
             overflow: visible
         }
-
+        
         .fb_dialog_advanced {
             padding: 10px;
             border-radius: 8px
         }
-
+        
         .fb_dialog_content {
             background: #fff;
             color: #333
         }
-
+        
         .fb_dialog_close_icon {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
             cursor: pointer;
@@ -159,35 +560,35 @@
             top: 17px;
             width: 15px
         }
-
+        
         .fb_dialog_mobile .fb_dialog_close_icon {
             top: 5px;
             left: 5px;
             right: auto
         }
-
+        
         .fb_dialog_padding {
             background-color: transparent;
             position: absolute;
             width: 1px;
             z-index: -1
         }
-
+        
         .fb_dialog_close_icon:hover {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
         }
-
+        
         .fb_dialog_close_icon:active {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
         }
-
+        
         .fb_dialog_loader {
             background-color: #f6f7f9;
             border: 1px solid #606060;
             font-size: 24px;
             padding: 20px
         }
-
+        
         .fb_dialog_top_left,
         .fb_dialog_top_right,
         .fb_dialog_bottom_left,
@@ -197,31 +598,31 @@
             overflow: hidden;
             position: absolute
         }
-
+        
         .fb_dialog_top_left {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;
             left: -10px;
             top: -10px
         }
-
+        
         .fb_dialog_top_right {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;
             right: -10px;
             top: -10px
         }
-
+        
         .fb_dialog_bottom_left {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;
             bottom: -10px;
             left: -10px
         }
-
+        
         .fb_dialog_bottom_right {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;
             right: -10px;
             bottom: -10px
         }
-
+        
         .fb_dialog_vert_left,
         .fb_dialog_vert_right,
         .fb_dialog_horiz_top,
@@ -231,41 +632,41 @@
             filter: alpha(opacity=70);
             opacity: .7
         }
-
+        
         .fb_dialog_vert_left,
         .fb_dialog_vert_right {
             width: 10px;
             height: 100%
         }
-
+        
         .fb_dialog_vert_left {
             margin-left: -10px
         }
-
+        
         .fb_dialog_vert_right {
             right: 0;
             margin-right: -10px
         }
-
+        
         .fb_dialog_horiz_top,
         .fb_dialog_horiz_bottom {
             width: 100%;
             height: 10px
         }
-
+        
         .fb_dialog_horiz_top {
             margin-top: -10px
         }
-
+        
         .fb_dialog_horiz_bottom {
             bottom: 0;
             margin-bottom: -10px
         }
-
+        
         .fb_dialog_iframe {
             line-height: 0
         }
-
+        
         .fb_dialog_content .dialog_title {
             background: #6d84b4;
             border: 1px solid #365899;
@@ -274,13 +675,13 @@
             font-weight: bold;
             margin: 0
         }
-
+        
         .fb_dialog_content .dialog_title>span {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
             float: left;
             padding: 5px 0 7px 26px
         }
-
+        
         body.fb_hidden {
             -webkit-transform: none;
             height: 100%;
@@ -291,7 +692,7 @@
             left: 0;
             width: 100%
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
             min-height: 100%;
@@ -301,7 +702,7 @@
             top: 0;
             z-index: 10001
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading.centered {
             width: auto;
             height: auto;
@@ -309,15 +710,15 @@
             min-width: initial;
             background: none
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
             width: 100%
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
             background: none
         }
-
+        
         .loading.centered #fb_dialog_loader_close {
             color: #fff;
             display: block;
@@ -325,7 +726,7 @@
             clear: both;
             font-size: 18px
         }
-
+        
         #fb-root #fb_dialog_ipad_overlay {
             background: rgba(0, 0, 0, .45);
             position: absolute;
@@ -337,15 +738,15 @@
             min-height: 100%;
             z-index: 10000
         }
-
+        
         #fb-root #fb_dialog_ipad_overlay.hidden {
             display: none
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading iframe {
             visibility: hidden
         }
-
+        
         .fb_dialog_content .dialog_header {
             -webkit-box-shadow: white 0 1px 1px -1px inset;
             background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));
@@ -359,27 +760,27 @@
             vertical-align: middle;
             white-space: nowrap
         }
-
+        
         .fb_dialog_content .dialog_header table {
             -webkit-font-smoothing: subpixel-antialiased;
             height: 43px;
             width: 100%
         }
-
+        
         .fb_dialog_content .dialog_header td.header_left {
             font-size: 12px;
             padding-left: 5px;
             vertical-align: middle;
             width: 60px
         }
-
+        
         .fb_dialog_content .dialog_header td.header_right {
             font-size: 12px;
             padding-right: 5px;
             vertical-align: middle;
             width: 60px
         }
-
+        
         .fb_dialog_content .touchable_button {
             background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));
             border: 1px solid #29487d;
@@ -393,7 +794,7 @@
             padding: 4px 12px;
             position: relative
         }
-
+        
         .fb_dialog_content .dialog_header .touchable_button input {
             border: none;
             background: none;
@@ -404,7 +805,7 @@
             padding: 2px 6px 3px 6px;
             text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
         }
-
+        
         .fb_dialog_content .dialog_header .header_center {
             color: #fff;
             font-size: 16px;
@@ -413,7 +814,7 @@
             text-align: center;
             vertical-align: middle
         }
-
+        
         .fb_dialog_content .dialog_content {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
             border: 1px solid #555;
@@ -421,26 +822,26 @@
             border-top: 0;
             height: 150px
         }
-
+        
         .fb_dialog_content .dialog_footer {
             background: #f6f7f9;
             border: 1px solid #555;
             border-top-color: #ccc;
             height: 40px
         }
-
+        
         #fb_dialog_loader_close {
             float: left
         }
-
+        
         .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
             text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
         }
-
+        
         .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
             visibility: hidden
         }
-
+        
         #fb_dialog_loader_spinner {
             animation: rotateSpinner 1.2s linear infinite;
             background-color: transparent;
@@ -450,7 +851,7 @@
             height: 24px;
             width: 24px
         }
-
+        
         @keyframes rotateSpinner {
             0% {
                 transform: rotate(0deg)
@@ -459,61 +860,61 @@
                 transform: rotate(360deg)
             }
         }
-
+        
         .fb_iframe_widget {
             display: inline-block;
             position: relative
         }
-
+        
         .fb_iframe_widget span {
             display: inline-block;
             position: relative;
             text-align: justify
         }
-
+        
         .fb_iframe_widget iframe {
             position: absolute
         }
-
+        
         .fb_iframe_widget_fluid_desktop,
         .fb_iframe_widget_fluid_desktop span,
         .fb_iframe_widget_fluid_desktop iframe {
             max-width: 100%
         }
-
+        
         .fb_iframe_widget_fluid_desktop iframe {
             min-width: 220px;
             position: relative
         }
-
+        
         .fb_iframe_widget_lift {
             z-index: 1
         }
-
+        
         .fb_hide_iframes iframe {
             position: relative;
             left: -10000px
         }
-
+        
         .fb_iframe_widget_loader {
             position: relative;
             display: inline-block
         }
-
+        
         .fb_iframe_widget_fluid {
             display: inline
         }
-
+        
         .fb_iframe_widget_fluid span {
             width: 100%
         }
-
+        
         .fb_iframe_widget_loader iframe {
             min-height: 32px;
             z-index: 2;
             zoom: 1
         }
-
+        
         .fb_iframe_widget_loader .FB_Loader {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;
             height: 32px;
@@ -523,71 +924,71 @@
             left: 50%;
             z-index: 4
         }
-
+        
         .fb_customer_chat_bounce_in_v1 {
             animation-duration: 250ms;
             animation-name: fb_bounce_in_v1
         }
-
+        
         .fb_customer_chat_bounce_out_v1 {
             animation-duration: 250ms;
             animation-name: fb_bounce_out_v1
         }
-
+        
         .fb_customer_chat_bounce_in_v2 {
             animation-duration: 300ms;
             animation-name: fb_bounce_in_v2;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bounce_out_v2 {
             animation-duration: 300ms;
             animation-name: fb_bounce_out_v2;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bounce_in_v2_mobile_chat_started {
             animation-duration: 300ms;
             animation-name: fb_bounce_in_v2_mobile_chat_started;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bounce_out_v2_mobile_chat_started {
             animation-duration: 300ms;
             animation-name: fb_bounce_out_v2_mobile_chat_started;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bubble_pop_in {
             animation-duration: 250ms;
             animation-name: fb_customer_chat_bubble_bounce_in_animation
         }
-
+        
         .fb_customer_chat_bubble_animated_no_badge {
             box-shadow: 0 3px 12px rgba(0, 0, 0, .15);
             transition: box-shadow 150ms linear
         }
-
+        
         .fb_customer_chat_bubble_animated_no_badge:hover {
             box-shadow: 0 5px 24px rgba(0, 0, 0, .3)
         }
-
+        
         .fb_customer_chat_bubble_animated_with_badge {
             box-shadow: -5px 4px 14px rgba(0, 0, 0, .15);
             transition: box-shadow 150ms linear
         }
-
+        
         .fb_customer_chat_bubble_animated_with_badge:hover {
             box-shadow: -5px 8px 24px rgba(0, 0, 0, .2)
         }
-
+        
         .fb_invisible_flow {
             display: inherit;
             height: 0;
             overflow-x: hidden;
             width: 0
         }
-
+        
         .fb_mobile_overlay_active {
             background-color: #fff;
             height: 100%;
@@ -596,7 +997,7 @@
             visibility: hidden;
             width: 100%
         }
-
+        
         @keyframes fb_bounce_in_v1 {
             0% {
                 opacity: 0;
@@ -612,7 +1013,7 @@
                 transform: scale(1, 1)
             }
         }
-
+        
         @keyframes fb_bounce_in_v2 {
             0% {
                 opacity: 0;
@@ -629,7 +1030,7 @@
                 transform-origin: bottom right
             }
         }
-
+        
         @keyframes fb_bounce_in_v2_mobile_chat_started {
             0% {
                 opacity: 0;
@@ -640,7 +1041,7 @@
                 top: 0
             }
         }
-
+        
         @keyframes fb_bounce_out_v1 {
             from {
                 opacity: 1
@@ -649,7 +1050,7 @@
                 opacity: 0
             }
         }
-
+        
         @keyframes fb_bounce_out_v2 {
             0% {
                 opacity: 1;
@@ -662,7 +1063,7 @@
                 transform-origin: bottom right
             }
         }
-
+        
         @keyframes fb_bounce_out_v2_mobile_chat_started {
             0% {
                 opacity: 1;
@@ -673,7 +1074,7 @@
                 top: 20px
             }
         }
-
+        
         @keyframes fb_customer_chat_bubble_bounce_in_animation {
             0% {
                 bottom: 6pt;
@@ -695,13 +1096,60 @@
 
 <body class="customer-facing AccountSettingsPage buttonsV3 route-AccountSettingsPage">
     <script type="text/javascript" src="https://smartlock.google.com/client?callback=onGoogleYoloLoad" async=""></script>
-    <script>var dataLayer = { 'user': { 'loginStatus': 'Logged in', 'loginId': 16487221, 'rfBrowserId': 'Q5wTb5mhR1OZzAhQsTQ1kQ' }, 'page': { 'riftPageType': 'tour_dashboard' }, 'nojs': false }; dataLayer.session = {}; var searchMarket = 'undefined'; if (searchMarket && searchMarket !== 'undefined') { dataLayer.session["searchMarket"] = searchMarket; } var businessMarketId = ''; if (businessMarketId && businessMarketId !== 'undefined') { dataLayer.session["businessMarketId"] = businessMarketId; } dataLayer = [dataLayer];</script>
+    <script>
+        var dataLayer = {
+            'user': {
+                'loginStatus': 'Logged in',
+                'loginId': 16487221,
+                'rfBrowserId': 'Q5wTb5mhR1OZzAhQsTQ1kQ'
+            },
+            'page': {
+                'riftPageType': 'tour_dashboard'
+            },
+            'nojs': false
+        };
+        dataLayer.session = {};
+        var searchMarket = 'undefined';
+        if (searchMarket && searchMarket !== 'undefined') {
+            dataLayer.session["searchMarket"] = searchMarket;
+        }
+        var businessMarketId = '';
+        if (businessMarketId && businessMarketId !== 'undefined') {
+            dataLayer.session["businessMarketId"] = businessMarketId;
+        }
+        dataLayer = [dataLayer];
+    </script>
     <noscript>
         <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TZTT5H&user.loginID=16487221&user.loginStatus=Logged in&user.rfBrowserId=Q5wTb5mhR1OZzAhQsTQ1kQ&session.searchMarket=undefined&page.riftPageType=tour_dashboard&nojs=true"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
-    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-TZTT5H');</script>
-    <script>if ('PerformanceLongTaskTiming' in window) { var o = window._corvLT = { o: new PerformanceObserver(function (l) { o.pre = (o.pre || []).concat(l.getEntries()) }) }; o.o.observe({ entryTypes: ['longtask'] }) }</script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TZTT5H');
+    </script>
+    <script>
+        if ('PerformanceLongTaskTiming' in window) {
+            var o = window._corvLT = {
+                o: new PerformanceObserver(function(l) {
+                    o.pre = (o.pre || []).concat(l.getEntries())
+                })
+            };
+            o.o.observe({
+                entryTypes: ['longtask']
+            })
+        }
+    </script>
     <div id="content" data-react-server-content="">
         <div data-react-server-root-id="0" data-react-server-timing-offset="12">
             <div data-reactroot=""></div>
@@ -714,7 +1162,7 @@
                         #header header.LargeHeader {
                             display: none;
                         }
-
+                        
                         @media (min-width: 600px) {
                             #header header.LargeHeader {
                                 display: flex;
@@ -741,13 +1189,10 @@
                                         <div data-rf-test-name="search-container" class="search-container inline-block">
                                             <div class="InputBox">
                                                 <noscript></noscript>
-                                                <input data-rf-test-name="search-box-input" id="search-box-input"
-                                                    class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true"
-                                                    tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP"
-                                                    title="City, Address, School, Agent, ZIP" type="search">
+                                                <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP" title="City, Address, School, Agent, ZIP"
+                                                    type="search">
                                                 <div role="button" class="inline-block clear-button-block">
-                                                    <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear"
-                                                        title="Clear" type="button">
+                                                    <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button">
                                                     <svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px">
                                                         <svg viewBox="0 0 24 24">
                                                             <g fill-rule="evenodd">
@@ -757,8 +1202,7 @@
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right"
-                                                type="submit" value="" title="Search" tabindex="2">
+                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2">
                                                 <svg class="SvgIcon rfSvg search">
                                                     <svg viewBox="0 0 24 24">
                                                         <g fill-rule="evenodd">
@@ -896,12 +1340,11 @@
                         <div class="header-left can-shrink">
                             <div class="logo-div menuItemAlign verticallyCenterFlexContent" itemscope="" itemtype="http://schema.org/Organization">
                                 <meta itemprop="name" content="Redfin">
-                                <link itemprop="logo" href="https://ssl.cdn-redfin.com/static-images/images/redfin-logo-transparent-bg-260x66.png"
-                                    type="image/png">
-                                    <a class="logo-link clickable inheritColor fill-redfin-red" data-rf-test-name="LogoLink" itemprop="url" href="owner_dashboard.html" target="_top">
-                                        <span id='custom_redfin_logo' class="RedfinLogo"><b>AVETIZ</b></span>
-                                      
-                                    </a>
+                                <link itemprop="logo" href="https://ssl.cdn-redfin.com/static-images/images/redfin-logo-transparent-bg-260x66.png" type="image/png">
+                                <a class="logo-link clickable inheritColor fill-redfin-red" data-rf-test-name="LogoLink" itemprop="url" href="owner_dashboard.html" target="_top">
+                                    <span id='custom_redfin_logo' class="RedfinLogo"><b>AVETIZ</b></span>
+
+                                </a>
                             </div>
                             <div id="headerUnifiedSearch" class="headerUnifiedSearch">
                                 <div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1">
@@ -909,13 +1352,10 @@
                                         <div data-rf-test-name="search-container" class="search-container inline-block">
                                             <div class="InputBox">
                                                 <noscript></noscript>
-                                                <input data-rf-test-name="search-box-input" id="search-box-input"
-                                                    class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true"
-                                                    tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP"
-                                                    title="City, Address, School, Agent, ZIP" type="search">
+                                                <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP" title="City, Address, School, Agent, ZIP"
+                                                    type="search">
                                                 <div role="button" class="inline-block clear-button-block">
-                                                    <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear"
-                                                        title="Clear" type="button">
+                                                    <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button">
                                                     <svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px">
                                                         <svg viewBox="0 0 24 24">
                                                             <g fill-rule="evenodd">
@@ -925,8 +1365,7 @@
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right"
-                                                type="submit" value="" title="Search" tabindex="2">
+                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2">
                                                 <svg class="SvgIcon rfSvg search">
                                                     <svg viewBox="0 0 24 24">
                                                         <g fill-rule="evenodd">
@@ -953,12 +1392,11 @@
                             <div class="menuItemClickable verticallyCenterFlexContent menuItemAlign clickable withHoverShim withHoverBoxShadow" data-rf-test-name="SellMenu">
                                 <a class="inheritColor" href="#">Sell <i class="fa fa-money"></i></a>
                             </div>
-                            <div id="userMenu" class="UserMenu menuItemClickable menuItemAlign verticallyCenterFlexContent clickable withHoverShim withHoverBoxShadow"
-                                data-rf-test-name="UserMenu">
+                            <div id="userMenu" class="UserMenu menuItemClickable menuItemAlign verticallyCenterFlexContent clickable withHoverShim withHoverBoxShadow" data-rf-test-name="UserMenu">
                                 <div class="item NameAndThumbnail verticallyCenterFlexContent">
                                     <span class="clickable nameNode">
                                         <span class="name">Simon</span>
-                                        <span>▾</span>
+                                    <span>▾</span>
                                     </span>
                                     <div class="user-photo">
                                         <img alt="" class="userPhoto small loginId16487221" src="https://ssl.cdn-redfin.com/system_files/images/38/338/10904338_615_0.jpg">
@@ -977,33 +1415,33 @@
                 <div class="SubheadNav subheadOverflowShown">
                     <div id='custom_overflowHiddeWrapper' class="overflowHideWrapper">
                         <ul class="SubheadNavLinks mainNavigation">
-                                <li class="SubheadLink ">
-                                        <a class="subheadLinkContent custom_subheadLinkContent" href="favorites.html"><b  style='color:whitesmoke;' class='fa fa-star'></b> Favorites </a>
-                                </li>
-                                <li class="SubheadLink">
-                                     <a class="subheadLinkContent custom_subheadLinkContent" href="user_saved_searches.html"><b  style='color:whitesmoke'class='fa fa-search'></b> Saved Searches</a>
-                                </li>
-                                <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="home_tour.html"> <b style='color:whitesmoke;' class='fa fa-home'></b> Scheduled Tour</a>
-                                </li>
-        
-                                <li class="SubheadLink">
-                                        <a class="subheadLinkContent custom_subheadLinkContent" href="your_agents.html"><b style='color:whitesmoke;' class='fa fa-users'></b> Your Consultant</a>
-                                </li>
-                                <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="offers.html"><b style='color:whitesmoke' class='fa fa-credit-card'></b> Offers</a>
-                                </li>
-        
-                                <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="owner_dashboard.html"><b style='color:whitesmoke' class='fa fa-dashboard'></b>   Owner Dashboard</a>
-                                </li>
-                                <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="Email_Settings.html"><b style='color:whitesmoke'  class='fa fa-envelope-open'></b> Email Settings</a>
-                                </li>
-        
-                                <li class="SubheadLink">
-                                    <a class="subheadLinkContent custom_subheadLinkContent" href="Settings.html"><b style='color:whitesmoke' class='fa fa-wrench'> </b> Account Settings</a>
-                                </li>
+                            <li class="SubheadLink ">
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="favorites.html"><b  style='color:whitesmoke;' class='fa fa-star'></b> Favorites </a>
+                            </li>
+                            <li class="SubheadLink">
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="user_saved_searches.html"><b  style='color:whitesmoke'class='fa fa-search'></b> Saved Searches</a>
+                            </li>
+                            <li class="SubheadLink">
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="home_tour.html"> <b style='color:whitesmoke;' class='fa fa-home'></b> Scheduled Tour</a>
+                            </li>
+
+                            <li class="SubheadLink">
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="your_agents.html"><b style='color:whitesmoke;' class='fa fa-users'></b> Your Consultant</a>
+                            </li>
+                            <li class="SubheadLink">
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="offers.html"><b style='color:whitesmoke' class='fa fa-credit-card'></b> Offers</a>
+                            </li>
+
+                            <li class="SubheadLink">
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="owner_dashboard.html"><b style='color:whitesmoke' class='fa fa-dashboard'></b>   Owner Dashboard</a>
+                            </li>
+                            <li class="SubheadLink">
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="Email_Settings.html"><b style='color:whitesmoke'  class='fa fa-envelope-open'></b> Email Settings</a>
+                            </li>
+
+                            <li class="SubheadLink active">
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="Settings.html"><b style='color:whitesmoke' class='fa fa-wrench'> </b> Account Settings</a>
+                            </li>
                         </ul>
                     </div>
                     <ul class="SubheadNavLinks moreNavigation" style="left: 1062px;"></ul>
@@ -1038,48 +1476,46 @@
                                     <div class="resendEmailLinkContainer">
                                         <a href="#" class="button Button  text resendEmailLink" tabindex="0">
                                             <span>Resend Email</span>
-                                        </a>
-                                    </div>
-                                </span>
+                                </a>
                             </div>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div data-react-server-root-id="6" data-react-server-timing-offset="76">
-                <div class="AccountSettingsSection AboutMeSection fluid-gutter" data-rf-test-name="AboutMeSection" data-reactroot="">
-                    <div class="sectionContents">
-                        <div class="ChangeMyPhotoControl">
-                            <img class="myPhoto" data-rf-test-id="myPhoto" src="https://ssl.cdn-redfin.com/system_files/images/39/339/10904339_46_0.jpg"
-                                width="150" height="150">
-                            <span class="actions">
+        </div>
+        <div data-react-server-root-id="6" data-react-server-timing-offset="76">
+            <div class="AccountSettingsSection AboutMeSection fluid-gutter" data-rf-test-name="AboutMeSection" data-reactroot="">
+                <div class="sectionContents">
+                    <div class="ChangeMyPhotoControl">
+                        <img class="myPhoto" data-rf-test-id="myPhoto" src="https://ssl.cdn-redfin.com/system_files/images/39/339/10904339_46_0.jpg" width="150" height="150">
+                        <span class="actions">
                                 <div class="facebookPhotoSection">
                                     <img class="myFacebookPhoto" data-rf-test-id="myFacebookPhoto" src="https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1711647602238070&amp;height=50&amp;width=50&amp;ext=1530194733&amp;hash=AeQ_mfK421z3ZdPD">
                                     <a href="#" class="button Button  text facebookPhotoLink" tabindex="0">
                                         <span>
                                             <span>Use Facebook Photo</span>
-                                        </span>
-                                    </a>
-                                </div>
-                                <a href="#" class="button Button  text changePhotoLink" tabindex="0">
-                                    <span>
+                        </span>
+                        </a>
+                    </div>
+                    <a href="#" class="button Button  text changePhotoLink" tabindex="0">
+                        <span>
                                         <span data-rf-test-id="changePhotoLinkText" class="changePhotoLinkText">Change Photo</span>
-                                    </span>
-                                </a>
-                                <a href="#" class="button Button  text removePhotoLink" tabindex="0">
-                                    <span>Remove</span>
-                                </a>
-                                <span data-rf-test-id="validationFeedback" class="field-null"></span>
-                            </span>
-                            <input accept="image/bmp, image/gif, image/jpeg, image/jpg, image/png" id="file" style="display:none"
-                                type="file">
-                        </div>
-                        <div class="AboutMeForm row">
-                            <form novalidate="" data-rf-test-name="ActionEmittingForm">
-                                <div class="formCell col-12 col-md-6 col-lg-4">
-                                    <span data-rf-test-name="Text" class="field text Text required fullWidth firstName" aria-disabled="false">
+                        </span>
+                    </a>
+                    <a href="#" class="button Button  text removePhotoLink" tabindex="0">
+                        <span>Remove</span>
+                    </a>
+                    <span data-rf-test-id="validationFeedback" class="field-null"></span>
+                    </span>
+                    <input accept="image/bmp, image/gif, image/jpeg, image/jpg, image/png" id="file" style="display:none" type="file">
+                </div>
+                <div class="AboutMeForm row">
+                    <form novalidate="" data-rf-test-name="ActionEmittingForm">
+                        <div class="formCell col-12 col-md-6 col-lg-4">
+                            <span data-rf-test-name="Text" class="field text Text required fullWidth firstName" aria-disabled="false">
                                         <span data-rf-test-name="label" class="label">First Name</span>
-                                        <span class="input">
+                            <span class="input">
                                             <div role="presentation" class="dijit dijitInline dijitLeft value text dijitTextBox dijitValidationTextBox">
                                                 <div class="dijitInputField dijitInputContainer">
                                                     <input name="firstName" value="Simon" placeholder="" inputmode="" class="dijitInputInner undefined"
@@ -1088,12 +1524,12 @@
                                                 </div>
                                             </div>
                                         </span>
-                                    </span>
-                                </div>
-                                <div class="formCell col-12 col-md-6 col-lg-4">
-                                    <span data-rf-test-name="Text" class="field text Text required fullWidth lastName" aria-disabled="false">
+                            </span>
+                        </div>
+                        <div class="formCell col-12 col-md-6 col-lg-4">
+                            <span data-rf-test-name="Text" class="field text Text required fullWidth lastName" aria-disabled="false">
                                         <span data-rf-test-name="label" class="label">Last Name</span>
-                                        <span class="input">
+                            <span class="input">
                                             <div role="presentation" class="dijit dijitInline dijitLeft value text dijitTextBox dijitValidationTextBox">
                                                 <div class="dijitInputField dijitInputContainer">
                                                     <input name="lastName" value="Leo" placeholder="" inputmode="" class="dijitInputInner undefined"
@@ -1102,12 +1538,12 @@
                                                 </div>
                                             </div>
                                         </span>
-                                    </span>
-                                </div>
-                                <div class="formCell col-12 col-md-6 col-lg-4">
-                                    <span data-rf-test-name="Text" class="field text Text required fullWidth email" aria-disabled="false">
+                            </span>
+                        </div>
+                        <div class="formCell col-12 col-md-6 col-lg-4">
+                            <span data-rf-test-name="Text" class="field text Text required fullWidth email" aria-disabled="false">
                                         <span data-rf-test-name="label" class="label">Email Address</span>
-                                        <span class="input">
+                            <span class="input">
                                             <div role="presentation" class="dijit dijitInline dijitLeft value text dijitTextBox dijitValidationTextBox">
                                                 <div class="dijitInputField dijitInputContainer">
                                                     <input name="email" value="etefialuckyonome@yahoo.com" placeholder="" inputmode=""
@@ -1116,12 +1552,12 @@
                                                 </div>
                                             </div>
                                         </span>
-                                    </span>
-                                </div>
-                                <div class="formCell col-12 col-md-6 col-lg-4">
-                                    <span data-rf-test-name="Text" class="field text Text phoneText phoneNumber" aria-disabled="false">
+                            </span>
+                        </div>
+                        <div class="formCell col-12 col-md-6 col-lg-4">
+                            <span data-rf-test-name="Text" class="field text Text phoneText phoneNumber" aria-disabled="false">
                                         <span data-rf-test-name="label" class="label">Phone Number</span>
-                                        <span class="input">
+                            <span class="input">
                                             <div role="presentation" class="dijit dijitInline dijitLeft value text dijitTextBox dijitValidationTextBox">
                                                 <div class="dijitInputField dijitInputContainer">
                                                     <input name="phoneNumber" value="" placeholder="" inputmode="numeric" class="dijitInputInner tel"
@@ -1130,70 +1566,67 @@
                                                 </div>
                                             </div>
                                         </span>
-                                    </span>
-                                    <span class="phoneTypeSelect phoneTypeId withFlyout withOptions mounted field select Select clickable"
-                                        data-rf-test-name="Select">
+                            </span>
+                            <span class="phoneTypeSelect phoneTypeId withFlyout withOptions mounted field select Select clickable" data-rf-test-name="Select">
                                         <span data-rf-test-name="label" class="label">&nbsp;</span>
-                                        <span data-rf-test-name="Select" class="input" tabindex="0">
+                            <span data-rf-test-name="Select" class="input" tabindex="0">
                                             <span class="container">
                                                 <span class="value defaultOption">Type</span>
-                                                <span class="arrow">
+                            <span class="arrow">
                                                     <svg class="SvgIcon rfSvg dropdown">
                                                         <svg viewBox="0 0 10 10">
                                                             <path d="M1.601 3h6.792a.25.25 0 0 1 .177.427L5.174 6.823a.25.25 0 0 1-.354 0L1.424 3.427A.25.25 0 0 1 1.601 3"></path>
                                                         </svg>
                                                     </svg>
                                                 </span>
-                                            </span>
-                                            <select name="phoneTypeId" class="select" tabindex="-1">
+                            </span>
+                            <select name="phoneTypeId" class="select" tabindex="-1">
                                                 <option selected="" value="-99998" disabled="" hidden="">Type</option>
                                                 <option value="3">Cell</option>
                                                 <option value="1">Home</option>
                                                 <option value="2">Office</option>
                                             </select>
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="formCell field col-12 col-md-6 col-lg-4">
-                                    <span class="label">Password</span>
-                                    <a href="/change-password" class="button Button  changePasswordButton tertiary fullWidth"
-                                        tabindex="0">
-                                        <span>Change Password</span>
-                                    </a>
-                                </div>
-                                <div class="formCell field col-12 col-md-6 col-lg-4">
-                                    <span class="label">&nbsp;</span>
-                                    <button type="submit" class="button Button  saveUpdatesButton primary fullWidth"
-                                        tabindex="0">
+                            </span>
+                            </span>
+                        </div>
+                        <div class="formCell field col-12 col-md-6 col-lg-4">
+                            <span class="label">Password</span>
+                            <a href="/change-password" class="button Button  changePasswordButton tertiary fullWidth" tabindex="0">
+                                <span>Change Password</span>
+                            </a>
+                        </div>
+                        <div class="formCell field col-12 col-md-6 col-lg-4">
+                            <span class="label">&nbsp;</span>
+                            <button type="submit" class="button Button  saveUpdatesButton primary fullWidth" tabindex="0">
                                         <span>Save Updates</span>
                                     </button>
-                                </div>
-                            </form>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
-            <div data-react-server-root-id="7" data-react-server-timing-offset="77">
-                <div class="AccountSettingsSection SocialAccountLinkSection" data-rf-test-name="SocialAccountLinkSection" data-reactroot="">
-                    <h2 class="sectionTitle">Linked Accounts</h2>
-                    <div class="description">Sign in to Redfin with your social apps. We never post anything on your behalf.</div>
-                    <hr class="HorizontalRule">
-                    <div data-rf-test-name="Notice" class="Notice alert inline-notice">
-                        <div data-rf-test-name="icon" class="icon">
-                            <svg class="SvgIcon rfSvg alert" style="fill:inherit">
+        </div>
+    </div>
+    <div data-react-server-root-id="7" data-react-server-timing-offset="77">
+        <div class="AccountSettingsSection SocialAccountLinkSection" data-rf-test-name="SocialAccountLinkSection" data-reactroot="">
+            <h2 class="sectionTitle">Linked Accounts</h2>
+            <div class="description">Sign in to Redfin with your social apps. We never post anything on your behalf.</div>
+            <hr class="HorizontalRule">
+            <div data-rf-test-name="Notice" class="Notice alert inline-notice">
+                <div data-rf-test-name="icon" class="icon">
+                    <svg class="SvgIcon rfSvg alert" style="fill:inherit">
                                 <svg viewBox="0 0 24 24">
                                     <path d="M12.025 4.472L20.789 22H3.261l8.764-17.528M.205 23.638A.25.25 0 0 0 .429 24H23.62a.25.25 0 0 0 .224-.362L12.248.447a.25.25 0 0 0-.447 0L.205 23.638zM12.75 20h-1.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25zm0-4h-1.5a.25.25 0 0 1-.25-.25v-5.5a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v5.5a.25.25 0 0 1-.25.25z"
                                         fill-rule="evenodd"></path>
                                 </svg>
-                            </svg>
-                        </div>
-                        <div class="text">
-                            <div data-rf-test-name="title" class="title">Verify your Email</div>
-                            <div data-rf-test-name="message" class="message">to be able to link an account.</div>
-                        </div>
-                    </div>
-                    <div class="socialLinkingButtons">
-                        <button type="button" class="button Button disabled  primary facebookSignInButton" tabindex="-1" disabled="">
+                    </svg>
+                </div>
+                <div class="text">
+                    <div data-rf-test-name="title" class="title">Verify your Email</div>
+                    <div data-rf-test-name="message" class="message">to be able to link an account.</div>
+                </div>
+            </div>
+            <div class="socialLinkingButtons">
+                <button type="button" class="button Button disabled  primary facebookSignInButton" tabindex="-1" disabled="">
                             <span>
                                 <svg class="SvgIcon rfSvg facebook socialIcon" style="fill:white">
                                     <svg viewBox="0 0 24 24">
@@ -1204,7 +1637,7 @@
                                 <span class="signInText">Unlink Facebook</span>
                             </span>
                         </button>
-                        <button type="button" class="button Button disabled  primary googleSignInButton" tabindex="-1" disabled="">
+                <button type="button" class="button Button disabled  primary googleSignInButton" tabindex="-1" disabled="">
                             <span>
                                 <svg class="SvgIcon rfSvg google socialIcon" style="fill:white">
                                     <svg viewBox="0 0 24 24">
@@ -1215,50 +1648,48 @@
                                 <span class="signInText">Connect Google</span>
                             </span>
                         </button>
+            </div>
+        </div>
+    </div>
+    <div data-react-server-root-id="8" data-react-server-timing-offset="79">
+        <div class="AccountSettingsSection TouringAndOffersSection" data-rf-test-name="TouringAndOffersSection" data-reactroot="">
+            <h2 class="sectionTitle">Touring and Offers</h2>
+            <div class="section row preapprovalSection">
+                <div class="title-and-description">
+                    <h4>
+                        <span>Pre-Approval Letter</span>
+                        <span class="status">None specified</span>
+                    </h4>
+                    <p class="description">Demonstrates your ability to obtain a mortgage for the amount in the offer.</p>
+                </div>
+                <div class="action">
+                    <div class="PreapprovalFileManager">
+                        <button type="button" class="button Button compact tertiary" tabindex="0">
+                                    <span>Upload letter</span>
+                                </button>
+                        <p class="fileName"></p>
+                        <input accept="application/msword, application/pdf, text/plain, image/bmp, image/gif, image/jpeg, image/jpg, image/png, image/tif" id="file" style="display:none" type="file">
                     </div>
                 </div>
             </div>
-            <div data-react-server-root-id="8" data-react-server-timing-offset="79">
-                <div class="AccountSettingsSection TouringAndOffersSection" data-rf-test-name="TouringAndOffersSection" data-reactroot="">
-                    <h2 class="sectionTitle">Touring and Offers</h2>
-                    <div class="section row preapprovalSection">
-                        <div class="title-and-description">
-                            <h4>
-                                <span>Pre-Approval Letter</span>
-                                <span class="status">None specified</span>
-                            </h4>
-                            <p class="description">Demonstrates your ability to obtain a mortgage for the amount in the offer.</p>
-                        </div>
-                        <div class="action">
-                            <div class="PreapprovalFileManager">
-                                <button type="button" class="button Button compact tertiary" tabindex="0">
-                                    <span>Upload letter</span>
-                                </button>
-                                <p class="fileName"></p>
-                                <input accept="application/msword, application/pdf, text/plain, image/bmp, image/gif, image/jpeg, image/jpg, image/png, image/tif"
-                                    id="file" style="display:none" type="file">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section row idVerificationSection">
-                        <div class="title-and-description">
-                            <h4>
-                                <span>Verify Your ID</span>
-                                <span class="status">Not yet verified</span>
-                            </h4>
-                            <p class="description">To ensure the safety of our agents, we need you to verify your identity before we can take you
-                                on a home tour.</p>
-                        </div>
-                        <div class="action">
-                            <a href="/myredfin/verify-id" class="button Button compact tertiary" tabindex="0">
-                                <span>Verify ID</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="section row offerInsightsSection">
-                        <div class="title-and-description">
-                            <div class="checkboxAndLabel">
-                                <span data-rf-test-name="Checkbox" class="field Checkbox styled">
+            <div class="section row idVerificationSection">
+                <div class="title-and-description">
+                    <h4>
+                        <span>Verify Your ID</span>
+                        <span class="status">Not yet verified</span>
+                    </h4>
+                    <p class="description">To ensure the safety of our agents, we need you to verify your identity before we can take you on a home tour.</p>
+                </div>
+                <div class="action">
+                    <a href="/myredfin/verify-id" class="button Button compact tertiary" tabindex="0">
+                        <span>Verify ID</span>
+                    </a>
+                </div>
+            </div>
+            <div class="section row offerInsightsSection">
+                <div class="title-and-description">
+                    <div class="checkboxAndLabel">
+                        <span data-rf-test-name="Checkbox" class="field Checkbox styled">
                                     <label class="label" data-rf-test-name="checkbox-label-container">
                                         <input data-rf-test-name="input" checked="" type="checkbox">
                                         <span data-rf-test-name="checkbox-label" class="checkbox">
@@ -1266,11 +1697,11 @@
                                                 <path d="M35 91.6 1 57.6 16.1 42.5 35 61.4 85.9 10.4 101 25.5z"></path>
                                             </svg>
                                         </span>
-                                    </label>
-                                </span>
-                                <span>Allow offer insights</span>
-                                <div class="DefinitionFlyout definition-flyout-container react inline-block">
-                                    <span class="DefinitionFlyoutLink inline-block clickable">
+                        </label>
+                        </span>
+                        <span>Allow offer insights</span>
+                        <div class="DefinitionFlyout definition-flyout-container react inline-block">
+                            <span class="DefinitionFlyoutLink inline-block clickable">
                                         <svg class="SvgIcon rfSvg label-info info-icon">
                                             <svg viewBox="0 0 12 12">
                                                 <path d="M6 12A6 6 0 1 0 6 0a6 6 0 0 0 0 12zm-.666-8.667h1.333V2H5.334v1.333zm1.333 5.334v-4h-2V6h.667v2.667h-.667V10h2.667V8.667h-.667z"
@@ -1278,133 +1709,397 @@
                                             </svg>
                                         </svg>
                                     </span>
-                                    <span data-rf-test-name="flyout-transition-group"></span>
-                                </div>
-                            </div>
-                            <p class="description">Allow offer insights for offers that you submit.</p>
+                            <span data-rf-test-name="flyout-transition-group"></span>
                         </div>
                     </div>
+                    <p class="description">Allow offer insights for offers that you submit.</p>
                 </div>
             </div>
-            <div data-react-server-root-id="9" data-react-server-timing-offset="80">
-                <div class="AccountSettingsSection CloseAccountSection" data-rf-test-name="CloseAccountSection" data-reactroot="">
-                    <h2 class="sectionTitle">Close Account</h2>
-                    <span class="description">This will remove your login information from our system and you will not be able to login again. It cannot
+        </div>
+    </div>
+    <div data-react-server-root-id="9" data-react-server-timing-offset="80">
+        <div class="AccountSettingsSection CloseAccountSection" data-rf-test-name="CloseAccountSection" data-reactroot="">
+            <h2 class="sectionTitle">Close Account</h2>
+            <span class="description">This will remove your login information from our system and you will not be able to login again. It cannot
                         be undone.
                         <!-- -->
                         <a href="#" class="deleteYourAccountLink">Delete Your Account</a>
                     </span>
-                </div>
-            </div>
-            <div data-react-server-root-id="10" data-react-server-timing-offset="80"></div>
         </div>
+    </div>
+    <div data-react-server-root-id="10" data-react-server-timing-offset="80"></div>
+    </div>
 
 
-        <div data-react-server-root-id="13" data-react-server-timing-offset="169">
+    <div data-react-server-root-id="13" data-react-server-timing-offset="169">
 
-            <div id="custom_footer" id='custom_footer' class="footer main-content " data-reactroot="">
-                    <div class="legal">
-                            <div class="searchRow" data-rf-test-name="ghostTownSearchbox"><div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1"><form class="SearchBoxForm" action="?"><div data-rf-test-name="search-container" class="search-container inline-block"><div class="InputBox"><noscript></noscript><input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="NGN" title="NGN" type="search"><div role="button" class="inline-block clear-button-block"><input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button"><svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.772 8.288l-1.06-1.06a.25.25 0 0 0-.354 0L12 10.586 8.642 7.228a.25.25 0 0 0-.354 0l-1.06 1.06a.25.25 0 0 0 0 .354L10.586 12l-3.358 3.358a.25.25 0 0 0 0 .354l1.06 1.06a.25.25 0 0 0 .354 0L12 13.414l3.358 3.358a.25.25 0 0 0 .354 0l1.06-1.06a.25.25 0 0 0 0-.354L13.414 12l3.358-3.358a.25.25 0 0 0 0-.354z"></path></g></svg></svg></div></div><button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2"><svg class="SvgIcon rfSvg search"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path></g></svg></svg></button></div></form><noscript></noscript></div></div>
-                    </div>
-                
-                <div class="links">
-                        <a href="http://press.redfin.com/phoenix.zhtml?c=252734&amp;p=irol-about">About</a>
-                        <a href="http://press.redfin.com/">Help</a>
-                        <a href="http://investors.redfin.com/">Investors</a>
-                        <a href="partners.html">Partners</a>
-                        <a href="https://www.redfin.com/blog/">Cities</a>
-                        <a href="/about/jobs">Polices</a>
-                        <a href="/about/redfin-partner-agents-application/?src=partner-application-footer">Countries</a>
-                        <a href="/mobile">Safety</a>
-                        <a href="" target="feedback" rel="nofollow">Media</a>
-                        <a href="/about/contact-us">How it Works</a>
-                        <a href="http://support.redfin.com/">Intelligent Investing</a>
-                        <a href="http://support.redfin.com/">Insight</a>
+        <div id="custom_footer" id='custom_footer' class="footer main-content " data-reactroot="">
+            <div class="legal">
+                <div class="searchRow" data-rf-test-name="ghostTownSearchbox">
+                    <div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1">
+                        <form class="SearchBoxForm" action="?">
+                            <div data-rf-test-name="search-container" class="search-container inline-block">
+                                <div class="InputBox"><noscript></noscript><input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="NGN"
+                                        title="NGN" type="search">
+                                    <div role="button" class="inline-block clear-button-block"><input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button"><svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.772 8.288l-1.06-1.06a.25.25 0 0 0-.354 0L12 10.586 8.642 7.228a.25.25 0 0 0-.354 0l-1.06 1.06a.25.25 0 0 0 0 .354L10.586 12l-3.358 3.358a.25.25 0 0 0 0 .354l1.06 1.06a.25.25 0 0 0 .354 0L12 13.414l3.358 3.358a.25.25 0 0 0 .354 0l1.06-1.06a.25.25 0 0 0 0-.354L13.414 12l3.358-3.358a.25.25 0 0 0 0-.354z"></path></g></svg></svg>
+                                    </div>
+                                </div><button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2"><svg class="SvgIcon rfSvg search"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path></g></svg></svg></button></div>
+                        </form><noscript></noscript></div>
                 </div>
             </div>
 
-
+            <div class="links">
+                <a href="http://press.redfin.com/phoenix.zhtml?c=252734&amp;p=irol-about">About</a>
+                <a href="http://press.redfin.com/">Help</a>
+                <a href="http://investors.redfin.com/">Investors</a>
+                <a href="partners.html">Partners</a>
+                <a href="https://www.redfin.com/blog/">Cities</a>
+                <a href="/about/jobs">Polices</a>
+                <a href="/about/redfin-partner-agents-application/?src=partner-application-footer">Countries</a>
+                <a href="/mobile">Safety</a>
+                <a href="" target="feedback" rel="nofollow">Media</a>
+                <a href="/about/contact-us">How it Works</a>
+                <a href="http://support.redfin.com/">Intelligent Investing</a>
+                <a href="http://support.redfin.com/">Insight</a>
+            </div>
         </div>
 
-        <div data-react-server-root-id="13" data-react-server-timing-offset="169">
-                <div id="custom_footer" id='custom_footer' class="footer main-content " data-reactroot="">
-                        <div class="legal" style="padding-left:15px;">
-                                <h4>AvetiZ is a service mark of AvetiZ © 2017. All Rights Reserved.</h4> 
-                        </div>
-        
-                        <div class="social" style="float:right;">
-                                    <ul class="footerSocialButtons inlineList">
-                                        <li id="footerFacebookIcon">
-                                            <a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/redfin" title="Redfin Facebook" alt="Redfin Facebook">
-                                                <svg class="SvgIcon rfSvg facebook">
+
+    </div>
+
+    <div data-react-server-root-id="13" data-react-server-timing-offset="169">
+        <div id="custom_footer" id='custom_footer' class="footer main-content " data-reactroot="">
+            <div class="legal" style="padding-left:15px;">
+                <h4>AvetiZ is a service mark of AvetiZ © 2017. All Rights Reserved.</h4>
+            </div>
+
+            <div class="social" style="float:right;">
+                <ul class="footerSocialButtons inlineList">
+                    <li id="footerFacebookIcon">
+                        <a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/redfin" title="Redfin Facebook" alt="Redfin Facebook">
+                            <svg class="SvgIcon rfSvg facebook">
                                                     <svg viewBox="0 0 24 24">
                                                         <path d="M21.252 1.6H2.747c-.633 0-1.147.514-1.147 1.148v18.504c0 .634.514 1.148 1.147 1.148h9.963v-8.055H9.999v-3.139h2.71V8.891c0-2.686 1.641-4.15 4.038-4.15 1.148 0 2.134.086 2.422.125v2.807h-1.662c-1.304 0-1.556.62-1.556 1.529v2.004h3.109l-.405 3.14h-2.704V22.4h5.3c.635 0 1.149-.514 1.149-1.148V2.748c0-.634-.514-1.148-1.148-1.148" fill-rule="evenodd"></path>
                                                     </svg>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li id="footerTwitterIcon">
-                                            <a class="icon icon-twitter" target="_blank" href="https://twitter.com/Redfin" title="Redfin Twitter" alt="Redfin Twitter">
-                                                <svg class="SvgIcon rfSvg twitter">
+                            </svg>
+                        </a>
+                    </li>
+                    <li id="footerTwitterIcon">
+                        <a class="icon icon-twitter" target="_blank" href="https://twitter.com/Redfin" title="Redfin Twitter" alt="Redfin Twitter">
+                            <svg class="SvgIcon rfSvg twitter">
                                                     <svg viewBox="0 0 25 24">
                                                         <path d="M21.863 6.828c.015.212.015.424.015.636 0 6.464-4.92 13.913-13.913 13.913-2.77 0-5.343-.802-7.508-2.195.393.045.772.061 1.18.061a9.78 9.78 0 0 0 6.07-2.09 4.896 4.896 0 0 1-4.571-3.391c.302.046.605.076.923.076.439 0 .878-.061 1.287-.167a4.89 4.89 0 0 1-3.92-4.799v-.061c.65.364 1.408.59 2.209.621a4.888 4.888 0 0 1-2.178-4.071c0-.909.24-1.741.664-2.468a13.904 13.904 0 0 0 10.084 5.116 5.426 5.426 0 0 1-.121-1.12A4.886 4.886 0 0 1 16.972 2c1.408 0 2.68.59 3.573 1.544a9.593 9.593 0 0 0 3.103-1.181 4.868 4.868 0 0 1-2.15 2.695 9.789 9.789 0 0 0 2.816-.757 10.522 10.522 0 0 1-2.451 2.527z" fill-rule="evenodd"></path>
                                                     </svg>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li id="footerGooglePlusIcon">
-                                            <a class="icon icon-gplus" target="_blank" href="https://plus.google.com/+redfin/posts" title="Redfin Google Plus" alt="Redfin Google Plus">
-                                                <svg class="SvgIcon rfSvg google">
+                            </svg>
+                        </a>
+                    </li>
+                    <li id="footerGooglePlusIcon">
+                        <a class="icon icon-gplus" target="_blank" href="https://plus.google.com/+redfin/posts" title="Redfin Google Plus" alt="Redfin Google Plus">
+                            <svg class="SvgIcon rfSvg google">
                                                     <svg viewBox="0 0 24 24">
                                                         <path d="M2.916 16.756c-1.052-2.092-1.371-4.549-.912-6.85.185-.924.487-1.825.907-2.669C4.116 4.791 6.275 2.863 8.808 1.98a10.372 10.372 0 0 1 7.015.063 10.091 10.091 0 0 1 3.354 2.115c-.324.36-.677.695-1.013 1.044l-1.915 1.95a5.652 5.652 0 0 0-2.245-1.347 6.046 6.046 0 0 0-3.058-.125 6.198 6.198 0 0 0-3.113 1.762 6.6 6.6 0 0 0-1.508 2.49l.001.002a6.505 6.505 0 0 0 0 4.127l-.01.008A6.58 6.58 0 0 0 8.7 17.323a6.17 6.17 0 0 0 2.318 1.02c.817.172 1.663.15 2.486.006a5.91 5.91 0 0 0 2.295-.923l.003.002a5.008 5.008 0 0 0 2.08-3.277h-5.677c.006-1.378.006-2.758.006-4.138h9.798c.325 1.864.252 3.808-.263 5.633-.476 1.67-1.378 3.221-2.637 4.4l-.003-.001c-1.192 1.122-2.686 1.885-4.264 2.255-1.747.405-3.594.417-5.33-.057A10.234 10.234 0 0 1 5.726 20.3a10.684 10.684 0 0 1-2.821-3.536l.01-.008z" fill-rule="evenodd"></path>
                                                     </svg>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li id="footerPinterestIcon">
-                                            <a class="icon icon-pinterest" target="_blank" href="https://www.pinterest.com/redfin/" title="Redfin Pinterest" alt="Redfin Pinterest">
-                                                <svg class="SvgIcon rfSvg pinterest">
+                            </svg>
+                        </a>
+                    </li>
+                    <li id="footerPinterestIcon">
+                        <a class="icon icon-pinterest" target="_blank" href="https://www.pinterest.com/redfin/" title="Redfin Pinterest" alt="Redfin Pinterest">
+                            <svg class="SvgIcon rfSvg pinterest">
                                                     <svg viewBox="0 0 24 24">
                                                         <path d="M11.865 22.13c-1.015 0-1.978-.148-2.912-.429.387-.613.828-1.402 1.042-2.19 0 0 .118-.456.72-2.82.347.68 1.389 1.28 2.5 1.28 3.3 0 5.545-3.005 5.545-7.042 0-3.033-2.577-5.88-6.508-5.88-4.865 0-7.324 3.502-7.324 6.414 0 1.764.668 3.343 2.099 3.932.229.093.44 0 .51-.269.051-.174.157-.628.211-.815.067-.268.04-.347-.147-.574-.414-.495-.682-1.123-.682-2.02 0-2.592 1.94-4.917 5.054-4.917 2.752 0 4.276 1.683 4.276 3.944 0 2.951-1.31 5.451-3.261 5.451-1.071 0-1.872-.882-1.618-1.978.308-1.296.91-2.7.91-3.636 0-.84-.457-1.55-1.39-1.55-1.097 0-1.979 1.137-1.979 2.661 0 0 0 .976.335 1.629-1.125 4.759-1.325 5.589-1.325 5.589-.187.774-.2 1.643-.173 2.365a10.267 10.267 0 0 1-6.148-9.41C1.6 6.197 6.199 1.6 11.865 1.6S22.13 6.197 22.13 11.865 17.53 22.13 11.865 22.13" fill-rule="evenodd">
             
                                                         </path>
                                                     </svg>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                        <li id="footerInstagramIcon">
-                                            <a class="icon icon-instagram" target="_blank" href="https://www.instagram.com/redfinrealestate/" title="Redfin Instagram" alt="Redfin Instagram">
-                                                <svg class="SvgIcon rfSvg instagram">
+                            </svg>
+                        </a>
+                    </li>
+                    <li id="footerInstagramIcon">
+                        <a class="icon icon-instagram" target="_blank" href="https://www.instagram.com/redfinrealestate/" title="Redfin Instagram" alt="Redfin Instagram">
+                            <svg class="SvgIcon rfSvg instagram">
                                                     <svg viewBox="0 0 24 24">
                                                         <path d="M12 1c-2.987 0-3.362.013-4.535.066-1.171.054-1.971.24-2.67.511a5.412 5.412 0 0 0-1.949 1.269 5.412 5.412 0 0 0-1.269 1.949c-.271.699-.457 1.499-.511 2.67C1.013 8.638 1 9.013 1 12s.013 3.362.066 4.535c.054 1.171.24 1.971.511 2.67a5.412 5.412 0 0 0 1.269 1.949 5.412 5.412 0 0 0 1.949 1.269c.699.271 1.499.457 2.67.511C8.638 22.987 9.013 23 12 23s3.362-.013 4.535-.066c1.171-.054 1.971-.24 2.67-.511a5.412 5.412 0 0 0 1.949-1.269 5.412 5.412 0 0 0 1.269-1.949c.271-.699.457-1.499.511-2.67.053-1.173.066-1.548.066-4.535s-.013-3.362-.066-4.535c-.054-1.171-.24-1.971-.511-2.67a5.412 5.412 0 0 0-1.269-1.949 5.412 5.412 0 0 0-1.949-1.269c-.699-.271-1.499-.457-2.67-.511C15.362 1.013 14.987 1 12 1m0 1.982c2.937 0 3.285.011 4.445.064 1.072.049 1.655.228 2.042.379.514.199.88.438 1.265.823.385.385.624.751.823 1.265.151.387.33.97.379 2.042.053 1.16.064 1.508.064 4.445 0 2.937-.011 3.285-.064 4.445-.049 1.072-.228 1.655-.379 2.042-.199.514-.438.88-.823 1.265a3.398 3.398 0 0 1-1.265.823c-.387.151-.97.33-2.042.379-1.16.053-1.508.064-4.445.064-2.937 0-3.285-.011-4.445-.064-1.072-.049-1.655-.228-2.042-.379a3.398 3.398 0 0 1-1.265-.823 3.398 3.398 0 0 1-.823-1.265c-.151-.387-.33-.97-.379-2.042-.053-1.16-.064-1.508-.064-4.445 0-2.937.011-3.285.064-4.445.049-1.072.228-1.655.379-2.042.199-.514.438-.88.823-1.265a3.398 3.398 0 0 1 1.265-.823c.387-.151.97-.33 2.042-.379 1.16-.053 1.508-.064 4.445-.064zm0 3.37a5.649 5.649 0 1 0 0 11.297 5.649 5.649 0 0 0 0-11.297zm0 9.315a3.667 3.667 0 1 1 0-7.335 3.667 3.667 0 0 1 0 7.335zm7.192-9.539a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0z" fill-rule="evenodd"></path>
                                                     </svg>
-                                                </svg>
-                                            </a>
-                                        </li>
-                                    </ul>
-                        </div>
-                </div>
-            
-               
-
-
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <script type="text/javascript">__displayAboveTheFold = new Date; window.performance && window.performance.mark && window.performance.mark("displayAboveTheFold.fromStart");</script>
 
-        <script>_tLAB.wait(function () {
-                (function (root) {
-                    // -- Data --
-                    root.__reactServerState || (root.__reactServerState = {});
-                    root.__reactServerState.InitialContext = { "ReactServerAgent.cache": { "dataCache": { "\u002Fstingray\u002Fdo\u002Fapi-get-header-user-menu": { "url": "\u002Fstingray\u002Fdo\u002Fapi-get-header-user-menu", "requestData": { "urlPath": "\u002Fstingray\u002Fdo\u002Fapi-get-header-user-menu", "method": "GET", "queryParams": [], "postParams": null, "type": "json" }, "requesters": 1, "loaded": true, "res": { "_hasBody": true, "text": "{}&&{\"resultCode\":0,\"errorMessage\":\"Success\",\"version\":228,\"payload\":{\"data\":{\"extraMenuItems\":[],\"facebookAppId\":\"161006757273279\",\"firstName\":\"Simon\",\"showFavoritesAndCommentsText\":false,\"loginId\":16487221,\"googleAppId\":\"597760556696.apps.googleusercontent.com\",\"facebookPermsRequested\":\"email\",\"showPinningOptions\":false,\"bouncerSettings\":{\"OPENHOUSES\":true},\"userPhotoUrl\":\"https:\u002F\u002Fssl.cdn-redfin.com\u002Fsystem_files\u002Fimages\u002F38\u002F338\u002F10904338_615_0.jpg\",\"userNotifications\":[]}}}", "type": "application\u002Fjson", "status": 200, "statusType": 2, "info": false, "ok": true, "clientError": false, "serverError": false, "error": false, "accepted": false, "noContent": false, "badRequest": false, "unauthorized": false, "notAcceptable": false, "notFound": false, "forbidden": false } }, "\u002Fstingray\u002Fdo\u002Fapi-social-login-info": { "url": "\u002Fstingray\u002Fdo\u002Fapi-social-login-info", "requestData": { "urlPath": "\u002Fstingray\u002Fdo\u002Fapi-social-login-info", "method": "GET", "queryParams": [], "postParams": null, "type": "json" }, "requesters": 2, "loaded": true, "res": { "_hasBody": true, "text": "{}&&{\"version\":228,\"errorMessage\":\"Success\",\"resultCode\":0,\"payload\":{\"facebookAppId\":\"161006757273279\",\"googleAppId\":\"597760556696.apps.googleusercontent.com\",\"googleClientAppId\":\"\",\"facebookPermsRequested\":\"email\",\"androidPackageName\":\"com.redfin.android\"}}", "type": "application\u002Fjson", "status": 200, "statusType": 2, "info": false, "ok": true, "clientError": false, "serverError": false, "error": false, "accepted": false, "noContent": false, "badRequest": false, "unauthorized": false, "notAcceptable": false, "notFound": false, "forbidden": false } }, "\u002Fstingray\u002Fcorvair\u002Fv2\u002FuserData": { "url": "\u002Fstingray\u002Fcorvair\u002Fv2\u002FuserData", "requestData": { "urlPath": "\u002Fstingray\u002Fcorvair\u002Fv2\u002FuserData", "method": "GET", "queryParams": [], "postParams": null, "type": "json" }, "requesters": 1, "loaded": true, "res": { "_hasBody": true, "text": "{}&&{\"version\":228,\"errorMessage\":\"Success\",\"resultCode\":0,\"payload\":{\"runningExperiments\":{\"7493077\":1,\"9736288\":1,\"281381\":1,\"397512\":1,\"7432007\":1,\"397514\":1,\"2214345\":1,\"8508076\":1,\"1973457\":1,\"3529811\":1,\"4205414\":1,\"835032326\":1,\"50360\":1,\"64660905\":1,\"2394281\":1,\"9680910\":1,\"7493067\":1,\"85167\":1,\"39823462\":1,\"7293030\":1,\"420309745\":1,\"7293031\":1,\"7293032\":1,\"5824265\":1,\"7293033\":1,\"1358911041\":1,\"365571\":1,\"8897250\":1,\"365572\":1,\"3787387\":1,\"7028006\":1,\"7438635\":1,\"9554555\":1,\"6352000\":1,\"1852986\":1,\"7445738\":1,\"7493057\":1,\"8007209\":1,\"1364281\":1,\"5311678\":1,\"8131707\":1,\"8054715\":1,\"682168316\":1,\"4696533\":1,\"3735101\":1,\"5480915\":1,\"9400191\":1,\"7493087\":1,\"124735222\":1,\"9822013\":1,\"3056001\":1,\"365577\":1,\"365576\":1,\"9800761\":1},\"bouncerData\":{\"3660036\":\"1\",\"8537661\":\"1\",\"5903840\":\"Control\",\"7405339\":\"1\",\"6559398\":\"GRAPH\",\"1177281902\":\"1\",\"6482560\":\"1\",\"1153918\":\"1\",\"123455\":\"Home_Worth\",\"6273165\":\"1\",\"4987461\":\"1\",\"9504394\":\"1\",\"1553837\":\"GIF\",\"6457139\":\"1\",\"720781\":\"CONTROL\",\"19471\":\"1\",\"9891905\":\"1\",\"900380\":\"1\",\"2123907\":\"1\",\"9943651\":\"1\",\"8305372\":\"1\",\"9289230\":\"1\",\"8505607\":\"1\",\"3\":\"1\",\"8495944\":\"1\",\"4\":\"1\",\"5\":\"1\",\"7\":\"1\",\"9565569\":\"1\",\"5903835\":\"No_name\",\"6290977\":\"1\",\"546487\":\"1\",\"8677727\":\"1\",\"9916027\":\"1\",\"365571\":\"Control\",\"330427\":\"1\",\"365572\":\"Google_one_tap\",\"1825637\":\"1\",\"3673134\":\"1\",\"7554571\":\"1\",\"544056\":\"1\",\"3259156\":\"1\",\"365566\":\"Google_one_tap\",\"365565\":\"Google_one_tap\",\"3204641\":\"1\",\"8505612\":\"Variant\",\"913490\":\"1\",\"5443779\":\"1\",\"4726829\":\"1\",\"6799071\":\"1\",\"1364281\":\"RedfinVsRedfinNow\",\"5624253\":\"1\",\"3123329\":\"1\",\"2157961\":\"1\",\"906713769\":\"1\",\"4888986\":\"1\",\"3137713\":\"1\",\"9400191\":\"No_Inline_ARF\",\"3137712\":\"1\",\"7493087\":\"Variant\",\"6621417\":\"Takeover\",\"365577\":\"Google_one_tap\",\"3137715\":\"1\",\"365576\":\"Google_one_tap\",\"3916828\":\"1\",\"7760229\":\"1\",\"7691580\":\"1\",\"1241346\":\"1\",\"3465472\":\"1\",\"8375209\":\"1\",\"7292129\":\"SoldHomesMap\",\"1926153\":\"1\",\"3975872\":\"1\",\"19839824\":\"1\",\"6637165\":\"Variant_2\",\"1346406\":\"1\",\"2621452\":\"1\",\"6254844\":\"1\",\"3168445\":\"1\",\"5938918\":\"1\",\"7775773\":\"1\",\"8508076\":\"Variant\",\"3529811\":\"Variant\",\"6323532\":\"1\",\"1953787\":\"1\",\"8093825\":\"1\",\"7751346\":\"Variant_2\",\"3697370\":\"1\",\"835032326\":\"CONTROL\",\"5161718\":\"1\",\"2543242\":\"1\",\"6196468\":\"1\",\"2608008\":\"1\",\"3168458\":\"1\",\"4955452\":\"1\",\"2155976\":\"Form\",\"2622764\":\"1\",\"8494872\":\"1\",\"3210042\":\"1\",\"1785932\":\"1\",\"4685802\":\"Clustering\",\"4860160\":\"1\",\"7477405\":\"1\",\"1190054\":\"LINK_AND_FILTER\",\"9759145\":\"1\",\"9788903\":\"1\",\"8631759\":\"1\",\"135671\":\"Merch\",\"135670\":\"Merch\",\"7740428\":\"1\",\"3043309\":\"1\",\"9566823\":\"1\",\"12472876\":\"1\",\"5308702\":\"1\",\"98562534\":\"1\",\"1259089\":\"1\",\"3251465\":\"1\",\"5858517\":\"1\",\"5946500\":\"1\",\"682168316\":\"Variant\",\"783958\":\"1\",\"6958153\":\"1\",\"9952379\":\"1\",\"6789481\":\"1\",\"4839587\":\"1\",\"7129658\":\"Variant_1\",\"5304589\":\"1\",\"8115925\":\"1\",\"5476227\":\"1\",\"7890106\":\"1\",\"7890105\":\"1\",\"7890104\":\"1\",\"1231375665\":\"1\",\"7890101\":\"1\",\"1696326\":\"1\",\"7194977\":\"1\",\"4494083\":\"1\",\"2905908\":\"1\",\"9984138\":\"1\",\"5515767\":\"1\",\"5515768\":\"1\",\"1568480\":\"1\",\"380782\":\"1\",\"827637\":\"1\",\"9736288\":\"Control\",\"9987874\":\"1\",\"1454002\":\"1\",\"8324726\":\"BigPicture\",\"7345336\":\"1\",\"7954881\":\"1\",\"8930797\":\"1\",\"3485058\":\"1\",\"9460660\":\"1\",\"2629360\":\"1\",\"8051396\":\"1\",\"7293030\":\"Variant\",\"7293031\":\"Variant\",\"7293032\":\"Control\",\"7293033\":\"Variant\",\"4426378\":\"1\",\"9122094\":\"1\",\"3193066\":\"1\",\"3835580\":\"1\",\"4706144\":\"1\",\"5691029\":\"1\",\"2262270\":\"1\",\"7502775\":\"Variant\",\"3037515\":\"1\",\"7639426\":\"Variant\",\"7502778\":\"Variant\",\"8007209\":\"Control\",\"1027856\":\"1\",\"3783808\":\"1\",\"7890111\":\"1\",\"7890110\":\"1\",\"8942319\":\"1\",\"5243226\":\"1\",\"2340523\":\"1\",\"1928393\":\"1\",\"4977838\":\"1\",\"1807816\":\"1\",\"5480915\":\"Control\",\"3056001\":\"Control\",\"49293828\":\"1\",\"7502767\":\"1\",\"4911640\":\"1\",\"7218380\":\"1\",\"7890109\":\"1\",\"7890107\":\"1\",\"4848699\":\"1\",\"5636026\":\"1\",\"4848698\":\"1\",\"4605677\":\"1\",\"118506\":\"1\",\"578278223\":\"1\",\"95479615\":\"1\",\"1222661\":\"1\",\"392877384\":\"1\",\"4101392\":\"1\",\"3997253\":\"1\",\"7493077\":\"Control\",\"415049957\":\"1\",\"7191272\":\"1\",\"598054\":\"1\",\"4079785\":\"1\",\"566220\":\"1\",\"4079786\":\"1\",\"4079784\":\"1\",\"3987210\":\"1\",\"7018143\":\"Notifications\",\"4240372\":\"1\",\"4079782\":\"1\",\"1827232\":\"1\",\"2105694\":\"1\",\"4079780\":\"1\",\"9527087\":\"1\",\"29843300\":\"1\",\"4010252\":\"1\",\"1594964\":\"Variant\",\"1217066\":\"1\",\"4321292\":\"1\",\"7493067\":\"Control\",\"85167\":\"CONTROL\",\"1291849\":\"variant_grey_background\",\"58495489\":\"1\",\"9822231\":\"1\",\"1291848\":\"variant_image_background\",\"2129896\":\"1\",\"9492062\":\"1\",\"8328912\":\"1\",\"3787387\":\"Control\",\"9274344\":\"1\",\"8995234\":\"1\",\"1372315\":\"Variant\",\"3512327\":\"1\",\"8598005\":\"1\",\"4815783\":\"1\",\"8683553\":\"1\",\"7493057\":\"Variant\",\"909634\":\"1\",\"8115999\":\"1\",\"9283261\":\"1\",\"1730187\":\"1\",\"6190071\":\"1\",\"3475449\":\"1\",\"2252282\":\"1\",\"8692016\":\"1\",\"5521136\":\"1\",\"56498751\":\"1\",\"486421\":\"1\",\"8309156\":\"1\",\"8663711\":\"1\",\"5512424\":\"GRAPH\",\"4696533\":\"WithGhostTown\",\"4079778\":\"1\",\"4079779\":\"1\",\"4858246\":\"1\",\"5345011\":\"1\",\"4079777\":\"1\",\"9822013\":\"VARIANT\",\"7559812\":\"1\",\"2779896\":\"1\",\"5290969\":\"1\",\"2779895\":\"1\",\"4981488\":\"1\",\"7799270\":\"1\",\"38928932\":\"1\",\"8814048\":\"1\",\"4259587\":\"1\",\"5071792\":\"1\",\"9796182\":\"1\",\"461358\":\"1\",\"2638135\":\"1\",\"2438911\":\"1\",\"7828921\":\"1\",\"1413083\":\"1\",\"9138944\":\"1\",\"1794278\":\"1\",\"9154194\":\"1\",\"1697913304\":\"1\",\"4616886\":\"1\",\"6259530\":\"1\",\"4881746\":\"1\",\"4062298\":\"1\",\"1523621\":\"1\",\"9466368\":\"1\",\"7906609\":\"1\",\"2198814\":\"1\",\"8443833\":\"1\",\"2901131\":\"1\",\"8443832\":\"1\",\"7505730\":\"1\",\"9328586\":\"1\",\"1808403\":\"1\",\"7327088\":\"1\",\"9555170\":\"1\",\"3520529\":\"1\",\"9717238\":\"1\",\"3838249\":\"1\",\"7536015\":\"1\",\"8154759\":\"1\",\"5824265\":\"PartnerVsRedfinNow\",\"3374833\":\"1\",\"394896\":\"1\",\"8897250\":\"Variant\",\"5652256\":\"1\",\"1522741\":\"1\",\"7285454\":\"1\",\"2307228\":\"1\",\"9030157\":\"1\",\"695808\":\"1\",\"2009469\":\"New_Exclamation\",\"2633942\":\"1\",\"6980364\":\"1\",\"4399311\":\"Variant\",\"802032\":\"Update\",\"1888533\":\"1\",\"2535597\":\"1\",\"6231188\":\"1\",\"9835647\":\"1\",\"8212833\":\"1\",\"5456392\":\"1\",\"4959344\":\"Variant\",\"4100573\":\"1\",\"3385748\":\"VARIANT\",\"4100571\":\"Red\",\"4100572\":\"No_Icon\",\"4406035\":\"1\",\"6359044\":\"1\",\"5367104\":\"1\",\"1148901\":\"1\",\"7402714\":\"1\",\"5401249\":\"1\",\"9568494\":\"1\",\"2009470\":\"1\",\"9997848\":\"1\",\"85540\":\"1\",\"690353\":\"1\",\"1109737\":\"1\",\"4939905\":\"1\",\"7676625\":\"1\",\"397508\":\"Variant\",\"397509\":\"Variant\",\"464822\":\"1\",\"8667327\":\"control\",\"8412160\":\"1\",\"397505\":\"1\",\"7848723\":\"1\",\"397507\":\"1\",\"4429189\":\"1\",\"7418282\":\"1\",\"710394\":\"1\",\"5138492\":\"Variant\",\"1626655\":\"1\",\"7799475\":\"1\",\"397512\":\"RequireContactInfo\",\"397514\":\"Control\",\"7515977\":\"1\",\"8967734\":\"1\",\"3385760\":\"1\",\"8718972\":\"1\",\"1463313\":\"1\",\"1248429\":\"1\",\"397516\":\"1\",\"2376275\":\"1\",\"7822585\":\"Control\",\"1601682588\":\"1\",\"3620462\":\"1\",\"853607\":\"Variant\",\"2869899\":\"1\",\"2762049\":\"1\",\"982718\":\"1\",\"49283291\":\"1\",\"6798843\":\"1\",\"4529932\":\"1\",\"2100143\":\"1\",\"7000114\":\"1\",\"942290\":\"Variant\",\"4859846\":\"1\",\"5240321\":\"1\",\"7423262\":\"1\",\"6475250\":\"PreventClose\",\"8507318\":\"1\",\"1716994\":\"1\",\"1705853\":\"1\",\"7700570\":\"1\",\"5802514\":\"1\",\"5802513\":\"1\",\"1617736\":\"1\",\"2171529\":\"1\",\"5301999\":\"1\",\"8910662\":\"1\",\"5802510\":\"1\",\"3844938\":\"1\",\"5849367\":\"1\",\"9800761\":\"GetStarted\",\"626646\":\"1\",\"5802506\":\"1\",\"626644\":\"1\",\"3450856\":\"1\",\"2160825\":\"1\",\"1354861\":\"Variant\",\"8593407\":\"Variant\",\"3626879\":\"1\",\"4293419\":\"CONTROL\",\"605714\":\"Variant\",\"1619492\":\"1\",\"8095767\":\"1\",\"3715003\":\"1\",\"6874554\":\"1\",\"9879609\":\"1\",\"1431036474\":\"1\",\"2502042\":\"1\",\"6131885\":\"1\",\"8899802\":\"1\",\"598761\":\"1\",\"2273621\":\"1\",\"168753\":\"1\",\"598760\":\"1\",\"2394281\":\"Control\",\"7746355\":\"1\",\"1123441\":\"1\",\"3224441\":\"1\",\"5482893\":\"1\",\"6950746\":\"1\",\"9201525\":\"1\",\"6352000\":\"GRAPH\",\"6723234\":\"1\",\"2946470\":\"1\",\"3652036\":\"1\",\"4632039\":\"1\",\"2578724\":\"1\",\"6480638\":\"1\",\"4632036\":\"New_Saved_Searches_Page\",\"7497294\":\"1\",\"9335060\":\"1\",\"47987823\":\"1\",\"6481960\":\"1\",\"1134595\":\"1\",\"8564511\":\"Variant\",\"8295612\":\"Variant\",\"8295611\":\"Variant\",\"3123608\":\"1\",\"3889211\":\"1\",\"4097541\":\"1\",\"2631135\":\"1\",\"8295621\":\"Variant\",\"8295620\":\"Variant\",\"7690559\":\"1\",\"9894124\":\"1\",\"3447473\":\"1\",\"6218830\":\"1\",\"752886\":\"1\",\"3898340\":\"1\",\"4369913\":\"1\",\"1463942\":\"1\",\"4099948\":\"Variant\",\"445477\":\"1\",\"935589\":\"1\",\"7506637\":\"1\",\"8295610\":\"1\",\"140156\":\"1\",\"6133606\":\"1\",\"9550524\":\"Control\",\"9389938\":\"1\",\"9680909\":\"1\",\"8337057\":\"Variant\",\"8565820\":\"1\",\"5283613\":\"1\",\"1783344\":\"1\",\"4295415\":\"Variant\",\"1248489395\":\"1\",\"4926423\":\"1\",\"9382062\":\"1\",\"4133203\":\"1\",\"7362699\":\"1\",\"64660905\":\"Control\",\"146703\":\"1\",\"9188728\":\"1\",\"7225764\":\"1\",\"9680910\":\"listing_fee_disclaimer\",\"8003435\":\"1\",\"5396023\":\"1\",\"2274510\":\"1\",\"1358911041\":\"Variant\",\"1542313\":\"1\",\"7600870\":\"1\",\"5205753\":\"1\",\"1633123\":\"1\",\"4845607\":\"1\",\"123633\":\"1\",\"809308\":\"1\",\"7736594\":\"1\",\"1059070\":\"1\",\"8992517\":\"1\",\"6402750\":\"1\",\"8872392\":\"1\",\"753924\":\"1\",\"5653141\":\"1\",\"1218864\":\"1\",\"8319874\":\"1\",\"1517126\":\"1\",\"8319876\":\"1\",\"8923575\":\"Autofill\",\"8923574\":\"Autofill\",\"8290125\":\"1\",\"8290124\":\"1\",\"2985837\":\"1\",\"5337084\":\"Variant\",\"8923573\":\"1\",\"1899231\":\"1\",\"9894162\":\"1\",\"842102\":\"1\",\"4702390\":\"Control\",\"7261848\":\"1\",\"29843299\":\"1\",\"3124786\":\"BOTH_BUTTONS_AND_COPY_CHANGE\",\"102881\":\"Control\",\"4642138\":\"TOGGLE_NEAR_FILTERS\",\"6422382\":\"1\",\"8873936\":\"1\",\"5617822\":\"1\",\"1665309\":\"Variant\",\"3299717\":\"1\",\"1770504\":\"1\",\"9898661\":\"Variant\",\"8837851\":\"1\",\"1973457\":\"Variant\",\"3846772\":\"1\",\"8294028\":\"1\",\"5330996\":\"1\",\"3513327\":\"1\",\"20120825\":\"1\",\"20120826\":\"1\",\"20120823\":\"1\",\"20120824\":\"1\",\"791875\":\"1\",\"34579678\":\"1\",\"20120827\":\"1\",\"20120828\":\"1\",\"904897\":\"1\",\"4739824\":\"1\",\"8837850\":\"1\",\"271024333\":\"1\",\"20120821\":\"1\",\"904658\":\"1\",\"2109981\":\"1\",\"20120820\":\"1\",\"9792001\":\"1\",\"5188495\":\"1\",\"7924741\":\"1\",\"3539965\":\"1\",\"2691229\":\"1\",\"4252294\":\"1\",\"2190616\":\"1\",\"2691228\":\"1\",\"740499\":\"1\",\"9554555\":\"Control\",\"33475602\":\"1\",\"2977451\":\"1\",\"2681427\":\"1\",\"525896\":\"1\",\"1033337\":\"1\",\"1676651\":\"1\",\"1940768\":\"1\",\"2691234\":\"1\",\"4831946\":\"1\",\"2691233\":\"1\",\"2691232\":\"1\",\"7097479\":\"1\",\"5042219\":\"1\",\"2089832\":\"1\",\"524326\":\"1\",\"8424835\":\"Control\",\"2691235\":\"1\",\"8548437\":\"1\",\"1448745\":\"1\",\"9371871\":\"Control\",\"545252\":\"Variant\",\"4092238\":\"1\",\"2842326\":\"1\",\"2639940\":\"1\",\"6300307\":\"1\",\"8535328\":\"1\",\"9813245\":\"Addresses\",\"6112235\":\"1\",\"7017338\":\"1\",\"4219897\":\"1\",\"31645138\":\"1\",\"4957737\":\"SHOW_REG_FORM\",\"713\":\"1\",\"2046270\":\"1\",\"5917087\":\"1\",\"7266366\":\"1\",\"1838823\":\"1\",\"7392244\":\"1\",\"1127961\":\"1\",\"8146784\":\"1\",\"9520969\":\"Control\",\"8037818\":\"1\",\"6033170\":\"1\",\"123126\":\"1\",\"4130697\":\"1\",\"7591696\":\"1\",\"4712129\":\"1\",\"976708\":\"1\",\"6632854\":\"1\",\"2311451\":\"1\",\"242729\":\"1\",\"9129884\":\"1\",\"7775404\":\"Variant\",\"2670124\":\"1\",\"7028006\":\"No_Inline_ARF\",\"2670125\":\"1\",\"1150999\":\"1\",\"33665897\":\"1\",\"7383561\":\"1\",\"7445738\":\"Control\",\"1941897\":\"1\",\"4503580\":\"1\",\"4503581\":\"1\",\"6142997\":\"1\",\"6142996\":\"1\",\"242732\":\"1\",\"3739371\":\"1\",\"242730\":\"1\",\"4503579\":\"1\",\"4503578\":\"1\",\"7892839\":\"1\",\"42771\":\"1\",\"8023693\":\"1\",\"7192623\":\"1\",\"9647874\":\"1\",\"3363534\":\"1\",\"2509697\":\"1\",\"7911642\":\"1\",\"124735222\":\"CONTROL\",\"575914\":\"1\",\"2579591\":\"1\",\"7954779\":\"1\",\"2584948\":\"1\",\"2492719\":\"1\",\"5575021\":\"1\",\"4323164\":\"1\",\"5487887\":\"1\",\"3973375\":\"1\",\"746667\":\"1\",\"5487888\":\"1\",\"9215032\":\"1\",\"4327522\":\"1\",\"9379302\":\"1\",\"9481474\":\"1\",\"6618738\":\"1\",\"8763451\":\"1\",\"1790756\":\"1\",\"408876\":\"1\",\"4602072\":\"1\",\"2209995\":\"Calculator\",\"2173218\":\"1\",\"2321926\":\"1\",\"1614123\":\"1\",\"5368290\":\"1\",\"3106703\":\"1\",\"8250059\":\"1\",\"6408929\":\"1\",\"12812342\":\"1\",\"5403129\":\"1\",\"9278826\":\"1\",\"5309051\":\"1\",\"3359259\":\"1\",\"420309745\":\"Control\",\"6603455\":\"1\",\"1561753\":\"1\",\"8220429\":\"1\",\"4723841\":\"1\",\"4723840\":\"Control\",\"2694333\":\"1\",\"2442244\":\"1\",\"489870\":\"1\",\"1326251\":\"1\",\"92852271\":\"1\",\"5476778\":\"LEFT_SIDE_OWNER_BUTTON\",\"8503952\":\"1\",\"4862829\":\"Variant\",\"589289\":\"1\",\"7706475\":\"1\",\"6890124\":\"1\",\"5274104\":\"1\",\"8623134\":\"1\",\"339991\":\"White_Chrome_Red_Button\",\"4681139\":\"1\",\"339997\":\"Anon_Users\",\"339988\":\"Top\",\"5409927\":\"1\",\"3026973\":\"1\",\"8570983\":\"1\",\"742055\":\"1\",\"7230131\":\"1\",\"2513992\":\"1\",\"6889187\":\"1\",\"5244669\":\"1\",\"6068828\":\"1\",\"7009541\":\"1\",\"1058201\":\"Stacked\",\"700858\":\"1\",\"8438674\":\"1\",\"4157089\":\"1\",\"8391647\":\"1\",\"4950267\":\"1\",\"9774469\":\"1\",\"1920566\":\"1\",\"7510444\":\"1\",\"797147\":\"1\",\"3974271\":\"1\",\"5076477\":\"1\",\"8380523\":\"1\",\"8066322\":\"Control\",\"3416175\":\"1\",\"4266879\":\"1\",\"8217020\":\"1\",\"4488953\":\"1\",\"3894892\":\"1\",\"8659798\":\"1\",\"5326614\":\"1\",\"347349\":\"Control\",\"1127570\":\"1\",\"9324409\":\"1\",\"1920351\":\"Variant_1\",\"7692139\":\"1\",\"5369790\":\"1\",\"2803585\":\"1\",\"1852986\":\"Variant\",\"9822386\":\"1\",\"6838858\":\"1\",\"5475645\":\"1\",\"5670280\":\"1\",\"3805405\":\"1\",\"8043202\":\"1\",\"9041370\":\"1\",\"1488531\":\"1\",\"4758940\":\"1\",\"5090773\":\"1\",\"4231340\":\"1\",\"9600175\":\"1\",\"3816532\":\"1\",\"8458060\":\"1\",\"3443517\":\"Variant\",\"1013531\":\"1\",\"6454600\":\"1\",\"3061909\":\"1\",\"322048\":\"1\",\"641505\":\"1\",\"2182339\":\"1\",\"5893399\":\"1\",\"5119814\":\"Variant\",\"8918251\":\"1\",\"3532636\":\"1\",\"1852002\":\"1\",\"5702860\":\"1\",\"4352323\":\"SoldHomesMap\",\"2126638\":\"1\",\"9693078\":\"1\",\"10\":\"1\",\"11\":\"1\",\"12\":\"1\",\"224707\":\"1\",\"14\":\"1\",\"15\":\"1\",\"8694851\":\"1\",\"17\":\"1\",\"2398123\":\"Variant\",\"94110\":\"1\",\"9396172\":\"1\",\"9944181\":\"1\",\"20\":\"1\",\"6892719\":\"1\",\"22\":\"1\",\"837255\":\"1\",\"3828532\":\"1\",\"25\":\"1\",\"1700094\":\"1\",\"26\":\"1\",\"1970611\":\"1\",\"4663970\":\"1\",\"4715140\":\"Variant\",\"1333067\":\"1\",\"5879063\":\"1\",\"736683\":\"1\",\"5203097\":\"On_Off_Toggle\",\"1658344\":\"1\",\"7559226\":\"Control\",\"6451360\":\"1\",\"6108554\":\"1\",\"8963083\":\"1\",\"8456801\":\"1\",\"5981925\":\"1\",\"64807657\":\"Standardized\",\"132649\":\"1\",\"4900593\":\"1\",\"28929832\":\"1\",\"8293714\":\"Variant\",\"8403118\":\"1\",\"94134\":\"1\",\"7766442\":\"1\",\"2675441\":\"Variant\",\"438472\":\"1\",\"9923481\":\"1\",\"4971573\":\"1\",\"3416875\":\"1\",\"167728\":\"1\",\"6167305\":\"1\",\"42\":\"1\",\"7832278\":\"1\",\"3810825\":\"1\",\"3810822\":\"1\",\"3810823\":\"1\",\"2094756\":\"Control\",\"840648\":\"1\",\"1544478\":\"1\",\"9660184\":\"1\",\"3810826\":\"1\",\"5727712\":\"1\",\"7714820\":\"1\",\"5563126\":\"Variant\",\"5870071\":\"1\",\"1811737\":\"1\",\"3941295\":\"1\",\"1825967781\":\"1\",\"8255661\":\"1\",\"1063070426\":\"1\",\"4373454\":\"Variant_1\",\"50360\":\"Variant\",\"8414454\":\"1\",\"5860286\":\"1\",\"862677\":\"1\",\"3898641\":\"1\",\"3978561\":\"1\",\"7435126\":\"1\",\"7438635\":\"PreventClose\",\"3481020\":\"1\",\"4079800\":\"1\",\"4079801\":\"1\",\"5885551\":\"1\",\"3132633\":\"1\",\"5309121\":\"Variant\",\"7227217\":\"1\",\"8529229\":\"1\",\"7627151\":\"1\",\"8395624\":\"1\",\"5311678\":\"Control\",\"1303624\":\"1\",\"8131707\":\"Video_Learn_More\",\"5906760\":\"1\",\"8054715\":\"Control\",\"4235662\":\"ShowRedfinMortgageRates\",\"3735101\":\"Variant\",\"236774567\":\"1\",\"6875180\":\"1\",\"4304477\":\"1\",\"4074120\":\"1\",\"6649600\":\"1\",\"7460302\":\"Refresh_With_Promo\",\"2101120\":\"1\",\"48928932\":\"1\",\"5567082\":\"1\",\"1733836\":\"1\",\"2009729\":\"Neighborhood\",\"4905899\":\"1\",\"513041\":\"1\",\"4268107\":\"1\",\"7937888\":\"Variant\",\"6156805\":\"1\",\"9982629\":\"1\",\"4506153\":\"OWNER\",\"904922\":\"1\",\"2405950\":\"1\",\"8725748\":\"1\",\"9982625\":\"1\",\"2710934\":\"New_Improved_And_Mobile\",\"1435215923\":\"1\",\"7937877\":\"Variant\",\"6773401\":\"1\",\"1435215924\":\"1\",\"3842456\":\"1\",\"4931933\":\"1\",\"1101510\":\"New_Estimate\",\"1363450\":\"1\",\"2785825\":\"1\",\"39823462\":\"Variant\",\"3285923\":\"1\",\"7213240\":\"Control\",\"1945018\":\"1\",\"9210355\":\"1\",\"3423339\":\"Control\",\"8388739\":\"Variant\",\"2204996\":\"1\",\"2532804\":\"1\",\"6743192\":\"1\",\"3314935\":\"1\",\"2689429\":\"1\",\"6771233\":\"1\",\"47194\":\"1\",\"8316681\":\"1\",\"6675079\":\"1\",\"621042\":\"1\",\"2117050\":\"1\",\"2710953\":\"1\",\"8229809\":\"1\",\"9372799\":\"1\",\"7549029\":\"1\",\"4034902\":\"1\",\"4341274\":\"1\",\"943294\":\"1\",\"5559232\":\"1\",\"5559234\":\"1\",\"2710954\":\"1\",\"7937899\":\"Variant\",\"8371080\":\"1\",\"9224512\":\"Variant\",\"4891870\":\"1\",\"8447930\":\"1\",\"6195392\":\"1\",\"7948739\":\"1\",\"761213\":\"1\",\"5892946\":\"1\",\"1343419\":\"1\",\"8748655\":\"1\",\"1103504\":\"1\",\"281381\":\"GRAPH\",\"258381\":\"1\",\"8538306\":\"1\",\"7432007\":\"Text_to_download_link\",\"8583353\":\"1\",\"7432008\":\"1\",\"9279680\":\"1\",\"2214345\":\"PartnerVsRedfinNow\",\"157703\":\"1\",\"5327385\":\"1\",\"4205414\":\"COMMUTE\",\"5327384\":\"1\",\"57152\":\"1\",\"4709922\":\"Control\",\"4709921\":\"Redesign\",\"4709923\":\"1\",\"7832412\":\"1\",\"619183\":\"1\",\"5492752\":\"1\",\"1971110\":\"1\",\"8744074\":\"1\",\"1541344\":\"1\",\"2687282\":\"1\",\"3881804\":\"login_popup\",\"6280228\":\"1\",\"3927408\":\"1\",\"8305362\":\"1\",\"7612741\":\"1\",\"8163354\":\"1\",\"1169979\":\"1\",\"7482705\":\"1\",\"5120236\":\"1\",\"6704664\":\"1\",\"5460974\":\"1\",\"13726408\":\"1\",\"5330337\":\"1\",\"5462910\":\"1\",\"7866621\":\"1\",\"4857715\":\"1\",\"8017978\":\"1\",\"8143525\":\"1\",\"2495604\":\"1\",\"4808586\":\"1\",\"5619155\":\"1\",\"8305356\":\"1\",\"6704665\":\"1\",\"3133312\":\"1\",\"8724471\":\"Control\",\"4589914\":\"1\"},\"userData\":{\"__att_names\":[[\"primaryEmail\",\"person\",\"accessLevel\",\"id\"],[\"firstName\",\"lastName\"]],\"__root\":{\"__g_id\":\"login-16487221\",\"__atts\":[\"etefialuckyonome@yahoo.com\",{\"__g_id\":\"person-10748210\",\"__atts\":[\"Simon\",\"Leo\"],\"__t_idx\":1},2,16487221],\"__t_idx\":0},\"__types\":[\"redfin.common.data.Login\",\"redfin.common.data.Person\"]},\"accessLevel\":2,\"cssServer\":\"https:\u002F\u002Fssl.cdn-redfin.com\u002Fv215.3.2\u002Fimages\u002Ftext\u002Fcsso\",\"contextRoles\":[],\"jsonLogin\":{\"loginId\":16487221,\"shareFavoritesOnFacebook\":\"false\",\"shareCollectionsOnFacebook\":\"false\",\"isTimeToRefreshFacebookAccessToken\":false,\"facebookPublishActions\":\"false\",\"isFastOffersTemplateToolOn\":false,\"isOfferWorkspaceOn\":false,\"isNewConstructionCalculatorOn\":false,\"isCustomerListReactOn\":true,\"isPartnerCustomerListOn\":true,\"canViewAgentToolsText\":false,\"canSendAgentToolsText\":false,\"isDealQueueEnabled\":false,\"tourHotlineDisplayNumber\":\"(216) TOURING\",\"tourHotlineNumber\":\"+12168687464\",\"hasAdminPermissions\":false,\"hasSuperAdminPermissions\":false,\"hasAgentPermissions\":false,\"hasContractAgentPermissions\":false,\"hasPartnerAgentPermissions\":false,\"hasServiceProviderPermissions\":false,\"hasPartnerTeamPermissions\":false,\"hasRecruitingPermissions\":false,\"hasFinancePermissions\":false,\"hasDealTemplateEditorPermissions\":false,\"hasEngineeringPermissions\":false,\"hasLegalPermissions\":false,\"hasMarketingPermissions\":false,\"hasReferralEditorPermissions\":false,\"hasReopsManagementPermissions\":false,\"hasSurveyEditorPermissions\":false,\"hasReopsTeamManagerPermissions\":false,\"hasTitleForwardPermissions\":false,\"hasCommunicationsPermissions\":false,\"hasEmailTemplateEditorPermissions\":false,\"hasReopsPayPermissions\":false,\"hasAgentProfileEditorPermissions\":false,\"hasPartnerTeamLeadPermissions\":false,\"hasSpurdogPermissions\":false,\"hasSpurdogAdminPermissions\":false,\"hasEmailAdminPermissions\":false,\"hasAdminElevationPermissions\":false,\"hasReopsSrManagementPermissions\":false,\"contextRoleGroups\":{},\"hasCompanyDirectoryViewerPermissions\":false,\"hasCustomerEditPermissions\":false,\"hasCustomerViewPermissions\":false,\"hasDealEditPermissions\":false,\"hasAppointmentEditPermissions\":false,\"hasTourEditPermissions\":false,\"hasTourViewPermissions\":false,\"hasAgentRequestEditPermissions\":false,\"hasInquiryEditPermissions\":false,\"hasAgentProfileViewerPermissions\":false,\"hasTeamListViewerPermissions\":false,\"hasTeamListEditPermissions\":false,\"hasExternalAgentProfileEditPermissions\":false,\"hasDocumentViewPermissions\":false,\"hasDocumentEditPermissions\":false,\"hasDealViewPermissions\":false,\"hasCustomerListPermissions\":false,\"hasAppointmentListPermissions\":false,\"hasDealListPermissions\":false,\"hasPaidAppointmentEditPermissions\":false,\"hasPaidAppointmentEditPermissionsAfterClose\":false,\"hasDevTabPermissions\":false,\"hasEmailRecipientsViewerPermissions\":false,\"hasEmailRecipientsEditorPermissions\":false,\"hasClickToCallPermissions\":false,\"hasDealTemplateListEditPermissions\":false,\"hasDocumentTemplateListEditPermissions\":false,\"hasPropertyEditorPermissions\":false,\"hasPartnerDealPricingEditPermissions\":false,\"hasPartnerRebateCheckEditPermissions\":false,\"hasPartnerRebateCheckAddressEditPermissions\":false,\"hasLibrarianToolsPermissions\":false,\"hasAgentToolsSearchPermissions\":false,\"hasMlsVendorLevelAccess\":false,\"accessLevel\":2,\"isAgentToolsVoiceEnabled\":false,\"agentStatus\":1,\"escapedName\":\"Simon Leo\",\"firstName\":\"Simon\",\"lastName\":\"Leo\",\"isAnonymous\":false,\"email\":\"etefialuckyonome@yahoo.com\",\"customerAgentsAndStatuses\":{},\"emailUnsubscribe\":false,\"memberSinceDate\":1528885026534,\"registrationAuthority\":\"Facebook\",\"canGrantSelfAdminAccess\":false},\"authLevel\":\"STRONG\"}}", "type": "application\u002Fjson", "status": 200, "statusType": 2, "info": false, "ok": true, "clientError": false, "serverError": false, "error": false, "accepted": false, "noContent": false, "badRequest": false, "unauthorized": false, "notAcceptable": false, "notFound": false, "forbidden": false, "header": { "date": "Mon, 25 Jun 2018 13:00:33 GMT", "server": "Apache", "x-content-type-options": "nosniff", "x-frame-options": "SAMEORIGIN", "cache-control": "no-cache", "pragma": "no-cache", "x-ua-compatible": "IE=edge", "x-newrelic-app-data": "PxQGVFJSDwoTV1FaDgMPX0YdFGQHBDcQUQxLA1tMXV1dORYSRQhdBRZXTjYDAWQcQgEFBF5fGREBUxhQDRQVA1kQFiFXSkJTWhdsElQTdwMQV3YxLyBXXUQWDg5bVEU6S0RFVhAiAhZRQBRSFggYAh1VDFUJVwZQURoaUEpBXlJRAFkEAwEDUlFUUAtSV0FOVgNUEV1l", "content-type": "application\u002Fjson;charset=UTF-8", "content-language": "en-US", "set-cookie": ["RF_LAST_ACCESS=1529931634665%3A5d8fcac3e0360249ba0a4b37233f1fd669118222; Domain=.redfin.com; Expires=Tue, 25-Jun-2019 13:00:34 GMT; Path=\u002F", "RF_ANON_ID=\"\"; Domain=.redfin.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=\u002F", "RF_ANON_AUTH=\"\"; Domain=.redfin.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=\u002F", "RF_ANON_SECURE_AUTH=\"\"; Domain=.redfin.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=\u002F; Secure"], "vary": "Accept-Encoding", "content-encoding": "gzip", "connection": "close", "transfer-encoding": "chunked" } } }, "\u002Fstingray\u002Ftours\u002Fdashboard\u002Fapi\u002Ftours": { "url": "\u002Fstingray\u002Ftours\u002Fdashboard\u002Fapi\u002Ftours", "requestData": { "urlPath": "\u002Fstingray\u002Ftours\u002Fdashboard\u002Fapi\u002Ftours", "method": "GET", "queryParams": [], "postParams": null, "type": "json" }, "requesters": 1, "loaded": true, "res": { "_hasBody": true, "text": "{}&&{\"resultCode\":0,\"errorMessage\":\"Success.\",\"version\":228,\"payload\":{\"__root\":{\"firstTimeTourerWithUnconfirmedTour\":false,\"__g_id\":\"1909680497\",\"upcomingTours\":[],\"pastTours\":[]}}}", "type": "application\u002Fjson", "status": 200, "statusType": 2, "info": false, "ok": true, "clientError": false, "serverError": false, "error": false, "accepted": false, "noContent": false, "badRequest": false, "unauthorized": false, "notAcceptable": false, "notFound": false, "forbidden": false } }, "\u002Fstingray\u002Fdo\u002Fapi\u002Ffavorites\u002Fids\u002Fmine?sort=BY_DATE_USER_FAVORITED&showSold=false": { "url": "\u002Fstingray\u002Fdo\u002Fapi\u002Ffavorites\u002Fids\u002Fmine?sort=BY_DATE_USER_FAVORITED&showSold=false", "requestData": { "urlPath": "\u002Fstingray\u002Fdo\u002Fapi\u002Ffavorites\u002Fids\u002Fmine?sort=BY_DATE_USER_FAVORITED&showSold=false", "method": "GET", "queryParams": [], "postParams": null, "type": "json" }, "requesters": 1, "loaded": true, "res": { "_hasBody": true, "text": "{}&&{\"version\":228,\"errorMessage\":\"Success\",\"resultCode\":0,\"payload\":{\"propertyIds\":[]}}", "type": "application\u002Fjson", "status": 200, "statusType": 2, "info": false, "ok": true, "clientError": false, "serverError": false, "error": false, "accepted": false, "noContent": false, "badRequest": false, "unauthorized": false, "notAcceptable": false, "notFound": false, "forbidden": false } }, "\u002Fcorv\u002Fdata\u002Fstylesheets\u002Fcustomer-pages\u002FTourDashboard": { "url": "\u002Fcorv\u002Fdata\u002Fstylesheets\u002Fcustomer-pages\u002FTourDashboard", "requestData": { "urlPath": "\u002Fcorv\u002Fdata\u002Fstylesheets\u002Fcustomer-pages\u002FTourDashboard", "method": "GET", "queryParams": [], "postParams": null, "type": "json" }, "requesters": 1, "loaded": true, "res": { "body": { "payload": { "longCacheCss": "long-cache.c39b758a4e83393ee827.styles.css", "commonCss": "common.9f305ba5e22a2f8478f4.styles.css", "pageCss": "TourDashboardPage.c7738afed385e0ea3da7.styles.css" } } } }, "\u002Fstingray\u002Fdo\u002FhomeSettings\u002Fapi\u002FclaimCount": { "url": "\u002Fstingray\u002Fdo\u002FhomeSettings\u002Fapi\u002FclaimCount", "requestData": { "urlPath": "\u002Fstingray\u002Fdo\u002FhomeSettings\u002Fapi\u002FclaimCount", "method": "GET", "queryParams": [{ "__rf_secure": "526a6b7c1821cf32b6486d7cb429eaa06a500cb8" }], "postParams": null, "type": "json" }, "requesters": 2, "loaded": true, "res": { "_hasBody": true, "text": "{}&&{\"resultCode\":0,\"version\":228,\"payload\":{\"claimCount\":0}}", "type": "application\u002Fjson", "status": 200, "statusType": 2, "info": false, "ok": true, "clientError": false, "serverError": false, "error": false, "accepted": false, "noContent": false, "badRequest": false, "unauthorized": false, "notAcceptable": false, "notFound": false, "forbidden": false } } } }, "deviceType": "desktop" };
-                    root.__reactServerState.Config = { "environmentName": "prod", "dataRequestTimeoutMs": 20000, "staticFileVersion": "215.3.2", "apiServerPrefix": "https:\u002F\u002Fwww.redfin.com", "apiServerRedfinMortgagePrefix": "https:\u002F\u002Fwww.redfinmortgage.com" };
-                }(this));
-                ; rfBootstrap();
-            });
-        </script>
-        <script>_tLAB.wait(function () { __reactServerClientController.nodeArrival(0, 13) });</script>
+
+
     </div>
-    <script type="text/javascript" id="">!function (b, e, f, g, a, c, d) { b.fbq || (a = b.fbq = function () { a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments) }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d)) }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js"); fbq("init", "851728468185585"); fbq("track", "PageView");</script>
+
+    <script type="text/javascript">
+        __displayAboveTheFold = new Date;
+        window.performance && window.performance.mark && window.performance.mark("displayAboveTheFold.fromStart");
+    </script>
+
+    <script>
+        _tLAB.wait(function() {
+            (function(root) {
+                // -- Data --
+                root.__reactServerState || (root.__reactServerState = {});
+                root.__reactServerState.InitialContext = {
+                    "ReactServerAgent.cache": {
+                        "dataCache": {
+                            "\u002Fstingray\u002Fdo\u002Fapi-get-header-user-menu": {
+                                "url": "\u002Fstingray\u002Fdo\u002Fapi-get-header-user-menu",
+                                "requestData": {
+                                    "urlPath": "\u002Fstingray\u002Fdo\u002Fapi-get-header-user-menu",
+                                    "method": "GET",
+                                    "queryParams": [],
+                                    "postParams": null,
+                                    "type": "json"
+                                },
+                                "requesters": 1,
+                                "loaded": true,
+                                "res": {
+                                    "_hasBody": true,
+                                    "text": "{}&&{\"resultCode\":0,\"errorMessage\":\"Success\",\"version\":228,\"payload\":{\"data\":{\"extraMenuItems\":[],\"facebookAppId\":\"161006757273279\",\"firstName\":\"Simon\",\"showFavoritesAndCommentsText\":false,\"loginId\":16487221,\"googleAppId\":\"597760556696.apps.googleusercontent.com\",\"facebookPermsRequested\":\"email\",\"showPinningOptions\":false,\"bouncerSettings\":{\"OPENHOUSES\":true},\"userPhotoUrl\":\"https:\u002F\u002Fssl.cdn-redfin.com\u002Fsystem_files\u002Fimages\u002F38\u002F338\u002F10904338_615_0.jpg\",\"userNotifications\":[]}}}",
+                                    "type": "application\u002Fjson",
+                                    "status": 200,
+                                    "statusType": 2,
+                                    "info": false,
+                                    "ok": true,
+                                    "clientError": false,
+                                    "serverError": false,
+                                    "error": false,
+                                    "accepted": false,
+                                    "noContent": false,
+                                    "badRequest": false,
+                                    "unauthorized": false,
+                                    "notAcceptable": false,
+                                    "notFound": false,
+                                    "forbidden": false
+                                }
+                            },
+                            "\u002Fstingray\u002Fdo\u002Fapi-social-login-info": {
+                                "url": "\u002Fstingray\u002Fdo\u002Fapi-social-login-info",
+                                "requestData": {
+                                    "urlPath": "\u002Fstingray\u002Fdo\u002Fapi-social-login-info",
+                                    "method": "GET",
+                                    "queryParams": [],
+                                    "postParams": null,
+                                    "type": "json"
+                                },
+                                "requesters": 2,
+                                "loaded": true,
+                                "res": {
+                                    "_hasBody": true,
+                                    "text": "{}&&{\"version\":228,\"errorMessage\":\"Success\",\"resultCode\":0,\"payload\":{\"facebookAppId\":\"161006757273279\",\"googleAppId\":\"597760556696.apps.googleusercontent.com\",\"googleClientAppId\":\"\",\"facebookPermsRequested\":\"email\",\"androidPackageName\":\"com.redfin.android\"}}",
+                                    "type": "application\u002Fjson",
+                                    "status": 200,
+                                    "statusType": 2,
+                                    "info": false,
+                                    "ok": true,
+                                    "clientError": false,
+                                    "serverError": false,
+                                    "error": false,
+                                    "accepted": false,
+                                    "noContent": false,
+                                    "badRequest": false,
+                                    "unauthorized": false,
+                                    "notAcceptable": false,
+                                    "notFound": false,
+                                    "forbidden": false
+                                }
+                            },
+                            "\u002Fstingray\u002Fcorvair\u002Fv2\u002FuserData": {
+                                "url": "\u002Fstingray\u002Fcorvair\u002Fv2\u002FuserData",
+                                "requestData": {
+                                    "urlPath": "\u002Fstingray\u002Fcorvair\u002Fv2\u002FuserData",
+                                    "method": "GET",
+                                    "queryParams": [],
+                                    "postParams": null,
+                                    "type": "json"
+                                },
+                                "requesters": 1,
+                                "loaded": true,
+                                "res": {
+                                    "_hasBody": true,
+                                    "text": "{}&&{\"version\":228,\"errorMessage\":\"Success\",\"resultCode\":0,\"payload\":{\"runningExperiments\":{\"7493077\":1,\"9736288\":1,\"281381\":1,\"397512\":1,\"7432007\":1,\"397514\":1,\"2214345\":1,\"8508076\":1,\"1973457\":1,\"3529811\":1,\"4205414\":1,\"835032326\":1,\"50360\":1,\"64660905\":1,\"2394281\":1,\"9680910\":1,\"7493067\":1,\"85167\":1,\"39823462\":1,\"7293030\":1,\"420309745\":1,\"7293031\":1,\"7293032\":1,\"5824265\":1,\"7293033\":1,\"1358911041\":1,\"365571\":1,\"8897250\":1,\"365572\":1,\"3787387\":1,\"7028006\":1,\"7438635\":1,\"9554555\":1,\"6352000\":1,\"1852986\":1,\"7445738\":1,\"7493057\":1,\"8007209\":1,\"1364281\":1,\"5311678\":1,\"8131707\":1,\"8054715\":1,\"682168316\":1,\"4696533\":1,\"3735101\":1,\"5480915\":1,\"9400191\":1,\"7493087\":1,\"124735222\":1,\"9822013\":1,\"3056001\":1,\"365577\":1,\"365576\":1,\"9800761\":1},\"bouncerData\":{\"3660036\":\"1\",\"8537661\":\"1\",\"5903840\":\"Control\",\"7405339\":\"1\",\"6559398\":\"GRAPH\",\"1177281902\":\"1\",\"6482560\":\"1\",\"1153918\":\"1\",\"123455\":\"Home_Worth\",\"6273165\":\"1\",\"4987461\":\"1\",\"9504394\":\"1\",\"1553837\":\"GIF\",\"6457139\":\"1\",\"720781\":\"CONTROL\",\"19471\":\"1\",\"9891905\":\"1\",\"900380\":\"1\",\"2123907\":\"1\",\"9943651\":\"1\",\"8305372\":\"1\",\"9289230\":\"1\",\"8505607\":\"1\",\"3\":\"1\",\"8495944\":\"1\",\"4\":\"1\",\"5\":\"1\",\"7\":\"1\",\"9565569\":\"1\",\"5903835\":\"No_name\",\"6290977\":\"1\",\"546487\":\"1\",\"8677727\":\"1\",\"9916027\":\"1\",\"365571\":\"Control\",\"330427\":\"1\",\"365572\":\"Google_one_tap\",\"1825637\":\"1\",\"3673134\":\"1\",\"7554571\":\"1\",\"544056\":\"1\",\"3259156\":\"1\",\"365566\":\"Google_one_tap\",\"365565\":\"Google_one_tap\",\"3204641\":\"1\",\"8505612\":\"Variant\",\"913490\":\"1\",\"5443779\":\"1\",\"4726829\":\"1\",\"6799071\":\"1\",\"1364281\":\"RedfinVsRedfinNow\",\"5624253\":\"1\",\"3123329\":\"1\",\"2157961\":\"1\",\"906713769\":\"1\",\"4888986\":\"1\",\"3137713\":\"1\",\"9400191\":\"No_Inline_ARF\",\"3137712\":\"1\",\"7493087\":\"Variant\",\"6621417\":\"Takeover\",\"365577\":\"Google_one_tap\",\"3137715\":\"1\",\"365576\":\"Google_one_tap\",\"3916828\":\"1\",\"7760229\":\"1\",\"7691580\":\"1\",\"1241346\":\"1\",\"3465472\":\"1\",\"8375209\":\"1\",\"7292129\":\"SoldHomesMap\",\"1926153\":\"1\",\"3975872\":\"1\",\"19839824\":\"1\",\"6637165\":\"Variant_2\",\"1346406\":\"1\",\"2621452\":\"1\",\"6254844\":\"1\",\"3168445\":\"1\",\"5938918\":\"1\",\"7775773\":\"1\",\"8508076\":\"Variant\",\"3529811\":\"Variant\",\"6323532\":\"1\",\"1953787\":\"1\",\"8093825\":\"1\",\"7751346\":\"Variant_2\",\"3697370\":\"1\",\"835032326\":\"CONTROL\",\"5161718\":\"1\",\"2543242\":\"1\",\"6196468\":\"1\",\"2608008\":\"1\",\"3168458\":\"1\",\"4955452\":\"1\",\"2155976\":\"Form\",\"2622764\":\"1\",\"8494872\":\"1\",\"3210042\":\"1\",\"1785932\":\"1\",\"4685802\":\"Clustering\",\"4860160\":\"1\",\"7477405\":\"1\",\"1190054\":\"LINK_AND_FILTER\",\"9759145\":\"1\",\"9788903\":\"1\",\"8631759\":\"1\",\"135671\":\"Merch\",\"135670\":\"Merch\",\"7740428\":\"1\",\"3043309\":\"1\",\"9566823\":\"1\",\"12472876\":\"1\",\"5308702\":\"1\",\"98562534\":\"1\",\"1259089\":\"1\",\"3251465\":\"1\",\"5858517\":\"1\",\"5946500\":\"1\",\"682168316\":\"Variant\",\"783958\":\"1\",\"6958153\":\"1\",\"9952379\":\"1\",\"6789481\":\"1\",\"4839587\":\"1\",\"7129658\":\"Variant_1\",\"5304589\":\"1\",\"8115925\":\"1\",\"5476227\":\"1\",\"7890106\":\"1\",\"7890105\":\"1\",\"7890104\":\"1\",\"1231375665\":\"1\",\"7890101\":\"1\",\"1696326\":\"1\",\"7194977\":\"1\",\"4494083\":\"1\",\"2905908\":\"1\",\"9984138\":\"1\",\"5515767\":\"1\",\"5515768\":\"1\",\"1568480\":\"1\",\"380782\":\"1\",\"827637\":\"1\",\"9736288\":\"Control\",\"9987874\":\"1\",\"1454002\":\"1\",\"8324726\":\"BigPicture\",\"7345336\":\"1\",\"7954881\":\"1\",\"8930797\":\"1\",\"3485058\":\"1\",\"9460660\":\"1\",\"2629360\":\"1\",\"8051396\":\"1\",\"7293030\":\"Variant\",\"7293031\":\"Variant\",\"7293032\":\"Control\",\"7293033\":\"Variant\",\"4426378\":\"1\",\"9122094\":\"1\",\"3193066\":\"1\",\"3835580\":\"1\",\"4706144\":\"1\",\"5691029\":\"1\",\"2262270\":\"1\",\"7502775\":\"Variant\",\"3037515\":\"1\",\"7639426\":\"Variant\",\"7502778\":\"Variant\",\"8007209\":\"Control\",\"1027856\":\"1\",\"3783808\":\"1\",\"7890111\":\"1\",\"7890110\":\"1\",\"8942319\":\"1\",\"5243226\":\"1\",\"2340523\":\"1\",\"1928393\":\"1\",\"4977838\":\"1\",\"1807816\":\"1\",\"5480915\":\"Control\",\"3056001\":\"Control\",\"49293828\":\"1\",\"7502767\":\"1\",\"4911640\":\"1\",\"7218380\":\"1\",\"7890109\":\"1\",\"7890107\":\"1\",\"4848699\":\"1\",\"5636026\":\"1\",\"4848698\":\"1\",\"4605677\":\"1\",\"118506\":\"1\",\"578278223\":\"1\",\"95479615\":\"1\",\"1222661\":\"1\",\"392877384\":\"1\",\"4101392\":\"1\",\"3997253\":\"1\",\"7493077\":\"Control\",\"415049957\":\"1\",\"7191272\":\"1\",\"598054\":\"1\",\"4079785\":\"1\",\"566220\":\"1\",\"4079786\":\"1\",\"4079784\":\"1\",\"3987210\":\"1\",\"7018143\":\"Notifications\",\"4240372\":\"1\",\"4079782\":\"1\",\"1827232\":\"1\",\"2105694\":\"1\",\"4079780\":\"1\",\"9527087\":\"1\",\"29843300\":\"1\",\"4010252\":\"1\",\"1594964\":\"Variant\",\"1217066\":\"1\",\"4321292\":\"1\",\"7493067\":\"Control\",\"85167\":\"CONTROL\",\"1291849\":\"variant_grey_background\",\"58495489\":\"1\",\"9822231\":\"1\",\"1291848\":\"variant_image_background\",\"2129896\":\"1\",\"9492062\":\"1\",\"8328912\":\"1\",\"3787387\":\"Control\",\"9274344\":\"1\",\"8995234\":\"1\",\"1372315\":\"Variant\",\"3512327\":\"1\",\"8598005\":\"1\",\"4815783\":\"1\",\"8683553\":\"1\",\"7493057\":\"Variant\",\"909634\":\"1\",\"8115999\":\"1\",\"9283261\":\"1\",\"1730187\":\"1\",\"6190071\":\"1\",\"3475449\":\"1\",\"2252282\":\"1\",\"8692016\":\"1\",\"5521136\":\"1\",\"56498751\":\"1\",\"486421\":\"1\",\"8309156\":\"1\",\"8663711\":\"1\",\"5512424\":\"GRAPH\",\"4696533\":\"WithGhostTown\",\"4079778\":\"1\",\"4079779\":\"1\",\"4858246\":\"1\",\"5345011\":\"1\",\"4079777\":\"1\",\"9822013\":\"VARIANT\",\"7559812\":\"1\",\"2779896\":\"1\",\"5290969\":\"1\",\"2779895\":\"1\",\"4981488\":\"1\",\"7799270\":\"1\",\"38928932\":\"1\",\"8814048\":\"1\",\"4259587\":\"1\",\"5071792\":\"1\",\"9796182\":\"1\",\"461358\":\"1\",\"2638135\":\"1\",\"2438911\":\"1\",\"7828921\":\"1\",\"1413083\":\"1\",\"9138944\":\"1\",\"1794278\":\"1\",\"9154194\":\"1\",\"1697913304\":\"1\",\"4616886\":\"1\",\"6259530\":\"1\",\"4881746\":\"1\",\"4062298\":\"1\",\"1523621\":\"1\",\"9466368\":\"1\",\"7906609\":\"1\",\"2198814\":\"1\",\"8443833\":\"1\",\"2901131\":\"1\",\"8443832\":\"1\",\"7505730\":\"1\",\"9328586\":\"1\",\"1808403\":\"1\",\"7327088\":\"1\",\"9555170\":\"1\",\"3520529\":\"1\",\"9717238\":\"1\",\"3838249\":\"1\",\"7536015\":\"1\",\"8154759\":\"1\",\"5824265\":\"PartnerVsRedfinNow\",\"3374833\":\"1\",\"394896\":\"1\",\"8897250\":\"Variant\",\"5652256\":\"1\",\"1522741\":\"1\",\"7285454\":\"1\",\"2307228\":\"1\",\"9030157\":\"1\",\"695808\":\"1\",\"2009469\":\"New_Exclamation\",\"2633942\":\"1\",\"6980364\":\"1\",\"4399311\":\"Variant\",\"802032\":\"Update\",\"1888533\":\"1\",\"2535597\":\"1\",\"6231188\":\"1\",\"9835647\":\"1\",\"8212833\":\"1\",\"5456392\":\"1\",\"4959344\":\"Variant\",\"4100573\":\"1\",\"3385748\":\"VARIANT\",\"4100571\":\"Red\",\"4100572\":\"No_Icon\",\"4406035\":\"1\",\"6359044\":\"1\",\"5367104\":\"1\",\"1148901\":\"1\",\"7402714\":\"1\",\"5401249\":\"1\",\"9568494\":\"1\",\"2009470\":\"1\",\"9997848\":\"1\",\"85540\":\"1\",\"690353\":\"1\",\"1109737\":\"1\",\"4939905\":\"1\",\"7676625\":\"1\",\"397508\":\"Variant\",\"397509\":\"Variant\",\"464822\":\"1\",\"8667327\":\"control\",\"8412160\":\"1\",\"397505\":\"1\",\"7848723\":\"1\",\"397507\":\"1\",\"4429189\":\"1\",\"7418282\":\"1\",\"710394\":\"1\",\"5138492\":\"Variant\",\"1626655\":\"1\",\"7799475\":\"1\",\"397512\":\"RequireContactInfo\",\"397514\":\"Control\",\"7515977\":\"1\",\"8967734\":\"1\",\"3385760\":\"1\",\"8718972\":\"1\",\"1463313\":\"1\",\"1248429\":\"1\",\"397516\":\"1\",\"2376275\":\"1\",\"7822585\":\"Control\",\"1601682588\":\"1\",\"3620462\":\"1\",\"853607\":\"Variant\",\"2869899\":\"1\",\"2762049\":\"1\",\"982718\":\"1\",\"49283291\":\"1\",\"6798843\":\"1\",\"4529932\":\"1\",\"2100143\":\"1\",\"7000114\":\"1\",\"942290\":\"Variant\",\"4859846\":\"1\",\"5240321\":\"1\",\"7423262\":\"1\",\"6475250\":\"PreventClose\",\"8507318\":\"1\",\"1716994\":\"1\",\"1705853\":\"1\",\"7700570\":\"1\",\"5802514\":\"1\",\"5802513\":\"1\",\"1617736\":\"1\",\"2171529\":\"1\",\"5301999\":\"1\",\"8910662\":\"1\",\"5802510\":\"1\",\"3844938\":\"1\",\"5849367\":\"1\",\"9800761\":\"GetStarted\",\"626646\":\"1\",\"5802506\":\"1\",\"626644\":\"1\",\"3450856\":\"1\",\"2160825\":\"1\",\"1354861\":\"Variant\",\"8593407\":\"Variant\",\"3626879\":\"1\",\"4293419\":\"CONTROL\",\"605714\":\"Variant\",\"1619492\":\"1\",\"8095767\":\"1\",\"3715003\":\"1\",\"6874554\":\"1\",\"9879609\":\"1\",\"1431036474\":\"1\",\"2502042\":\"1\",\"6131885\":\"1\",\"8899802\":\"1\",\"598761\":\"1\",\"2273621\":\"1\",\"168753\":\"1\",\"598760\":\"1\",\"2394281\":\"Control\",\"7746355\":\"1\",\"1123441\":\"1\",\"3224441\":\"1\",\"5482893\":\"1\",\"6950746\":\"1\",\"9201525\":\"1\",\"6352000\":\"GRAPH\",\"6723234\":\"1\",\"2946470\":\"1\",\"3652036\":\"1\",\"4632039\":\"1\",\"2578724\":\"1\",\"6480638\":\"1\",\"4632036\":\"New_Saved_Searches_Page\",\"7497294\":\"1\",\"9335060\":\"1\",\"47987823\":\"1\",\"6481960\":\"1\",\"1134595\":\"1\",\"8564511\":\"Variant\",\"8295612\":\"Variant\",\"8295611\":\"Variant\",\"3123608\":\"1\",\"3889211\":\"1\",\"4097541\":\"1\",\"2631135\":\"1\",\"8295621\":\"Variant\",\"8295620\":\"Variant\",\"7690559\":\"1\",\"9894124\":\"1\",\"3447473\":\"1\",\"6218830\":\"1\",\"752886\":\"1\",\"3898340\":\"1\",\"4369913\":\"1\",\"1463942\":\"1\",\"4099948\":\"Variant\",\"445477\":\"1\",\"935589\":\"1\",\"7506637\":\"1\",\"8295610\":\"1\",\"140156\":\"1\",\"6133606\":\"1\",\"9550524\":\"Control\",\"9389938\":\"1\",\"9680909\":\"1\",\"8337057\":\"Variant\",\"8565820\":\"1\",\"5283613\":\"1\",\"1783344\":\"1\",\"4295415\":\"Variant\",\"1248489395\":\"1\",\"4926423\":\"1\",\"9382062\":\"1\",\"4133203\":\"1\",\"7362699\":\"1\",\"64660905\":\"Control\",\"146703\":\"1\",\"9188728\":\"1\",\"7225764\":\"1\",\"9680910\":\"listing_fee_disclaimer\",\"8003435\":\"1\",\"5396023\":\"1\",\"2274510\":\"1\",\"1358911041\":\"Variant\",\"1542313\":\"1\",\"7600870\":\"1\",\"5205753\":\"1\",\"1633123\":\"1\",\"4845607\":\"1\",\"123633\":\"1\",\"809308\":\"1\",\"7736594\":\"1\",\"1059070\":\"1\",\"8992517\":\"1\",\"6402750\":\"1\",\"8872392\":\"1\",\"753924\":\"1\",\"5653141\":\"1\",\"1218864\":\"1\",\"8319874\":\"1\",\"1517126\":\"1\",\"8319876\":\"1\",\"8923575\":\"Autofill\",\"8923574\":\"Autofill\",\"8290125\":\"1\",\"8290124\":\"1\",\"2985837\":\"1\",\"5337084\":\"Variant\",\"8923573\":\"1\",\"1899231\":\"1\",\"9894162\":\"1\",\"842102\":\"1\",\"4702390\":\"Control\",\"7261848\":\"1\",\"29843299\":\"1\",\"3124786\":\"BOTH_BUTTONS_AND_COPY_CHANGE\",\"102881\":\"Control\",\"4642138\":\"TOGGLE_NEAR_FILTERS\",\"6422382\":\"1\",\"8873936\":\"1\",\"5617822\":\"1\",\"1665309\":\"Variant\",\"3299717\":\"1\",\"1770504\":\"1\",\"9898661\":\"Variant\",\"8837851\":\"1\",\"1973457\":\"Variant\",\"3846772\":\"1\",\"8294028\":\"1\",\"5330996\":\"1\",\"3513327\":\"1\",\"20120825\":\"1\",\"20120826\":\"1\",\"20120823\":\"1\",\"20120824\":\"1\",\"791875\":\"1\",\"34579678\":\"1\",\"20120827\":\"1\",\"20120828\":\"1\",\"904897\":\"1\",\"4739824\":\"1\",\"8837850\":\"1\",\"271024333\":\"1\",\"20120821\":\"1\",\"904658\":\"1\",\"2109981\":\"1\",\"20120820\":\"1\",\"9792001\":\"1\",\"5188495\":\"1\",\"7924741\":\"1\",\"3539965\":\"1\",\"2691229\":\"1\",\"4252294\":\"1\",\"2190616\":\"1\",\"2691228\":\"1\",\"740499\":\"1\",\"9554555\":\"Control\",\"33475602\":\"1\",\"2977451\":\"1\",\"2681427\":\"1\",\"525896\":\"1\",\"1033337\":\"1\",\"1676651\":\"1\",\"1940768\":\"1\",\"2691234\":\"1\",\"4831946\":\"1\",\"2691233\":\"1\",\"2691232\":\"1\",\"7097479\":\"1\",\"5042219\":\"1\",\"2089832\":\"1\",\"524326\":\"1\",\"8424835\":\"Control\",\"2691235\":\"1\",\"8548437\":\"1\",\"1448745\":\"1\",\"9371871\":\"Control\",\"545252\":\"Variant\",\"4092238\":\"1\",\"2842326\":\"1\",\"2639940\":\"1\",\"6300307\":\"1\",\"8535328\":\"1\",\"9813245\":\"Addresses\",\"6112235\":\"1\",\"7017338\":\"1\",\"4219897\":\"1\",\"31645138\":\"1\",\"4957737\":\"SHOW_REG_FORM\",\"713\":\"1\",\"2046270\":\"1\",\"5917087\":\"1\",\"7266366\":\"1\",\"1838823\":\"1\",\"7392244\":\"1\",\"1127961\":\"1\",\"8146784\":\"1\",\"9520969\":\"Control\",\"8037818\":\"1\",\"6033170\":\"1\",\"123126\":\"1\",\"4130697\":\"1\",\"7591696\":\"1\",\"4712129\":\"1\",\"976708\":\"1\",\"6632854\":\"1\",\"2311451\":\"1\",\"242729\":\"1\",\"9129884\":\"1\",\"7775404\":\"Variant\",\"2670124\":\"1\",\"7028006\":\"No_Inline_ARF\",\"2670125\":\"1\",\"1150999\":\"1\",\"33665897\":\"1\",\"7383561\":\"1\",\"7445738\":\"Control\",\"1941897\":\"1\",\"4503580\":\"1\",\"4503581\":\"1\",\"6142997\":\"1\",\"6142996\":\"1\",\"242732\":\"1\",\"3739371\":\"1\",\"242730\":\"1\",\"4503579\":\"1\",\"4503578\":\"1\",\"7892839\":\"1\",\"42771\":\"1\",\"8023693\":\"1\",\"7192623\":\"1\",\"9647874\":\"1\",\"3363534\":\"1\",\"2509697\":\"1\",\"7911642\":\"1\",\"124735222\":\"CONTROL\",\"575914\":\"1\",\"2579591\":\"1\",\"7954779\":\"1\",\"2584948\":\"1\",\"2492719\":\"1\",\"5575021\":\"1\",\"4323164\":\"1\",\"5487887\":\"1\",\"3973375\":\"1\",\"746667\":\"1\",\"5487888\":\"1\",\"9215032\":\"1\",\"4327522\":\"1\",\"9379302\":\"1\",\"9481474\":\"1\",\"6618738\":\"1\",\"8763451\":\"1\",\"1790756\":\"1\",\"408876\":\"1\",\"4602072\":\"1\",\"2209995\":\"Calculator\",\"2173218\":\"1\",\"2321926\":\"1\",\"1614123\":\"1\",\"5368290\":\"1\",\"3106703\":\"1\",\"8250059\":\"1\",\"6408929\":\"1\",\"12812342\":\"1\",\"5403129\":\"1\",\"9278826\":\"1\",\"5309051\":\"1\",\"3359259\":\"1\",\"420309745\":\"Control\",\"6603455\":\"1\",\"1561753\":\"1\",\"8220429\":\"1\",\"4723841\":\"1\",\"4723840\":\"Control\",\"2694333\":\"1\",\"2442244\":\"1\",\"489870\":\"1\",\"1326251\":\"1\",\"92852271\":\"1\",\"5476778\":\"LEFT_SIDE_OWNER_BUTTON\",\"8503952\":\"1\",\"4862829\":\"Variant\",\"589289\":\"1\",\"7706475\":\"1\",\"6890124\":\"1\",\"5274104\":\"1\",\"8623134\":\"1\",\"339991\":\"White_Chrome_Red_Button\",\"4681139\":\"1\",\"339997\":\"Anon_Users\",\"339988\":\"Top\",\"5409927\":\"1\",\"3026973\":\"1\",\"8570983\":\"1\",\"742055\":\"1\",\"7230131\":\"1\",\"2513992\":\"1\",\"6889187\":\"1\",\"5244669\":\"1\",\"6068828\":\"1\",\"7009541\":\"1\",\"1058201\":\"Stacked\",\"700858\":\"1\",\"8438674\":\"1\",\"4157089\":\"1\",\"8391647\":\"1\",\"4950267\":\"1\",\"9774469\":\"1\",\"1920566\":\"1\",\"7510444\":\"1\",\"797147\":\"1\",\"3974271\":\"1\",\"5076477\":\"1\",\"8380523\":\"1\",\"8066322\":\"Control\",\"3416175\":\"1\",\"4266879\":\"1\",\"8217020\":\"1\",\"4488953\":\"1\",\"3894892\":\"1\",\"8659798\":\"1\",\"5326614\":\"1\",\"347349\":\"Control\",\"1127570\":\"1\",\"9324409\":\"1\",\"1920351\":\"Variant_1\",\"7692139\":\"1\",\"5369790\":\"1\",\"2803585\":\"1\",\"1852986\":\"Variant\",\"9822386\":\"1\",\"6838858\":\"1\",\"5475645\":\"1\",\"5670280\":\"1\",\"3805405\":\"1\",\"8043202\":\"1\",\"9041370\":\"1\",\"1488531\":\"1\",\"4758940\":\"1\",\"5090773\":\"1\",\"4231340\":\"1\",\"9600175\":\"1\",\"3816532\":\"1\",\"8458060\":\"1\",\"3443517\":\"Variant\",\"1013531\":\"1\",\"6454600\":\"1\",\"3061909\":\"1\",\"322048\":\"1\",\"641505\":\"1\",\"2182339\":\"1\",\"5893399\":\"1\",\"5119814\":\"Variant\",\"8918251\":\"1\",\"3532636\":\"1\",\"1852002\":\"1\",\"5702860\":\"1\",\"4352323\":\"SoldHomesMap\",\"2126638\":\"1\",\"9693078\":\"1\",\"10\":\"1\",\"11\":\"1\",\"12\":\"1\",\"224707\":\"1\",\"14\":\"1\",\"15\":\"1\",\"8694851\":\"1\",\"17\":\"1\",\"2398123\":\"Variant\",\"94110\":\"1\",\"9396172\":\"1\",\"9944181\":\"1\",\"20\":\"1\",\"6892719\":\"1\",\"22\":\"1\",\"837255\":\"1\",\"3828532\":\"1\",\"25\":\"1\",\"1700094\":\"1\",\"26\":\"1\",\"1970611\":\"1\",\"4663970\":\"1\",\"4715140\":\"Variant\",\"1333067\":\"1\",\"5879063\":\"1\",\"736683\":\"1\",\"5203097\":\"On_Off_Toggle\",\"1658344\":\"1\",\"7559226\":\"Control\",\"6451360\":\"1\",\"6108554\":\"1\",\"8963083\":\"1\",\"8456801\":\"1\",\"5981925\":\"1\",\"64807657\":\"Standardized\",\"132649\":\"1\",\"4900593\":\"1\",\"28929832\":\"1\",\"8293714\":\"Variant\",\"8403118\":\"1\",\"94134\":\"1\",\"7766442\":\"1\",\"2675441\":\"Variant\",\"438472\":\"1\",\"9923481\":\"1\",\"4971573\":\"1\",\"3416875\":\"1\",\"167728\":\"1\",\"6167305\":\"1\",\"42\":\"1\",\"7832278\":\"1\",\"3810825\":\"1\",\"3810822\":\"1\",\"3810823\":\"1\",\"2094756\":\"Control\",\"840648\":\"1\",\"1544478\":\"1\",\"9660184\":\"1\",\"3810826\":\"1\",\"5727712\":\"1\",\"7714820\":\"1\",\"5563126\":\"Variant\",\"5870071\":\"1\",\"1811737\":\"1\",\"3941295\":\"1\",\"1825967781\":\"1\",\"8255661\":\"1\",\"1063070426\":\"1\",\"4373454\":\"Variant_1\",\"50360\":\"Variant\",\"8414454\":\"1\",\"5860286\":\"1\",\"862677\":\"1\",\"3898641\":\"1\",\"3978561\":\"1\",\"7435126\":\"1\",\"7438635\":\"PreventClose\",\"3481020\":\"1\",\"4079800\":\"1\",\"4079801\":\"1\",\"5885551\":\"1\",\"3132633\":\"1\",\"5309121\":\"Variant\",\"7227217\":\"1\",\"8529229\":\"1\",\"7627151\":\"1\",\"8395624\":\"1\",\"5311678\":\"Control\",\"1303624\":\"1\",\"8131707\":\"Video_Learn_More\",\"5906760\":\"1\",\"8054715\":\"Control\",\"4235662\":\"ShowRedfinMortgageRates\",\"3735101\":\"Variant\",\"236774567\":\"1\",\"6875180\":\"1\",\"4304477\":\"1\",\"4074120\":\"1\",\"6649600\":\"1\",\"7460302\":\"Refresh_With_Promo\",\"2101120\":\"1\",\"48928932\":\"1\",\"5567082\":\"1\",\"1733836\":\"1\",\"2009729\":\"Neighborhood\",\"4905899\":\"1\",\"513041\":\"1\",\"4268107\":\"1\",\"7937888\":\"Variant\",\"6156805\":\"1\",\"9982629\":\"1\",\"4506153\":\"OWNER\",\"904922\":\"1\",\"2405950\":\"1\",\"8725748\":\"1\",\"9982625\":\"1\",\"2710934\":\"New_Improved_And_Mobile\",\"1435215923\":\"1\",\"7937877\":\"Variant\",\"6773401\":\"1\",\"1435215924\":\"1\",\"3842456\":\"1\",\"4931933\":\"1\",\"1101510\":\"New_Estimate\",\"1363450\":\"1\",\"2785825\":\"1\",\"39823462\":\"Variant\",\"3285923\":\"1\",\"7213240\":\"Control\",\"1945018\":\"1\",\"9210355\":\"1\",\"3423339\":\"Control\",\"8388739\":\"Variant\",\"2204996\":\"1\",\"2532804\":\"1\",\"6743192\":\"1\",\"3314935\":\"1\",\"2689429\":\"1\",\"6771233\":\"1\",\"47194\":\"1\",\"8316681\":\"1\",\"6675079\":\"1\",\"621042\":\"1\",\"2117050\":\"1\",\"2710953\":\"1\",\"8229809\":\"1\",\"9372799\":\"1\",\"7549029\":\"1\",\"4034902\":\"1\",\"4341274\":\"1\",\"943294\":\"1\",\"5559232\":\"1\",\"5559234\":\"1\",\"2710954\":\"1\",\"7937899\":\"Variant\",\"8371080\":\"1\",\"9224512\":\"Variant\",\"4891870\":\"1\",\"8447930\":\"1\",\"6195392\":\"1\",\"7948739\":\"1\",\"761213\":\"1\",\"5892946\":\"1\",\"1343419\":\"1\",\"8748655\":\"1\",\"1103504\":\"1\",\"281381\":\"GRAPH\",\"258381\":\"1\",\"8538306\":\"1\",\"7432007\":\"Text_to_download_link\",\"8583353\":\"1\",\"7432008\":\"1\",\"9279680\":\"1\",\"2214345\":\"PartnerVsRedfinNow\",\"157703\":\"1\",\"5327385\":\"1\",\"4205414\":\"COMMUTE\",\"5327384\":\"1\",\"57152\":\"1\",\"4709922\":\"Control\",\"4709921\":\"Redesign\",\"4709923\":\"1\",\"7832412\":\"1\",\"619183\":\"1\",\"5492752\":\"1\",\"1971110\":\"1\",\"8744074\":\"1\",\"1541344\":\"1\",\"2687282\":\"1\",\"3881804\":\"login_popup\",\"6280228\":\"1\",\"3927408\":\"1\",\"8305362\":\"1\",\"7612741\":\"1\",\"8163354\":\"1\",\"1169979\":\"1\",\"7482705\":\"1\",\"5120236\":\"1\",\"6704664\":\"1\",\"5460974\":\"1\",\"13726408\":\"1\",\"5330337\":\"1\",\"5462910\":\"1\",\"7866621\":\"1\",\"4857715\":\"1\",\"8017978\":\"1\",\"8143525\":\"1\",\"2495604\":\"1\",\"4808586\":\"1\",\"5619155\":\"1\",\"8305356\":\"1\",\"6704665\":\"1\",\"3133312\":\"1\",\"8724471\":\"Control\",\"4589914\":\"1\"},\"userData\":{\"__att_names\":[[\"primaryEmail\",\"person\",\"accessLevel\",\"id\"],[\"firstName\",\"lastName\"]],\"__root\":{\"__g_id\":\"login-16487221\",\"__atts\":[\"etefialuckyonome@yahoo.com\",{\"__g_id\":\"person-10748210\",\"__atts\":[\"Simon\",\"Leo\"],\"__t_idx\":1},2,16487221],\"__t_idx\":0},\"__types\":[\"redfin.common.data.Login\",\"redfin.common.data.Person\"]},\"accessLevel\":2,\"cssServer\":\"https:\u002F\u002Fssl.cdn-redfin.com\u002Fv215.3.2\u002Fimages\u002Ftext\u002Fcsso\",\"contextRoles\":[],\"jsonLogin\":{\"loginId\":16487221,\"shareFavoritesOnFacebook\":\"false\",\"shareCollectionsOnFacebook\":\"false\",\"isTimeToRefreshFacebookAccessToken\":false,\"facebookPublishActions\":\"false\",\"isFastOffersTemplateToolOn\":false,\"isOfferWorkspaceOn\":false,\"isNewConstructionCalculatorOn\":false,\"isCustomerListReactOn\":true,\"isPartnerCustomerListOn\":true,\"canViewAgentToolsText\":false,\"canSendAgentToolsText\":false,\"isDealQueueEnabled\":false,\"tourHotlineDisplayNumber\":\"(216) TOURING\",\"tourHotlineNumber\":\"+12168687464\",\"hasAdminPermissions\":false,\"hasSuperAdminPermissions\":false,\"hasAgentPermissions\":false,\"hasContractAgentPermissions\":false,\"hasPartnerAgentPermissions\":false,\"hasServiceProviderPermissions\":false,\"hasPartnerTeamPermissions\":false,\"hasRecruitingPermissions\":false,\"hasFinancePermissions\":false,\"hasDealTemplateEditorPermissions\":false,\"hasEngineeringPermissions\":false,\"hasLegalPermissions\":false,\"hasMarketingPermissions\":false,\"hasReferralEditorPermissions\":false,\"hasReopsManagementPermissions\":false,\"hasSurveyEditorPermissions\":false,\"hasReopsTeamManagerPermissions\":false,\"hasTitleForwardPermissions\":false,\"hasCommunicationsPermissions\":false,\"hasEmailTemplateEditorPermissions\":false,\"hasReopsPayPermissions\":false,\"hasAgentProfileEditorPermissions\":false,\"hasPartnerTeamLeadPermissions\":false,\"hasSpurdogPermissions\":false,\"hasSpurdogAdminPermissions\":false,\"hasEmailAdminPermissions\":false,\"hasAdminElevationPermissions\":false,\"hasReopsSrManagementPermissions\":false,\"contextRoleGroups\":{},\"hasCompanyDirectoryViewerPermissions\":false,\"hasCustomerEditPermissions\":false,\"hasCustomerViewPermissions\":false,\"hasDealEditPermissions\":false,\"hasAppointmentEditPermissions\":false,\"hasTourEditPermissions\":false,\"hasTourViewPermissions\":false,\"hasAgentRequestEditPermissions\":false,\"hasInquiryEditPermissions\":false,\"hasAgentProfileViewerPermissions\":false,\"hasTeamListViewerPermissions\":false,\"hasTeamListEditPermissions\":false,\"hasExternalAgentProfileEditPermissions\":false,\"hasDocumentViewPermissions\":false,\"hasDocumentEditPermissions\":false,\"hasDealViewPermissions\":false,\"hasCustomerListPermissions\":false,\"hasAppointmentListPermissions\":false,\"hasDealListPermissions\":false,\"hasPaidAppointmentEditPermissions\":false,\"hasPaidAppointmentEditPermissionsAfterClose\":false,\"hasDevTabPermissions\":false,\"hasEmailRecipientsViewerPermissions\":false,\"hasEmailRecipientsEditorPermissions\":false,\"hasClickToCallPermissions\":false,\"hasDealTemplateListEditPermissions\":false,\"hasDocumentTemplateListEditPermissions\":false,\"hasPropertyEditorPermissions\":false,\"hasPartnerDealPricingEditPermissions\":false,\"hasPartnerRebateCheckEditPermissions\":false,\"hasPartnerRebateCheckAddressEditPermissions\":false,\"hasLibrarianToolsPermissions\":false,\"hasAgentToolsSearchPermissions\":false,\"hasMlsVendorLevelAccess\":false,\"accessLevel\":2,\"isAgentToolsVoiceEnabled\":false,\"agentStatus\":1,\"escapedName\":\"Simon Leo\",\"firstName\":\"Simon\",\"lastName\":\"Leo\",\"isAnonymous\":false,\"email\":\"etefialuckyonome@yahoo.com\",\"customerAgentsAndStatuses\":{},\"emailUnsubscribe\":false,\"memberSinceDate\":1528885026534,\"registrationAuthority\":\"Facebook\",\"canGrantSelfAdminAccess\":false},\"authLevel\":\"STRONG\"}}",
+                                    "type": "application\u002Fjson",
+                                    "status": 200,
+                                    "statusType": 2,
+                                    "info": false,
+                                    "ok": true,
+                                    "clientError": false,
+                                    "serverError": false,
+                                    "error": false,
+                                    "accepted": false,
+                                    "noContent": false,
+                                    "badRequest": false,
+                                    "unauthorized": false,
+                                    "notAcceptable": false,
+                                    "notFound": false,
+                                    "forbidden": false,
+                                    "header": {
+                                        "date": "Mon, 25 Jun 2018 13:00:33 GMT",
+                                        "server": "Apache",
+                                        "x-content-type-options": "nosniff",
+                                        "x-frame-options": "SAMEORIGIN",
+                                        "cache-control": "no-cache",
+                                        "pragma": "no-cache",
+                                        "x-ua-compatible": "IE=edge",
+                                        "x-newrelic-app-data": "PxQGVFJSDwoTV1FaDgMPX0YdFGQHBDcQUQxLA1tMXV1dORYSRQhdBRZXTjYDAWQcQgEFBF5fGREBUxhQDRQVA1kQFiFXSkJTWhdsElQTdwMQV3YxLyBXXUQWDg5bVEU6S0RFVhAiAhZRQBRSFggYAh1VDFUJVwZQURoaUEpBXlJRAFkEAwEDUlFUUAtSV0FOVgNUEV1l",
+                                        "content-type": "application\u002Fjson;charset=UTF-8",
+                                        "content-language": "en-US",
+                                        "set-cookie": ["RF_LAST_ACCESS=1529931634665%3A5d8fcac3e0360249ba0a4b37233f1fd669118222; Domain=.redfin.com; Expires=Tue, 25-Jun-2019 13:00:34 GMT; Path=\u002F", "RF_ANON_ID=\"\"; Domain=.redfin.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=\u002F", "RF_ANON_AUTH=\"\"; Domain=.redfin.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=\u002F", "RF_ANON_SECURE_AUTH=\"\"; Domain=.redfin.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=\u002F; Secure"],
+                                        "vary": "Accept-Encoding",
+                                        "content-encoding": "gzip",
+                                        "connection": "close",
+                                        "transfer-encoding": "chunked"
+                                    }
+                                }
+                            },
+                            "\u002Fstingray\u002Ftours\u002Fdashboard\u002Fapi\u002Ftours": {
+                                "url": "\u002Fstingray\u002Ftours\u002Fdashboard\u002Fapi\u002Ftours",
+                                "requestData": {
+                                    "urlPath": "\u002Fstingray\u002Ftours\u002Fdashboard\u002Fapi\u002Ftours",
+                                    "method": "GET",
+                                    "queryParams": [],
+                                    "postParams": null,
+                                    "type": "json"
+                                },
+                                "requesters": 1,
+                                "loaded": true,
+                                "res": {
+                                    "_hasBody": true,
+                                    "text": "{}&&{\"resultCode\":0,\"errorMessage\":\"Success.\",\"version\":228,\"payload\":{\"__root\":{\"firstTimeTourerWithUnconfirmedTour\":false,\"__g_id\":\"1909680497\",\"upcomingTours\":[],\"pastTours\":[]}}}",
+                                    "type": "application\u002Fjson",
+                                    "status": 200,
+                                    "statusType": 2,
+                                    "info": false,
+                                    "ok": true,
+                                    "clientError": false,
+                                    "serverError": false,
+                                    "error": false,
+                                    "accepted": false,
+                                    "noContent": false,
+                                    "badRequest": false,
+                                    "unauthorized": false,
+                                    "notAcceptable": false,
+                                    "notFound": false,
+                                    "forbidden": false
+                                }
+                            },
+                            "\u002Fstingray\u002Fdo\u002Fapi\u002Ffavorites\u002Fids\u002Fmine?sort=BY_DATE_USER_FAVORITED&showSold=false": {
+                                "url": "\u002Fstingray\u002Fdo\u002Fapi\u002Ffavorites\u002Fids\u002Fmine?sort=BY_DATE_USER_FAVORITED&showSold=false",
+                                "requestData": {
+                                    "urlPath": "\u002Fstingray\u002Fdo\u002Fapi\u002Ffavorites\u002Fids\u002Fmine?sort=BY_DATE_USER_FAVORITED&showSold=false",
+                                    "method": "GET",
+                                    "queryParams": [],
+                                    "postParams": null,
+                                    "type": "json"
+                                },
+                                "requesters": 1,
+                                "loaded": true,
+                                "res": {
+                                    "_hasBody": true,
+                                    "text": "{}&&{\"version\":228,\"errorMessage\":\"Success\",\"resultCode\":0,\"payload\":{\"propertyIds\":[]}}",
+                                    "type": "application\u002Fjson",
+                                    "status": 200,
+                                    "statusType": 2,
+                                    "info": false,
+                                    "ok": true,
+                                    "clientError": false,
+                                    "serverError": false,
+                                    "error": false,
+                                    "accepted": false,
+                                    "noContent": false,
+                                    "badRequest": false,
+                                    "unauthorized": false,
+                                    "notAcceptable": false,
+                                    "notFound": false,
+                                    "forbidden": false
+                                }
+                            },
+                            "\u002Fcorv\u002Fdata\u002Fstylesheets\u002Fcustomer-pages\u002FTourDashboard": {
+                                "url": "\u002Fcorv\u002Fdata\u002Fstylesheets\u002Fcustomer-pages\u002FTourDashboard",
+                                "requestData": {
+                                    "urlPath": "\u002Fcorv\u002Fdata\u002Fstylesheets\u002Fcustomer-pages\u002FTourDashboard",
+                                    "method": "GET",
+                                    "queryParams": [],
+                                    "postParams": null,
+                                    "type": "json"
+                                },
+                                "requesters": 1,
+                                "loaded": true,
+                                "res": {
+                                    "body": {
+                                        "payload": {
+                                            "longCacheCss": "long-cache.c39b758a4e83393ee827.styles.css",
+                                            "commonCss": "common.9f305ba5e22a2f8478f4.styles.css",
+                                            "pageCss": "TourDashboardPage.c7738afed385e0ea3da7.styles.css"
+                                        }
+                                    }
+                                }
+                            },
+                            "\u002Fstingray\u002Fdo\u002FhomeSettings\u002Fapi\u002FclaimCount": {
+                                "url": "\u002Fstingray\u002Fdo\u002FhomeSettings\u002Fapi\u002FclaimCount",
+                                "requestData": {
+                                    "urlPath": "\u002Fstingray\u002Fdo\u002FhomeSettings\u002Fapi\u002FclaimCount",
+                                    "method": "GET",
+                                    "queryParams": [{
+                                        "__rf_secure": "526a6b7c1821cf32b6486d7cb429eaa06a500cb8"
+                                    }],
+                                    "postParams": null,
+                                    "type": "json"
+                                },
+                                "requesters": 2,
+                                "loaded": true,
+                                "res": {
+                                    "_hasBody": true,
+                                    "text": "{}&&{\"resultCode\":0,\"version\":228,\"payload\":{\"claimCount\":0}}",
+                                    "type": "application\u002Fjson",
+                                    "status": 200,
+                                    "statusType": 2,
+                                    "info": false,
+                                    "ok": true,
+                                    "clientError": false,
+                                    "serverError": false,
+                                    "error": false,
+                                    "accepted": false,
+                                    "noContent": false,
+                                    "badRequest": false,
+                                    "unauthorized": false,
+                                    "notAcceptable": false,
+                                    "notFound": false,
+                                    "forbidden": false
+                                }
+                            }
+                        }
+                    },
+                    "deviceType": "desktop"
+                };
+                root.__reactServerState.Config = {
+                    "environmentName": "prod",
+                    "dataRequestTimeoutMs": 20000,
+                    "staticFileVersion": "215.3.2",
+                    "apiServerPrefix": "https:\u002F\u002Fwww.redfin.com",
+                    "apiServerRedfinMortgagePrefix": "https:\u002F\u002Fwww.redfinmortgage.com"
+                };
+            }(this));;
+            rfBootstrap();
+        });
+    </script>
+    <script>
+        _tLAB.wait(function() {
+            __reactServerClientController.nodeArrival(0, 13)
+        });
+    </script>
+    </div>
+    <script type="text/javascript" id="">
+        ! function(b, e, f, g, a, c, d) {
+            b.fbq || (a = b.fbq = function() {
+                a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
+            }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d))
+        }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+        fbq("init", "851728468185585");
+        fbq("track", "PageView");
+    </script>
     <noscript>
         <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=851728468185585&amp;ev=PageView&amp;noscript=1">
     </noscript>
@@ -1412,10 +2107,8 @@
     <div id="fb-root" class=" fb_reset">
         <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
             <div>
-                <iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
-                    id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1"
-                    style="border: medium none;" src="https://staticxx.facebook.com/connect/xd_arbiter/r/xaOI6zd9HW9.js?version=42#channel=f15e3177ebb9522&amp;origin=https%3A%2F%2Fwww.redfin.com"
-                    frameborder="0"></iframe>
+                <iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;"
+                    src="https://staticxx.facebook.com/connect/xd_arbiter/r/xaOI6zd9HW9.js?version=42#channel=f15e3177ebb9522&amp;origin=https%3A%2F%2Fwww.redfin.com" frameborder="0"></iframe>
             </div>
         </div>
         <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
@@ -1426,8 +2119,7 @@
         <img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.06122815037333207" alt="" src="https://bat.bing.com/action/0?ti=5220234&amp;Ver=2&amp;mid=f2207db4-390d-19bd-7ab0-d70f02ebdf48&amp;evt=pageLoad&amp;sid=1fd3132a-1&amp;lt=1443&amp;pi=0&amp;lg=en-US&amp;sw=1280&amp;sh=800&amp;sc=24&amp;tl=My%20Redfin%20-%20Home%20Tours%20%7C%20Redfin&amp;r=https%3A%2F%2Fwww.redfin.com%2Fmyredfin%2Fopen-houses&amp;p=https%3A%2F%2Fwww.redfin.com%2Fmyredfin%2Ftours&amp;msclkid=N&amp;rn=837570"
             width="0" height="0">
     </div>
-    <iframe style="position: absolute; width: 1px; height: 1px; left: -9999px; display: none;" aria-hidden="true" id="ssIFrame_google"
-        sandbox="allow-scripts allow-same-origin" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fwww.redfin.com&amp;rpcToken=853919737.0556833"></iframe>
+    <iframe style="position: absolute; width: 1px; height: 1px; left: -9999px; display: none;" aria-hidden="true" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fwww.redfin.com&amp;rpcToken=853919737.0556833"></iframe>
 </body>
 
 </html>

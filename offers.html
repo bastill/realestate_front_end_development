@@ -7,8 +7,7 @@
     <script type="text/javascript" async="" src="https://sb.scorecardresearch.com/c2/15053602/cs.js"></script>
     <script src="https://js-agent.newrelic.com/nr-1071.min.js"></script>
     <script async="" src="https://d21cvz3pxk3jih.cloudfront.net/eedBxki3dCdMi44LjI.js"></script>
-    <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.IEiPH6oW6Uk.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=QQE/rs=AGLTcCMuCErG7m-o3LY9_f9cEknqaaTL4A/cb=gapi.loaded_0"
-        async=""></script>
+    <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en.IEiPH6oW6Uk.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=QQE/rs=AGLTcCMuCErG7m-o3LY9_f9cEknqaaTL4A/cb=gapi.loaded_0" async=""></script>
     <script src="https://connect.facebook.net/signals/config/851728468185585?v=2.8.18&amp;r=stable" async=""></script>
     <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
     <script type="text/javascript" async="" src="//bat.bing.com/bat.js"></script>
@@ -24,10 +23,10 @@
     <script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-TZTT5H"></script>
     <script>
         /*! LAB.js (LABjs :: Loading And Blocking JavaScript)
-                        v2.0.3 (c) Kyle Simpson
-                        MIT License
-                    */
-        ! function (t) {
+                                                                        v2.0.3 (c) Kyle Simpson
+                                                                        MIT License
+                                                                    */
+        ! function(t) {
             function e(t, e) {
                 u.push([t, +(e || 0), +new Date])
             }
@@ -41,15 +40,15 @@
                 var i = new Date,
                     r = "unknown",
                     c = n;
-                n = function () {
+                n = function() {
                     return e("request_script.byMethod." + r, i), e("request_script.overall", i), c.apply(this, arguments)
-                }, setTimeout(function () {
+                }, setTimeout(function() {
                     var e, i = t.src;
                     if ("item" in a) {
                         if (!a[0]) return void setTimeout(arguments.callee, 25);
                         a = a[0]
                     }
-                    e = document.createElement("script"), t.type && (e.type = t.type), t.charset && (e.charset = t.charset), t.crossOrigin && (e.crossOrigin = t.crossOrigin), r = "script_async", e.async = !1, e.onload = e.onreadystatechange = function () {
+                    e = document.createElement("script"), t.type && (e.type = t.type), t.charset && (e.charset = t.charset), t.crossOrigin && (e.crossOrigin = t.crossOrigin), r = "script_async", e.async = !1, e.onload = e.onreadystatechange = function() {
                         e.readyState && "complete" != e.readyState && "loaded" != e.readyState || (e.onload = e.onreadystatechange = null, n())
                     }, e.src = i, a.insertBefore(e, a.firstChild)
                 }, 0)
@@ -63,7 +62,7 @@
                 function e(e) {
                     var r = e.script,
                         c = r.src = n(r.src);
-                    o[c] ? e.script = o[c] : (o[c] = r, i(r, function () {
+                    o[c] ? e.script = o[c] : (o[c] = r, i(r, function() {
                         t(r)
                     }))
                 }
@@ -78,8 +77,8 @@
                             if (s[t].wait) {
                                 s[t] = s[t].wait, s[t].started = !0;
                                 var n = [],
-                                    i = function (t) {
-                                        return function () {
+                                    i = function(t) {
+                                        return function() {
                                             t.finished = !0, r()
                                         }
                                     }(s[t]);
@@ -87,7 +86,7 @@
                                 try {
                                     s[t].apply(this, n)
                                 } catch (t) {
-                                    setTimeout(function () {
+                                    setTimeout(function() {
                                         throw t
                                     }, 1)
                                 }
@@ -99,22 +98,22 @@
                 var c, s = [],
                     a = 0;
                 return c = {
-                    script: function (t) {
+                    script: function(t) {
                         return "string" == typeof t && (t = {
                             src: t
                         }), t.finished = !1, s.push({
                             script: t
                         }), r(), c
                     },
-                    wait: function (t) {
+                    wait: function(t) {
                         return s.push({
-                            wait: t || function () { }
+                            wait: t || function() {}
                         }), r(), c
                     }
                 }, {
-                        script: c.script,
-                        wait: c.wait
-                    }
+                    script: c.script,
+                    wait: c.wait
+                }
             }
             var c = (t.$LAB, /^[^?#]*\//.exec(location.href)[0]),
                 s = /^\w+\:\/\/\/?[^\/]+/.exec(c)[0],
@@ -122,22 +121,22 @@
                 o = {},
                 u = [];
             t.$LAB = {
-                script: function (t) {
+                script: function(t) {
                     return r().script(t)
                 },
-                wait: function (t) {
+                wait: function(t) {
                     return r().wait(t)
                 }
             }, t.$LAB.timings = u
         }(this);
 
-        window._tLAB = $LAB.wait(function (c) {
+        window._tLAB = $LAB.wait(function(c) {
             if (document.readyState === 'complete') {
                 c();
             } else {
                 document.addEventListener('DOMContentLoaded', c);
             }
-        }).wait(function () {
+        }).wait(function() {
             window.NREUM || (NREUM = {});
             NREUM.info = {
                 "agent": "",
@@ -151,13 +150,13 @@
                 "ttGuid": "6a5174436bdfb4",
                 "agentToken": null
             };
-            window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
+            window.NREUM || (NREUM = {}), __nr_require = function(e, t, n) {
                 function r(n) {
                     if (!t[n]) {
                         var o = t[n] = {
                             exports: {}
                         };
-                        e[n][0].call(o.exports, function (t) {
+                        e[n][0].call(o.exports, function(t) {
                             var o = e[n][1][t];
                             return r(o || t)
                         }, o, o.exports)
@@ -168,11 +167,11 @@
                 for (var o = 0; o < n.length; o++) r(n[o]);
                 return r
             }({
-                1: [function (e, t, n) {
-                    function r() { }
+                1: [function(e, t, n) {
+                    function r() {}
 
                     function o(e, t, n) {
-                        return function () {
+                        return function() {
                             return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
                         }
                     }
@@ -186,35 +185,35 @@
                     var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
                         d = "api-",
                         l = d + "ixn-";
-                    a(p, function (e, t) {
+                    a(p, function(e, t) {
                         s[t] = o(d + t, !0, "api")
-                    }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function () {
+                    }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function() {
                         return (new r).get()
                     };
                     var m = r.prototype = {
-                        createTracer: function (e, t) {
+                        createTracer: function(e, t) {
                             var n = {},
                                 r = this,
                                 o = "function" == typeof t;
                             return i(l + "tracer", [f.now(), e, n], r),
-                                function () {
+                                function() {
                                     if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try {
                                         return t.apply(this, arguments)
                                     } catch (e) {
                                         throw c.emit("fn-err", [arguments, this, e], n), e
                                     } finally {
-                                            c.emit("fn-end", [f.now()], n)
-                                        }
+                                        c.emit("fn-end", [f.now()], n)
+                                    }
                                 }
                         }
                     };
-                    a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) {
+                    a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, t) {
                         m[t] = o(l + t)
-                    }), newrelic.noticeError = function (e) {
+                    }), newrelic.noticeError = function(e) {
                         "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
                     }
                 }, {}],
-                2: [function (e, t, n) {
+                2: [function(e, t, n) {
                     function r(e, t) {
                         var n = [],
                             r = "",
@@ -225,7 +224,7 @@
                     var o = Object.prototype.hasOwnProperty;
                     t.exports = r
                 }, {}],
-                3: [function (e, t, n) {
+                3: [function(e, t, n) {
                     function r(e, t, n) {
                         t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
                         for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r];
@@ -233,13 +232,13 @@
                     }
                     t.exports = r
                 }, {}],
-                4: [function (e, t, n) {
+                4: [function(e, t, n) {
                     t.exports = {
                         exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
                     }
                 }, {}],
-                ee: [function (e, t, n) {
-                    function r() { }
+                ee: [function(e, t, n) {
+                    function r() {}
 
                     function o(e) {
                         function t(e) {
@@ -268,7 +267,7 @@
                         }
 
                         function g(e, t) {
-                            f(e, function (e, n) {
+                            f(e, function(e, n) {
                                 t = t || "feature", y[n] = t, t in s || (s[t] = [])
                             })
                         }
@@ -302,7 +301,7 @@
                         d = t.exports = o();
                     d.backlog = s
                 }, {}],
-                gos: [function (e, t, n) {
+                gos: [function(e, t, n) {
                     function r(e, t, n) {
                         if (o.call(e, t)) return e[t];
                         var r = n();
@@ -312,23 +311,23 @@
                                 writable: !0,
                                 enumerable: !1
                             }), r
-                        } catch (i) { }
+                        } catch (i) {}
                         return e[t] = r, r
                     }
                     var o = Object.prototype.hasOwnProperty;
                     t.exports = r
                 }, {}],
-                handle: [function (e, t, n) {
+                handle: [function(e, t, n) {
                     function r(e, t, n, r) {
                         o.buffer([e], r), o.emit(e, t, n)
                     }
                     var o = e("ee").get("handle");
                     t.exports = r, r.ee = o
                 }, {}],
-                id: [function (e, t, n) {
+                id: [function(e, t, n) {
                     function r(e) {
                         var t = typeof e;
-                        return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () {
+                        return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function() {
                             return o++
                         })
                     }
@@ -337,13 +336,13 @@
                         a = e("gos");
                     t.exports = r
                 }, {}],
-                loader: [function (e, t, n) {
+                loader: [function(e, t, n) {
                     function r() {
                         if (!x++) {
                             var e = h.info = NREUM.info,
                                 t = d.getElementsByTagName("script")[0];
                             if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort();
-                            f(y, function (t, n) {
+                            f(y, function(t, n) {
                                 e[t] || (e[t] = n)
                             }), c("mark", ["onload", a() + h.offset], null, "api");
                             var n = d.createElement("script");
@@ -401,7 +400,7 @@
                         E = e(4)
                 }, {}]
             }, {}, ["loader"]);
-        }).wait(function () {
+        }).wait(function() {
             window.__corvairVersion = "215.2.0"
         }).script("/corv/data/environment/9bb687aa9d68d23f9255dfe958c7f01bf4adf971/customer-pages.js").script({
             "src": "https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/vendor.62ce4cc3844f02ca9c16.bundle.js",
@@ -412,7 +411,7 @@
         }).script({
             "src": "https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/FavoritesPagePage.e924f70961a85d3d23ef.bundle.js",
             "crossOrigin": "anonymous"
-        }).wait(function () {
+        }).wait(function() {
             window.__rfBrowserClassification = {
                 "family": "Firefox",
                 "major": "60",
@@ -435,15 +434,13 @@
         });
     </script>
     <title>Favorites | Avetiz</title>
-    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/long-cache.2f2dfebed5be7ab2afee.styles.css"
-        data-react-server-css="">
+    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/long-cache.2f2dfebed5be7ab2afee.styles.css" data-react-server-css="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" media="" href="styles/styles.css" data-react-server-css="">
-    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/FavoritesPagePage.e924f70961a85d3d23ef.styles.css"
-        data-react-server-css="">
+    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/FavoritesPagePage.e924f70961a85d3d23ef.styles.css" data-react-server-css="">
     <link rel="stylesheet" type="text/css" media="" href="custom.css">
     <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/StartAnOfferPage.995864ab30014eeca63e.styles.css" data-react-server-css="">
     <link data-react-server-link="" rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
@@ -471,16 +468,16 @@
             top: -10000px;
             z-index: 10001
         }
-
+        
         .fb_reposition {
             overflow: hidden;
             position: relative
         }
-
+        
         .fb_invisible {
             display: none
         }
-
+        
         .fb_reset {
             background: none;
             border: 0;
@@ -507,15 +504,15 @@
             white-space: normal;
             word-spacing: normal
         }
-
+        
         .fb_reset>div {
             overflow: hidden
         }
-
+        
         .fb_link img {
             border: none
         }
-
+        
         @keyframes fb_transform {
             from {
                 opacity: 0;
@@ -526,32 +523,32 @@
                 transform: scale(1)
             }
         }
-
+        
         .fb_animate {
             animation: fb_transform .3s forwards
         }
-
+        
         .fb_dialog {
             background: rgba(82, 82, 82, .7);
             position: absolute;
             top: -10000px;
             z-index: 10001
         }
-
+        
         .fb_reset .fb_dialog_legacy {
             overflow: visible
         }
-
+        
         .fb_dialog_advanced {
             padding: 10px;
             border-radius: 8px
         }
-
+        
         .fb_dialog_content {
             background: #fff;
             color: #333
         }
-
+        
         .fb_dialog_close_icon {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
             cursor: pointer;
@@ -562,35 +559,35 @@
             top: 17px;
             width: 15px
         }
-
+        
         .fb_dialog_mobile .fb_dialog_close_icon {
             top: 5px;
             left: 5px;
             right: auto
         }
-
+        
         .fb_dialog_padding {
             background-color: transparent;
             position: absolute;
             width: 1px;
             z-index: -1
         }
-
+        
         .fb_dialog_close_icon:hover {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
         }
-
+        
         .fb_dialog_close_icon:active {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
         }
-
+        
         .fb_dialog_loader {
             background-color: #f6f7f9;
             border: 1px solid #606060;
             font-size: 24px;
             padding: 20px
         }
-
+        
         .fb_dialog_top_left,
         .fb_dialog_top_right,
         .fb_dialog_bottom_left,
@@ -600,31 +597,31 @@
             overflow: hidden;
             position: absolute
         }
-
+        
         .fb_dialog_top_left {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;
             left: -10px;
             top: -10px
         }
-
+        
         .fb_dialog_top_right {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;
             right: -10px;
             top: -10px
         }
-
+        
         .fb_dialog_bottom_left {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;
             bottom: -10px;
             left: -10px
         }
-
+        
         .fb_dialog_bottom_right {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;
             right: -10px;
             bottom: -10px
         }
-
+        
         .fb_dialog_vert_left,
         .fb_dialog_vert_right,
         .fb_dialog_horiz_top,
@@ -634,41 +631,41 @@
             filter: alpha(opacity=70);
             opacity: .7
         }
-
+        
         .fb_dialog_vert_left,
         .fb_dialog_vert_right {
             width: 10px;
             height: 100%
         }
-
+        
         .fb_dialog_vert_left {
             margin-left: -10px
         }
-
+        
         .fb_dialog_vert_right {
             right: 0;
             margin-right: -10px
         }
-
+        
         .fb_dialog_horiz_top,
         .fb_dialog_horiz_bottom {
             width: 100%;
             height: 10px
         }
-
+        
         .fb_dialog_horiz_top {
             margin-top: -10px
         }
-
+        
         .fb_dialog_horiz_bottom {
             bottom: 0;
             margin-bottom: -10px
         }
-
+        
         .fb_dialog_iframe {
             line-height: 0
         }
-
+        
         .fb_dialog_content .dialog_title {
             background: #6d84b4;
             border: 1px solid #365899;
@@ -677,13 +674,13 @@
             font-weight: bold;
             margin: 0
         }
-
+        
         .fb_dialog_content .dialog_title>span {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
             float: left;
             padding: 5px 0 7px 26px
         }
-
+        
         body.fb_hidden {
             -webkit-transform: none;
             height: 100%;
@@ -694,7 +691,7 @@
             left: 0;
             width: 100%
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
             min-height: 100%;
@@ -704,7 +701,7 @@
             top: 0;
             z-index: 10001
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading.centered {
             width: auto;
             height: auto;
@@ -712,15 +709,15 @@
             min-width: initial;
             background: none
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
             width: 100%
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
             background: none
         }
-
+        
         .loading.centered #fb_dialog_loader_close {
             color: #fff;
             display: block;
@@ -728,7 +725,7 @@
             clear: both;
             font-size: 18px
         }
-
+        
         #fb-root #fb_dialog_ipad_overlay {
             background: rgba(0, 0, 0, .45);
             position: absolute;
@@ -740,15 +737,15 @@
             min-height: 100%;
             z-index: 10000
         }
-
+        
         #fb-root #fb_dialog_ipad_overlay.hidden {
             display: none
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading iframe {
             visibility: hidden
         }
-
+        
         .fb_dialog_content .dialog_header {
             -webkit-box-shadow: white 0 1px 1px -1px inset;
             background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));
@@ -762,27 +759,27 @@
             vertical-align: middle;
             white-space: nowrap
         }
-
+        
         .fb_dialog_content .dialog_header table {
             -webkit-font-smoothing: subpixel-antialiased;
             height: 43px;
             width: 100%
         }
-
+        
         .fb_dialog_content .dialog_header td.header_left {
             font-size: 12px;
             padding-left: 5px;
             vertical-align: middle;
             width: 60px
         }
-
+        
         .fb_dialog_content .dialog_header td.header_right {
             font-size: 12px;
             padding-right: 5px;
             vertical-align: middle;
             width: 60px
         }
-
+        
         .fb_dialog_content .touchable_button {
             background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));
             border: 1px solid #29487d;
@@ -796,7 +793,7 @@
             padding: 4px 12px;
             position: relative
         }
-
+        
         .fb_dialog_content .dialog_header .touchable_button input {
             border: none;
             background: none;
@@ -807,7 +804,7 @@
             padding: 2px 6px 3px 6px;
             text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
         }
-
+        
         .fb_dialog_content .dialog_header .header_center {
             color: #fff;
             font-size: 16px;
@@ -816,7 +813,7 @@
             text-align: center;
             vertical-align: middle
         }
-
+        
         .fb_dialog_content .dialog_content {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
             border: 1px solid #555;
@@ -824,26 +821,26 @@
             border-top: 0;
             height: 150px
         }
-
+        
         .fb_dialog_content .dialog_footer {
             background: #f6f7f9;
             border: 1px solid #555;
             border-top-color: #ccc;
             height: 40px
         }
-
+        
         #fb_dialog_loader_close {
             float: left
         }
-
+        
         .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
             text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
         }
-
+        
         .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
             visibility: hidden
         }
-
+        
         #fb_dialog_loader_spinner {
             animation: rotateSpinner 1.2s linear infinite;
             background-color: transparent;
@@ -853,7 +850,7 @@
             height: 24px;
             width: 24px
         }
-
+        
         @keyframes rotateSpinner {
             0% {
                 transform: rotate(0deg)
@@ -862,61 +859,61 @@
                 transform: rotate(360deg)
             }
         }
-
+        
         .fb_iframe_widget {
             display: inline-block;
             position: relative
         }
-
+        
         .fb_iframe_widget span {
             display: inline-block;
             position: relative;
             text-align: justify
         }
-
+        
         .fb_iframe_widget iframe {
             position: absolute
         }
-
+        
         .fb_iframe_widget_fluid_desktop,
         .fb_iframe_widget_fluid_desktop span,
         .fb_iframe_widget_fluid_desktop iframe {
             max-width: 100%
         }
-
+        
         .fb_iframe_widget_fluid_desktop iframe {
             min-width: 220px;
             position: relative
         }
-
+        
         .fb_iframe_widget_lift {
             z-index: 1
         }
-
+        
         .fb_hide_iframes iframe {
             position: relative;
             left: -10000px
         }
-
+        
         .fb_iframe_widget_loader {
             position: relative;
             display: inline-block
         }
-
+        
         .fb_iframe_widget_fluid {
             display: inline
         }
-
+        
         .fb_iframe_widget_fluid span {
             width: 100%
         }
-
+        
         .fb_iframe_widget_loader iframe {
             min-height: 32px;
             z-index: 2;
             zoom: 1
         }
-
+        
         .fb_iframe_widget_loader .FB_Loader {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;
             height: 32px;
@@ -926,71 +923,71 @@
             left: 50%;
             z-index: 4
         }
-
+        
         .fb_customer_chat_bounce_in_v1 {
             animation-duration: 250ms;
             animation-name: fb_bounce_in_v1
         }
-
+        
         .fb_customer_chat_bounce_out_v1 {
             animation-duration: 250ms;
             animation-name: fb_bounce_out_v1
         }
-
+        
         .fb_customer_chat_bounce_in_v2 {
             animation-duration: 300ms;
             animation-name: fb_bounce_in_v2;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bounce_out_v2 {
             animation-duration: 300ms;
             animation-name: fb_bounce_out_v2;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bounce_in_v2_mobile_chat_started {
             animation-duration: 300ms;
             animation-name: fb_bounce_in_v2_mobile_chat_started;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bounce_out_v2_mobile_chat_started {
             animation-duration: 300ms;
             animation-name: fb_bounce_out_v2_mobile_chat_started;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bubble_pop_in {
             animation-duration: 250ms;
             animation-name: fb_customer_chat_bubble_bounce_in_animation
         }
-
+        
         .fb_customer_chat_bubble_animated_no_badge {
             box-shadow: 0 3px 12px rgba(0, 0, 0, .15);
             transition: box-shadow 150ms linear
         }
-
+        
         .fb_customer_chat_bubble_animated_no_badge:hover {
             box-shadow: 0 5px 24px rgba(0, 0, 0, .3)
         }
-
+        
         .fb_customer_chat_bubble_animated_with_badge {
             box-shadow: -5px 4px 14px rgba(0, 0, 0, .15);
             transition: box-shadow 150ms linear
         }
-
+        
         .fb_customer_chat_bubble_animated_with_badge:hover {
             box-shadow: -5px 8px 24px rgba(0, 0, 0, .2)
         }
-
+        
         .fb_invisible_flow {
             display: inherit;
             height: 0;
             overflow-x: hidden;
             width: 0
         }
-
+        
         .fb_mobile_overlay_active {
             background-color: #fff;
             height: 100%;
@@ -999,7 +996,7 @@
             visibility: hidden;
             width: 100%
         }
-
+        
         @keyframes fb_bounce_in_v1 {
             0% {
                 opacity: 0;
@@ -1015,7 +1012,7 @@
                 transform: scale(1, 1)
             }
         }
-
+        
         @keyframes fb_bounce_in_v2 {
             0% {
                 opacity: 0;
@@ -1032,7 +1029,7 @@
                 transform-origin: bottom right
             }
         }
-
+        
         @keyframes fb_bounce_in_v2_mobile_chat_started {
             0% {
                 opacity: 0;
@@ -1043,7 +1040,7 @@
                 top: 0
             }
         }
-
+        
         @keyframes fb_bounce_out_v1 {
             from {
                 opacity: 1
@@ -1052,7 +1049,7 @@
                 opacity: 0
             }
         }
-
+        
         @keyframes fb_bounce_out_v2 {
             0% {
                 opacity: 1;
@@ -1065,7 +1062,7 @@
                 transform-origin: bottom right
             }
         }
-
+        
         @keyframes fb_bounce_out_v2_mobile_chat_started {
             0% {
                 opacity: 1;
@@ -1076,7 +1073,7 @@
                 top: 20px
             }
         }
-
+        
         @keyframes fb_customer_chat_bubble_bounce_in_animation {
             0% {
                 bottom: 6pt;
@@ -1127,7 +1124,7 @@
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <script>
-        (function (w, d, s, l, i) {
+        (function(w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
                 'gtm.start': new Date().getTime(),
@@ -1144,7 +1141,7 @@
     <script>
         if ('PerformanceLongTaskTiming' in window) {
             var o = window._corvLT = {
-                o: new PerformanceObserver(function (l) {
+                o: new PerformanceObserver(function(l) {
                     o.pre = (o.pre || []).concat(l.getEntries())
                 })
             };
@@ -1164,7 +1161,7 @@
                         #header header.LargeHeader {
                             display: none;
                         }
-
+                        
                         @media (min-width: 600px) {
                             #header header.LargeHeader {
                                 display: flex;
@@ -1193,9 +1190,8 @@
                                         <div data-rf-test-name="search-container" class="search-container inline-block">
                                             <div class="InputBox">
                                                 <noscript></noscript>
-                                                <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off"
-                                                    aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP"
-                                                    title="City, Address, School, Agent, ZIP" type="search">
+                                                <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP" title="City, Address, School, Agent, ZIP"
+                                                    type="search">
                                                 <div role="button" class="inline-block clear-button-block">
                                                     <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button">
                                                     <svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px">
@@ -1209,8 +1205,7 @@
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search"
-                                                tabindex="2">
+                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2">
                                                 <svg class="SvgIcon rfSvg search">
                                                     <svg viewBox="0 0 24 24">
                                                         <g fill-rule="evenodd">
@@ -1368,8 +1363,7 @@
                             <div class="logo-div menuItemAlign verticallyCenterFlexContent" itemscope="" itemtype="http://schema.org/Organization">
                                 <meta itemprop="name" content="Redfin">
                                 <link itemprop="logo" href="https://ssl.cdn-redfin.com/static-images/images/redfin-logo-transparent-bg-260x66.png" type="image/png">
-                                <a class="logo-link clickable inheritColor fill-redfin-red" data-rf-test-name="LogoLink" itemprop="url" href="owner_dashboard.html"
-                                    target="_top">
+                                <a class="logo-link clickable inheritColor fill-redfin-red" data-rf-test-name="LogoLink" itemprop="url" href="owner_dashboard.html" target="_top">
                                     <span id='custom_redfin_logo' class="RedfinLogo">
                                         <b>AVETIZ</b>
                                     </span>
@@ -1382,9 +1376,8 @@
                                         <div data-rf-test-name="search-container" class="search-container inline-block">
                                             <div class="InputBox">
                                                 <noscript></noscript>
-                                                <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off"
-                                                    aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP"
-                                                    title="City, Address, School, Agent, ZIP" type="search">
+                                                <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP" title="City, Address, School, Agent, ZIP"
+                                                    type="search">
                                                 <div role="button" class="inline-block clear-button-block">
                                                     <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button">
                                                     <svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px">
@@ -1396,8 +1389,7 @@
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search"
-                                                tabindex="2">
+                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2">
                                                 <svg class="SvgIcon rfSvg search">
                                                     <svg viewBox="0 0 24 24">
                                                         <g fill-rule="evenodd">
@@ -1425,12 +1417,11 @@
                                 </a>
                             </div>
 
-                            <div id="userMenu" class="UserMenu menuItemClickable menuItemAlign verticallyCenterFlexContent clickable withHoverShim withHoverBoxShadow"
-                                data-rf-test-name="UserMenu">
+                            <div id="userMenu" class="UserMenu menuItemClickable menuItemAlign verticallyCenterFlexContent clickable withHoverShim withHoverBoxShadow" data-rf-test-name="UserMenu">
                                 <div class="item NameAndThumbnail verticallyCenterFlexContent">
                                     <span class="clickable nameNode">
                                         <span class="name">Simon</span>
-                                        <span>▾</span>
+                                    <span>▾</span>
                                     </span>
                                     <div class="user-photo">
                                         <img alt="" class="userPhoto small loginId16487221" src="https://ssl.cdn-redfin.com/system_files/images/38/338/10904338_615_0.jpg">
@@ -1447,7 +1438,7 @@
                 <div class="SubheadNav subheadOverflowShown">
                     <div id='custom_overflowHiddeWrapper' class="overflowHideWrapper">
                         <ul class="SubheadNavLinks mainNavigation">
-                            <li class="SubheadLink active">
+                            <li class="SubheadLink">
                                 <a class="subheadLinkContent custom_subheadLinkContent" href="favorites.html">
                                     <b style='color:whitesmoke;' class='fa fa-star'></b> Favorites </a>
                             </li>
@@ -1464,7 +1455,7 @@
                                 <a class="subheadLinkContent custom_subheadLinkContent" href="your_agents.html">
                                     <b style='color:whitesmoke;' class='fa fa-users'></b> Your Consultant</a>
                             </li>
-                            <li class="SubheadLink">
+                            <li class="SubheadLink active">
                                 <a class="subheadLinkContent custom_subheadLinkContent" href="offers.html">
                                     <b style='color:whitesmoke' class='fa fa-credit-card'></b> Offers</a>
                             </li>
@@ -1489,7 +1480,30 @@
         </div>
         <div data-react-server-root-id="3" data-react-server-timing-offset="63"></div>
         <div data-react-server-root-id="4" data-react-server-timing-offset="122">
-                <div class="start-an-offer-container" data-reactroot=""><div class="start-an-offer-header"><div class="title"><h1>Start an Offer</h1></div></div><div class="disambiguation"><div class="subheading"><h2>Hi Simon!<!-- --> Find a home to get started. </h2></div><div class="disambig-searchbox"><div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1"><form class="SearchBoxForm" action="?"><div data-rf-test-name="search-container" class="search-container inline-block"><div class="InputBox"><noscript></noscript><input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="0" aria-invalid="false" value="" placeholder="Enter street address or MLS#" title="Enter street address or MLS#" type="search"><div role="button" class="inline-block clear-button-block"><input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button"><svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.772 8.288l-1.06-1.06a.25.25 0 0 0-.354 0L12 10.586 8.642 7.228a.25.25 0 0 0-.354 0l-1.06 1.06a.25.25 0 0 0 0 .354L10.586 12l-3.358 3.358a.25.25 0 0 0 0 .354l1.06 1.06a.25.25 0 0 0 .354 0L12 13.414l3.358 3.358a.25.25 0 0 0 .354 0l1.06-1.06a.25.25 0 0 0 0-.354L13.414 12l3.358-3.358a.25.25 0 0 0 0-.354z"></path></g></svg></svg></div></div><button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2"><svg class="SvgIcon rfSvg search"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path></g></svg></svg></button></div></form><noscript></noscript></div></div></div></div>
+            <div class="start-an-offer-container" data-reactroot="">
+                <div class="start-an-offer-header">
+                    <div class="title">
+                        <h1>Start an Offer</h1>
+                    </div>
+                </div>
+                <div class="disambiguation">
+                    <div class="subheading">
+                        <h2>Hi Simon!
+                            <!-- -->Find a home to get started. </h2>
+                    </div>
+                    <div class="disambig-searchbox">
+                        <div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1">
+                            <form class="SearchBoxForm" action="?">
+                                <div data-rf-test-name="search-container" class="search-container inline-block">
+                                    <div class="InputBox"><noscript></noscript><input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="0" aria-invalid="false" value=""
+                                            placeholder="Enter street address or MLS#" title="Enter street address or MLS#" type="search">
+                                        <div role="button" class="inline-block clear-button-block"><input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button"><svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.772 8.288l-1.06-1.06a.25.25 0 0 0-.354 0L12 10.586 8.642 7.228a.25.25 0 0 0-.354 0l-1.06 1.06a.25.25 0 0 0 0 .354L10.586 12l-3.358 3.358a.25.25 0 0 0 0 .354l1.06 1.06a.25.25 0 0 0 .354 0L12 13.414l3.358 3.358a.25.25 0 0 0 .354 0l1.06-1.06a.25.25 0 0 0 0-.354L13.414 12l3.358-3.358a.25.25 0 0 0 0-.354z"></path></g></svg></svg>
+                                        </div>
+                                    </div><button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2"><svg class="SvgIcon rfSvg search"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path></g></svg></svg></button></div>
+                            </form><noscript></noscript></div>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <div data-react-server-container="5">
@@ -1507,12 +1521,9 @@
                                 <div data-rf-test-name="search-container" class="search-container inline-block">
                                     <div class="InputBox">
                                         <noscript></noscript>
-                                        <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box"
-                                            name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false"
-                                            value="" placeholder="NGN" title="NGN" type="search">
+                                        <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="NGN" title="NGN" type="search">
                                         <div role="button" class="inline-block clear-button-block">
-                                            <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear"
-                                                title="Clear" type="button">
+                                            <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button">
                                             <svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px">
                                                 <svg viewBox="0 0 24 24">
                                                     <g fill-rule="evenodd">
@@ -1522,8 +1533,7 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right"
-                                        type="submit" value="" title="Search" tabindex="2">
+                                    <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2">
                                         <svg class="SvgIcon rfSvg search">
                                             <svg viewBox="0 0 24 24">
                                                 <g fill-rule="evenodd">
@@ -1609,8 +1619,7 @@
                             </a>
                         </li>
                         <li id="footerInstagramIcon">
-                            <a class="icon icon-instagram" target="_blank" href="https://www.instagram.com/redfinrealestate/" title="Redfin Instagram"
-                                alt="Redfin Instagram">
+                            <a class="icon icon-instagram" target="_blank" href="https://www.instagram.com/redfinrealestate/" title="Redfin Instagram" alt="Redfin Instagram">
                                 <svg class="SvgIcon rfSvg instagram">
                                     <svg viewBox="0 0 24 24">
                                         <path d="M12 1c-2.987 0-3.362.013-4.535.066-1.171.054-1.971.24-2.67.511a5.412 5.412 0 0 0-1.949 1.269 5.412 5.412 0 0 0-1.269 1.949c-.271.699-.457 1.499-.511 2.67C1.013 8.638 1 9.013 1 12s.013 3.362.066 4.535c.054 1.171.24 1.971.511 2.67a5.412 5.412 0 0 0 1.269 1.949 5.412 5.412 0 0 0 1.949 1.269c.699.271 1.499.457 2.67.511C8.638 22.987 9.013 23 12 23s3.362-.013 4.535-.066c1.171-.054 1.971-.24 2.67-.511a5.412 5.412 0 0 0 1.949-1.269 5.412 5.412 0 0 0 1.269-1.949c.271-.699.457-1.499.511-2.67.053-1.173.066-1.548.066-4.535s-.013-3.362-.066-4.535c-.054-1.171-.24-1.971-.511-2.67a5.412 5.412 0 0 0-1.269-1.949 5.412 5.412 0 0 0-1.949-1.269c-.699-.271-1.499-.457-2.67-.511C15.362 1.013 14.987 1 12 1m0 1.982c2.937 0 3.285.011 4.445.064 1.072.049 1.655.228 2.042.379.514.199.88.438 1.265.823.385.385.624.751.823 1.265.151.387.33.97.379 2.042.053 1.16.064 1.508.064 4.445 0 2.937-.011 3.285-.064 4.445-.049 1.072-.228 1.655-.379 2.042-.199.514-.438.88-.823 1.265a3.398 3.398 0 0 1-1.265.823c-.387.151-.97.33-2.042.379-1.16.053-1.508.064-4.445.064-2.937 0-3.285-.011-4.445-.064-1.072-.049-1.655-.228-2.042-.379a3.398 3.398 0 0 1-1.265-.823 3.398 3.398 0 0 1-.823-1.265c-.151-.387-.33-.97-.379-2.042-.053-1.16-.064-1.508-.064-4.445 0-2.937.011-3.285.064-4.445.049-1.072.228-1.655.379-2.042.199-.514.438-.88.823-1.265a3.398 3.398 0 0 1 1.265-.823c.387-.151.97-.33 2.042-.379 1.16-.053 1.508-.064 4.445-.064zm0 3.37a5.649 5.649 0 1 0 0 11.297 5.649 5.649 0 0 0 0-11.297zm0 9.315a3.667 3.667 0 1 1 0-7.335 3.667 3.667 0 0 1 0 7.335zm7.192-9.539a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0z"
@@ -1629,8 +1638,8 @@
             window.performance && window.performance.mark && window.performance.mark("displayAboveTheFold.fromStart");
         </script>
         <script>
-            _tLAB.wait(function () {
-                (function (root) {
+            _tLAB.wait(function() {
+                (function(root) {
                     // -- Data --
                     root.__reactServerState || (root.__reactServerState = {});
                     root.__reactServerState.InitialContext = {
@@ -1971,7 +1980,7 @@
             });
         </script>
         <script>
-            _tLAB.wait(function () {
+            _tLAB.wait(function() {
                 __reactServerClientController.nodeArrival(0, 9)
             });
         </script>
@@ -1979,8 +1988,8 @@
     <span style="border-radius: 3px !important; text-indent: 20px !important; width: auto !important; padding: 0px 4px 0px 0px !important; text-align: center !important; font: bold 11px/20px &quot;Helvetica Neue&quot;, Helvetica, sans-serif !important; color: rgb(255, 255, 255) !important; background: rgb(189, 8, 28) url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==&quot;) no-repeat scroll 3px 50% / 14px 14px !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: medium none !important;">Save</span>
     <span style="width: 24px !important; height: 24px !important; background: rgba(0, 0, 0, 0.4) url(&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDI0IDI0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxtYXNrIGlkPSJtIj48cmVjdCBmaWxsPSIjZmZmIiB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHJ4PSI2IiByeT0iNiIvPjxyZWN0IGZpbGw9IiMwMDAiIHg9IjUiIHk9IjUiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgcng9IjEiIHJ5PSIxIi8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMTAiIHk9IjAiIHdpZHRoPSI0IiBoZWlnaHQ9IjI0Ii8+PHJlY3QgZmlsbD0iIzAwMCIgeD0iMCIgeT0iMTAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0Ii8+PC9tYXNrPjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNmZmYiIG1hc2s9InVybCgjbSkiLz48L3N2Zz4=&quot;) no-repeat scroll 50% 50% / 14px 14px !important; position: absolute !important; opacity: 1 !important; z-index: 8675309 !important; display: none; cursor: pointer !important; border: medium none !important; border-radius: 12px;"></span>
     <script type="text/javascript" id="">
-        ! function (b, e, f, g, a, c, d) {
-            b.fbq || (a = b.fbq = function () {
+        ! function(b, e, f, g, a, c, d) {
+            b.fbq || (a = b.fbq = function() {
                 a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
             }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d))
         }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
@@ -1998,22 +2007,18 @@
     <div id="fb-root" class=" fb_reset">
         <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
             <div>
-                <iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
-                    id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1"
-                    style="border: medium none;" src="https://staticxx.facebook.com/connect/xd_arbiter/r/xh_uObIASmW.js?version=42#channel=f3113842dfacdc6&amp;origin=https%3A%2F%2Fwww.redfin.com"
-                    frameborder="0"></iframe>
+                <iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;"
+                    src="https://staticxx.facebook.com/connect/xd_arbiter/r/xh_uObIASmW.js?version=42#channel=f3113842dfacdc6&amp;origin=https%3A%2F%2Fwww.redfin.com" frameborder="0"></iframe>
             </div>
         </div>
         <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
             <div>
-                <iframe name="f3a6ce18ffb5d46" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
-                    style="display: none;" src="https://www.facebook.com/connect/ping?client_id=161006757273279&amp;domain=www.redfin.com&amp;origin=1&amp;redirect_uri=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fxh_uObIASmW.js%3Fversion%3D42%23cb%3Df35bd230a6706ba%26domain%3Dwww.redfin.com%26origin%3Dhttps%253A%252F%252Fwww.redfin.com%252Ff3113842dfacdc6%26relation%3Dparent&amp;response_type=token%2Csigned_request%2Ccode&amp;sdk=joey&amp;version=v2.0"
+                <iframe name="f3a6ce18ffb5d46" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" style="display: none;" src="https://www.facebook.com/connect/ping?client_id=161006757273279&amp;domain=www.redfin.com&amp;origin=1&amp;redirect_uri=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2Fxh_uObIASmW.js%3Fversion%3D42%23cb%3Df35bd230a6706ba%26domain%3Dwww.redfin.com%26origin%3Dhttps%253A%252F%252Fwww.redfin.com%252Ff3113842dfacdc6%26relation%3Dparent&amp;response_type=token%2Csigned_request%2Ccode&amp;sdk=joey&amp;version=v2.0"
                     frameborder="0"></iframe>
             </div>
         </div>
     </div>
-    <iframe style="position: absolute; width: 1px; height: 1px; left: -9999px; display: none;" aria-hidden="true" id="ssIFrame_google"
-        sandbox="allow-scripts allow-same-origin" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fwww.redfin.com&amp;rpcToken=1993688339.2974677"></iframe>
+    <iframe style="position: absolute; width: 1px; height: 1px; left: -9999px; display: none;" aria-hidden="true" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fwww.redfin.com&amp;rpcToken=1993688339.2974677"></iframe>
 </body>
 
 </html>

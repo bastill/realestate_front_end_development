@@ -44,3 +44,8 @@ body {
 .Mission {
     background-color: whitesmoke !important;
 }
+
+.SubheadLink.active {
+    font-weight: 715 !important;
+    border-color: #f90b0b !important;
+}
