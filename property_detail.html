@@ -78,10 +78,12 @@
         data-react-server-css="">
     <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/long-cache.575fea6f352b09920d43.styles.css"
         data-react-server-css="">
-    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/common.a7586146b184e62b7d8e.styles.css"
-        data-react-server-css="">
+    <link rel="stylesheet" type="text/css" media="" href="styles/styles.css"/>
+       
     <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/ADPDesktopPage.0171e3a37f361a1857d8.styles.css"
         data-react-server-css="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="" href="custom.css">
     <link data-react-server-link="" rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
     <link data-react-server-link="" rel="apple-touch-icon" href="https://ssl.cdn-redfin.com/v216.2.0/images/logos/Touch-icon-60.png">
     <link data-react-server-link="" rel="apple-touch-icon" sizes="76x76" href="https://ssl.cdn-redfin.com/v216.2.0/images/logos/Touch-icon-76.png">
@@ -979,99 +981,72 @@
                         </div>
                         <div class="mobileNavOverlay"></div>
                     </header>
+
                     <header data-rf-test-name="large_header_content" class="LargeHeader">
-                        <div class="header-left can-shrink">
-                            <div class="logo-div menuItemAlign verticallyCenterFlexContent" itemscope="" itemtype="http://schema.org/Organization">
-                                <meta itemprop="name" content="Redfin">
-                                <link itemprop="logo" href="https://ssl.cdn-redfin.com/static-images/images/redfin-logo-transparent-bg-260x66.png"
-                                    type="image/png">
-                                <a class="logo-link clickable inheritColor fill-redfin-red" data-rf-test-name="LogoLink"
-                                    itemprop="url" href="https://www.redfin.com/" target="_top">
-                                    <svg class="SvgIcon rfSvg logo-R">
-                                        <svg viewBox="0 0 24 24">
-                                            <path d="M10.644 10.965h-2.53V3.513h2.53c1.242 0 2.208.184 2.921.851.253.276.46.598.621.966.184.46.276 1.035.276 1.725-.023 1.012-.092 3.91-3.818 3.91zm9.315 11.385c-.322-.138-.667-.414-1.541-1.978l-1.771-3.105-2.07-3.657-.184-.322c.092-.023.207-.069.299-.092 2.392-.874 3.772-3.174 3.772-6.486 0-1.633-.621-3.128-1.817-4.255a5.12 5.12 0 0 0-.552-.437C14.554.914 12.415.5 9.563.5H4.112c-.345 0-.391.207-.253.391.115.184.276.414.322.989v18.216c-.069.736-.207.966-.322 1.15-.138.184-.069.414.276.414h3.979v-7.728h1.817l1.265 2.3 1.587 2.875.782 1.403c.989 1.771 1.863 2.737 3.565 2.944.23.046.483.046.759.046h.276c.621 0 1.219-.253 1.587-.437.046-.023.092-.046.161-.069.46-.207.322-.529.046-.644z"></path>
-                                        </svg>
-                                    </svg>
-                                    <span class="RedfinLogo">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="30" viewBox="0 0 110 30">
-                                            <path d="M56.8 5.7c-2-1.3-4.8-1.8-8.4-1.8h-6.9v22.9h7.1c2.5 0 4.7-.3 6.5-1s3.2-1.9 4.2-3.6 1.5-3.9 1.5-6.7c0-2.4-.3-4.4-.9-6-.9-1.7-1.8-3-3.1-3.8zm-1.9 13.6c-.3 1.1-.9 2-1.7 2.6-.9.7-2.3 1-4.1 1h-2.5V7.5h2.1c2 0 3.6.3 4.6 1.1.7.6 1.3 1.3 1.6 2.4s.5 2.4.5 4c0 1.8-.1 3.2-.5 4.3zm9 7.4h5.2V17h6.1v-3.8h-6.1V7.6h9.3V3.8H63.9v22.9zm17.9 0H87V3.8h-5.2v22.9zM110 3.8h-5.3V17L95 3.8h-4.2v22.9h5.3V13.2l9.6 13.5h4.3V3.8zM21.7 27.6c-.4-.2-.9-.5-2.1-2.5l-2.4-3.9-2.8-4.6-.2-.4c.1 0 .3-.1.4-.1 3.2-1.1 5.1-4 5.1-8.2 0-2.1-.8-4-2.4-5.4-.2-.2-.5-.4-.7-.6C14.4.5 11.5 0 7.7 0H.4C0 0-.1.3.1.5s.4.5.4 1.3v23c-.1.9-.3 1.2-.4 1.4-.2.2-.1.5.4.5h5.3V17h2.4l1.7 2.9 2.1 3.6 1 1.8c1.2 2 2.3 3.3 4.2 3.6.2 0 1.2.2 1.6.2h.4c.8 0 1.6-.3 2.1-.5 0 0 .1-.1.2-.1.7-.4.5-.8.2-.9zM9.2 13.2H5.8V3.8h3.4c1.7 0 3 .2 3.9 1.1.4.3.6.7.8 1.2.2.6.4 1.3.4 2.2 0 1.2-.1 4.9-5.1 4.9zM28.5 17h6.1v-3.8h-6.1V7.6h9.3V3.8H23.3v22.9h14.5v-3.8h-9.3V17z"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
-                            <div id="headerUnifiedSearch" class="headerUnifiedSearch">
-                                <div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1">
-                                    <form class="SearchBoxForm" action="?">
-                                        <div data-rf-test-name="search-container" class="search-container inline-block">
-                                            <div class="InputBox">
-                                                <noscript></noscript>
-                                                <input data-rf-test-name="search-box-input" id="search-box-input"
-                                                    class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true"
-                                                    tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP"
-                                                    title="City, Address, School, Agent, ZIP" type="search">
-                                                <div role="button" class="inline-block clear-button-block">
-                                                    <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear"
-                                                        title="Clear" type="button">
-                                                    <svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px">
-                                                        <svg viewBox="0 0 24 24">
-                                                            <g fill-rule="evenodd">
-                                                                <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.772 8.288l-1.06-1.06a.25.25 0 0 0-.354 0L12 10.586 8.642 7.228a.25.25 0 0 0-.354 0l-1.06 1.06a.25.25 0 0 0 0 .354L10.586 12l-3.358 3.358a.25.25 0 0 0 0 .354l1.06 1.06a.25.25 0 0 0 .354 0L12 13.414l3.358 3.358a.25.25 0 0 0 .354 0l1.06-1.06a.25.25 0 0 0 0-.354L13.414 12l3.358-3.358a.25.25 0 0 0 0-.354z"></path>
-                                                            </g>
+                            <div class="header-left can-shrink">
+                                <div class="logo-div menuItemAlign verticallyCenterFlexContent" itemscope="" itemtype="http://schema.org/Organization">
+                                    <meta itemprop="name" content="Redfin">
+                                    <link itemprop="logo" href="https://ssl.cdn-redfin.com/static-images/images/redfin-logo-transparent-bg-260x66.png" type="image/png">
+                                    <a class="logo-link clickable inheritColor fill-redfin-red" data-rf-test-name="LogoLink" itemprop="url" href="owner_dashboard.html" target="_top">
+                                        <span id="custom_redfin_logo" class="RedfinLogo"><b>AVETIZ</b></span>
+    
+                                    </a>
+                                </div>
+                                <div id="headerUnifiedSearch" class="headerUnifiedSearch">
+                                    <div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1">
+                                        <form class="SearchBoxForm" action="?">
+                                            <div data-rf-test-name="search-container" class="search-container inline-block">
+                                                <div class="InputBox">
+                                                    <noscript></noscript>
+                                                    <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP" title="City, Address, School, Agent, ZIP" type="search">
+                                                    <div role="button" class="inline-block clear-button-block">
+                                                        <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button">
+                                                        <svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px">
+                                                                    <svg viewBox="0 0 24 24">
+                                                                        <g fill-rule="evenodd">
+                                                                            <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.772 8.288l-1.06-1.06a.25.25 0 0 0-.354 0L12 10.586 8.642 7.228a.25.25 0 0 0-.354 0l-1.06 1.06a.25.25 0 0 0 0 .354L10.586 12l-3.358 3.358a.25.25 0 0 0 0 .354l1.06 1.06a.25.25 0 0 0 .354 0L12 13.414l3.358 3.358a.25.25 0 0 0 .354 0l1.06-1.06a.25.25 0 0 0 0-.354L13.414 12l3.358-3.358a.25.25 0 0 0 0-.354z"></path>
+                                                                        </g>
+                                                                    </svg>
                                                         </svg>
-                                                    </svg>
+                                                    </div>
                                                 </div>
+                                                <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2">
+                                                            <svg class="SvgIcon rfSvg search">
+                                                                <svg viewBox="0 0 24 24">
+                                                                    <g fill-rule="evenodd">
+                                                                        <path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </svg>
+                                                        </button>
                                             </div>
-                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right"
-                                                type="submit" value="" title="Search" tabindex="2">
-                                                <svg class="SvgIcon rfSvg search">
-                                                    <svg viewBox="0 0 24 24">
-                                                        <g fill-rule="evenodd">
-                                                            <path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path>
-                                                        </g>
-                                                    </svg>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </form>
-                                    <noscript></noscript>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header-right">
-                            <div class="item Phone menuItemClickable menuItemAlign verticallyCenterFlexContent shouldHide">
-                                <div class="contents hoverWrapper">
-                                    <div class="text menuItemClickable">
-                                        <a data-rf-test-name="Phone" href="tel:1-844-759-7732">
-                                            <span> </span>
-                                            <span class="phoneNumberDigits">1-844-759-7732</span>
-                                        </a>
+                                        </form>
+                                        <noscript></noscript>
                                     </div>
                                 </div>
                             </div>
-                            <div class="menuItemClickable verticallyCenterFlexContent menuItemAlign clickable withHoverShim withHoverBoxShadow"
-                                data-rf-test-name="BuyMenu">
-                                <a class="inheritColor" href="#">Buy ▾</a>
-                            </div>
-                            <div class="menuItemClickable verticallyCenterFlexContent menuItemAlign clickable withHoverShim withHoverBoxShadow"
-                                data-rf-test-name="SellMenu">
-                                <a class="inheritColor" href="#">Sell ▾</a>
-                            </div>
-                            <a data-rf-test-name="RealEstateAgentsLink" class="inline-block menuItemClickable verticallyCenterFlexContent menuItemAlign topMenuRealEstateAgentsLink clickable"
-                                href="/real-estate-agents" data-rift-target="redfin_agents" id="topMenuRealEstateAgentsLink">Real Estate Agents</a>
-                            <div id="userMenu" class="UserMenu menuItemClickable menuItemAlign verticallyCenterFlexContent clickable withHoverShim withHoverBoxShadow"
-                                data-rf-test-name="UserMenu">
-                                <div class="item NameAndThumbnail verticallyCenterFlexContent">
-                                    <span class="clickable nameNode">
-                                        <span class="name">Simon</span>
+                            <div class="header-right">
+    
+                                <div class="menuItemClickable verticallyCenterFlexContent menuItemAlign clickable withHoverShim withHoverBoxShadow" data-rf-test-name="BuyMenu">
+                                    <a class="inheritColor" href="#">Buy <i class="fa fa-credit-card"></i></a>
+                                </div>
+                                <div class="menuItemClickable verticallyCenterFlexContent menuItemAlign clickable withHoverShim withHoverBoxShadow" data-rf-test-name="SellMenu">
+                                    <a class="inheritColor" href="#">Sell <i class="fa fa-money"></i></a>
+                                </div>
+    
+                                <div id="userMenu" class="UserMenu menuItemClickable menuItemAlign verticallyCenterFlexContent clickable withHoverShim withHoverBoxShadow" data-rf-test-name="UserMenu">
+                                    <div class="item NameAndThumbnail verticallyCenterFlexContent">
+                                        <span class="clickable nameNode">
+                                                        <span class="name">Simon</span>
                                         <span>▾</span>
-                                    </span>
-                                    <div class="user-photo">
-                                        <img alt="" class="userPhoto small loginId16487221" src="https://ssl.cdn-redfin.com/system_files/images/38/338/10904338_615_0.jpg">
+                                        </span>
+                                        <div class="user-photo">
+                                            <img alt="" class="userPhoto small loginId16487221" src="https://ssl.cdn-redfin.com/system_files/images/38/338/10904338_615_0.jpg">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </header>
+                        </header>
                 </div>
             </div>
         </div>
@@ -5105,59 +5080,7 @@
                                     <span> — daily errands can be accomplished on a bike. </span>
                                 </div>
                             </div>
-                            <div class="OfferInsights">
-                                <div class="overview">
-                                    <h3 class="h3">
-                                        <span></span>
-                                        <span>
-                                            <a href="/zipcode/95616">95616</a>
-                                        </span>
-                                        <span> Real Estate Sales</span>
-                                        <span class="header-note"> (Last 30 days)</span>
-                                    </h3>
-                                    <div>
-                                        <div class="region-map float-left">
-                                            <img src="https://maps.google.com/maps/api/staticmap?channel=ldp-neighborhood&amp;size=210x176&amp;style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&amp;style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&amp;style=feature%3Atransit.station%7Chue%3A0xffa200&amp;path=color%3A0xFF2F2FFF%7Cweight%3A2%7Cenc%3As%7BejFfa%60fV%60%40gBdR%7ETdIrK%7EJdSdFpPm%40VdUvR%60%40w%40lZPv%40dHoF%3FJnFjFG%60BtHek%40F%7CAfIpDpItHbKvE%60N_CRa%40xH%7DBrGwGjF%7EU%5EdK%7EBhP%60LkIu%40qo%40m%40%5D%7E%7B%40%7EG%60L%7ELxBpFa%40h%40bMy%40vGaFlOgNv%5De%40pNBxOpAjReDfAFzK%60AdOB%7CGnAzLRjJc%40bE%7BEzQkApGqEpPrE%3FiEnT%5DxRK%7EJq%40nMuEnLeNnZmB%5D%7BGjTeIn%5EmEhOm%40%60IlGr%40ElJsBhHwAlFcA%7EFgAbNBpFuEjAWbRqAxYum%40pLdCae%40gMsf%40o%5ESgm%40DElbAfClBjMShCr%40xB%60DQnJfA%7EGhGlOuiAn%40kdANyYUin%40%7D%40CaUDo%7BADmsDLwiAa%40sH%7DCmENeEjF%7DCAmJuAkJoH%7BHCeKhAmGdD_CdDW%60AgEaCmIb%40agCX_lA%3FcWz%40gsDj%40yKfC_MdtAt%40l%5EXtGNjQPxJPnIZz%40H%7ECB%7ECg%40%7EAe%40hA%7D%40pD_GpA%7DBv%40eAv%40u%40%60%40Yd%40Ux%40YlD%5BdN%5DxHq%40jBEzHk%40%7EBY%7CCOvRaBdAxFfDnKjCjGzAlCdCdEdLdO%60CxEdI%7CJdB%7EB&amp;client=gme-redfin&amp;signature=NB0RV9_JzgHDUqtseZYu5edGScM=">
-                                        </div>
-                                        <div class="offer-stats">
-                                            <table class="basic-table">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <span class="field">Median List Price</span>
-                                                            <span class="value">$785,000</span>
-                                                        </td>
-                                                        <td>
-                                                            <span class="field">Avg. # Offers</span>
-                                                            <span class="value">—</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <span class="field">Median $ / Sq. Ft.</span>
-                                                            <span class="value">$392</span>
-                                                        </td>
-                                                        <td>
-                                                            <span class="field">Avg. Down Payment</span>
-                                                            <span class="value">—</span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <span class="field">Median Sale / List</span>
-                                                            <span class="value">102%</span>
-                                                        </td>
-                                                        <td>
-                                                            <span class="field"># Sold Homes</span>
-                                                            <span class="value">30</span>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="OfferInsightsSection region-content-section" id="offer-insights-section">
                                 <div class="title primary-heading h3">What It Takes to Win an Offer near
                                     <!-- -->
@@ -5230,76 +5153,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="statsAndChartsContainer">
-                                <div class="NeighborhoodStatsTable">
-                                    <h3 class="h3">Median Real Estate Values</h3>
-                                    <div class="median-values">
-                                        <table class="basic-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Location</th>
-                                                    <th>List Price</th>
-                                                    <th>$ / Sq. Ft.</th>
-                                                    <th>Sale / List</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <a href="/neighborhood/43234/CA/Davis/Norwood">Norwood</a>
-                                                    </td>
-                                                    <td>$719,000</td>
-                                                    <td>$435</td>
-                                                    <td>101.9%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <a href="/neighborhood/427/CA/Davis/Central-Davis">Central Davis</a>
-                                                    </td>
-                                                    <td>$719,000</td>
-                                                    <td>$437</td>
-                                                    <td>100.9%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <a href="/zipcode/95616">95616</a>
-                                                    </td>
-                                                    <td>$725,000</td>
-                                                    <td>$392</td>
-                                                    <td>101.1%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <a href="/city/4690/CA/Davis">Davis</a>
-                                                    </td>
-                                                    <td>$717,000</td>
-                                                    <td>$378</td>
-                                                    <td>101.4%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <a href="/county/359/CA/Yolo-County">Yolo County</a>
-                                                    </td>
-                                                    <td>$495,000</td>
-                                                    <td>$275</td>
-                                                    <td>100.5%</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="NeighborhoodStatsChart">
-                                    <h3 class="h3">$/Sq. Ft.
-                                        <!-- -->House
-                                        <!-- -->s in
-                                        <a href="/zipcode/95616" target="_top">95616</a>
-                                    </h3>
-                                    <div class="chart-image">
-                                        <img style="opacity: 1;" class="transition-opaque-fast" alt="95616 House median price per square foot"
-                                            title="95616 House median price per square foot" src="/stingray/do/region-chart-small/2018_06_29/2/39745/MEDIAN_HOUSE_SQ_FT_BY_TIME.png">
-                                    </div>
-                                </div>
-                            </div>
+                          
                         </div>
                     </section>
                 </div>
@@ -5726,440 +5580,7 @@
                                         </div>
                                     </div>
                                     <hr class="sim-divider">
-                                    <div class="similar-homes" id="lsis-solds">
-                                        <div class="section-header">
-                                            <span class="h3">Nearby Sold Homes</span>
-                                        </div>
-                                        <div class="similars">
-                                            <div class="row-type">
-                                                <div class="SimilarHomeCardReact">
-                                                    <div class="homecard" data-rf-test-name="basicNode-homeCard">
-                                                        <div style="padding-top:52.13764337851929%">
-                                                            <a class="PhotoWrapper cover-all" href="/CA/Davis/517-Cleveland-Ct-95616/home/19468056"
-                                                                target="_self" aria-label="517 Cleveland Ct, Davis, CA 95616, 4 beds, 2 baths, 1,934 square feet, MLS# 18005676, Keller Williams Realty, 1.3 miles away, SOLD 3/07/18 ">
-                                                                <div class="photoContainer" data-rf-test-name="basic-card-photo">
-                                                                    <div style="height: 100%; background-size: cover; background-position: center center; background-image: url(&quot;https://ssl.cdn-redfin.com/photo/77/mbphoto/676/genMid.18005676_0.jpg&quot;);"
-                                                                        class="HomeCardImage" title="Photo of 517 Cleveland Ct, Davis, CA 95616"></div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="topright">
-                                                                <a class="mlsLogo" href="/about/terms-of-use#MetroList" target="_top">
-                                                                    <img alt="MetroList Services, Inc" src="https://ssl.cdn-redfin.com/v216.2.0/images/logos/metrolist.png">
-                                                                </a>
-                                                                <div class="DistanceIndicator">
-                                                                    <div class="distance-wrapper">
-                                                                        <span class="distance-amount">1.3</span>
-                                                                        <span class="distance-units">&nbsp;
-                                                                            <!-- -->mi.</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="topleft">
-                                                                <span class="HomeSash font-weight-bold" data-rf-test-id="home-sash"
-                                                                    style="background-color:#5D8ACB">SOLD 3/07/18</span>
-                                                            </div>
-                                                            <a class="bottom link-override" href="/CA/Davis/517-Cleveland-Ct-95616/home/19468056"
-                                                                title="517 Cleveland Ct, Davis, CA 95616" target="_self">
-                                                                <div class="left" role="heading">
-                                                                    <div>
-                                                                        <span class="homeIcon sold" data-rf-test-name="property-icon">
-                                                                            <svg class="SvgIcon rfSvg home property-icon">
-                                                                                <svg viewBox="0 0 24 24">
-                                                                                    <path d="M22.584 12.563L12.027 1.846 7.068 6.645V2.646H4.669v6.398L1.47 12.563h3.199v9.598h4.958v-6.399h4.799v6.399h4.959v-9.598z"></path>
-                                                                                </svg>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="homecardPrice font-size-small font-weight-bold"
-                                                                            data-rf-test-name="homecard-price">$821,000</span>
-                                                                    </div>
-                                                                    <div class="addressDisplay font-size-smaller" data-rf-test-id="abp-homeinfo-homeaddress">
-                                                                        <span data-rf-test-id="abp-streetLine">517 Cleveland Ct </span>
-                                                                        <span class="cityStateZip"
-                                                                            data-rf-test-id="abp-cityStateZip">Davis, CA 95616</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="right" role="heading">
-                                                                    <div class="HomeStats font-size-smaller">
-                                                                        <div>
-                                                                            <div class="value">4</div>
-                                                                            <div data-rf-test-name="homecardLabel">Beds</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">2</div>
-                                                                            <div data-rf-test-name="homecardLabel">Baths</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">1,934</div>
-                                                                            <div data-rf-test-name="homecardLabel">Sq. Ft.</div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="disclaimer" title="Keller Williams Realty">Keller Williams Realty</div>
-                                                                </div>
-                                                                <script type="application/ld+json">{"@context":"http://schema.org","name":"517 Cleveland Ct, Davis, CA 95616","url":"/CA/Davis/517-Cleveland-Ct-95616/home/19468056","address":{"@type":"PostalAddress","streetAddress":"517 Cleveland Ct","addressLocality":"Davis","addressRegion":"CA","postalCode":"95616","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":38.5472637,"longitude":-121.7728366},"numberOfRooms":"4","@type":"SingleFamilyResidence"}</script>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="SimilarHomeCardReact">
-                                                    <div class="homecard" data-rf-test-name="basicNode-homeCard">
-                                                        <div style="padding-top:52.13764337851929%">
-                                                            <a class="PhotoWrapper cover-all" href="/CA/Davis/1308-Redwood-Ln-95616/home/19471089"
-                                                                target="_self" aria-label="1308 Redwood Ln, Davis, CA 95616, 3 beds, 2 baths, 1,772 square feet, MLS# 18023256, Main Event Realty, 0.1 miles away, SOLD 5/17/18 ">
-                                                                <div class="photoContainer" data-rf-test-name="basic-card-photo">
-                                                                    <div style="height: 100%; background-size: cover; background-position: center center; background-image: url(&quot;https://ssl.cdn-redfin.com/photo/77/mbphoto/256/genMid.18023256_1.jpg&quot;);"
-                                                                        class="HomeCardImage" title="Photo of 1308 Redwood Ln, Davis, CA 95616"></div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="topright">
-                                                                <a class="mlsLogo" href="/about/terms-of-use#MetroList" target="_top">
-                                                                    <img alt="MetroList Services, Inc" src="https://ssl.cdn-redfin.com/v216.2.0/images/logos/metrolist.png">
-                                                                </a>
-                                                                <div class="DistanceIndicator">
-                                                                    <div class="distance-wrapper">
-                                                                        <span class="distance-amount">0.1</span>
-                                                                        <span class="distance-units">&nbsp;
-                                                                            <!-- -->mi.</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="topleft">
-                                                                <span class="HomeSash font-weight-bold" data-rf-test-id="home-sash"
-                                                                    style="background-color:#5D8ACB">SOLD 5/17/18</span>
-                                                            </div>
-                                                            <a class="bottom link-override" href="/CA/Davis/1308-Redwood-Ln-95616/home/19471089"
-                                                                title="1308 Redwood Ln, Davis, CA 95616" target="_self">
-                                                                <div class="left" role="heading">
-                                                                    <div>
-                                                                        <span class="homeIcon sold" data-rf-test-name="property-icon">
-                                                                            <svg class="SvgIcon rfSvg home property-icon">
-                                                                                <svg viewBox="0 0 24 24">
-                                                                                    <path d="M22.584 12.563L12.027 1.846 7.068 6.645V2.646H4.669v6.398L1.47 12.563h3.199v9.598h4.958v-6.399h4.799v6.399h4.959v-9.598z"></path>
-                                                                                </svg>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="homecardPrice font-size-small font-weight-bold"
-                                                                            data-rf-test-name="homecard-price">$725,000</span>
-                                                                    </div>
-                                                                    <div class="addressDisplay font-size-smaller" data-rf-test-id="abp-homeinfo-homeaddress">
-                                                                        <span data-rf-test-id="abp-streetLine">1308 Redwood Ln </span>
-                                                                        <span class="cityStateZip"
-                                                                            data-rf-test-id="abp-cityStateZip">Davis, CA 95616</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="right" role="heading">
-                                                                    <div class="HomeStats font-size-smaller">
-                                                                        <div>
-                                                                            <div class="value">3</div>
-                                                                            <div data-rf-test-name="homecardLabel">Beds</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">2</div>
-                                                                            <div data-rf-test-name="homecardLabel">Baths</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">1,772</div>
-                                                                            <div data-rf-test-name="homecardLabel">Sq. Ft.</div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="disclaimer" title="Main Event Realty">Main Event Realty</div>
-                                                                </div>
-                                                                <script type="application/ld+json">{"@context":"http://schema.org","name":"1308 Redwood Ln, Davis, CA 95616","url":"/CA/Davis/1308-Redwood-Ln-95616/home/19471089","address":{"@type":"PostalAddress","streetAddress":"1308 Redwood Ln","addressLocality":"Davis","addressRegion":"CA","postalCode":"95616","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":38.555028,"longitude":-121.7530504},"numberOfRooms":"3","@type":"SingleFamilyResidence"}</script>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="SimilarHomeCardReact">
-                                                    <div class="homecard" data-rf-test-name="basicNode-homeCard">
-                                                        <div style="padding-top:52.13764337851929%">
-                                                            <a class="PhotoWrapper cover-all" href="/CA/Davis/669-Flamenco-Pl-95616/home/19469148"
-                                                                target="_self" aria-label="669 Flamenco Pl, Davis, CA 95616, 4 beds, 3.5 baths, 2,576 square feet, MLS# 18006731, Coldwell Banker Select Real Estate, Coldwell Banker Select Real Estate, 1.0 miles away, SOLD 3/22/18 ">
-                                                                <div class="photoContainer" data-rf-test-name="basic-card-photo">
-                                                                    <div style="height: 100%; background-size: cover; background-position: center center; background-image: url(&quot;https://ssl.cdn-redfin.com/photo/77/mbphoto/731/genMid.18006731_0.jpg&quot;);"
-                                                                        class="HomeCardImage" title="Photo of 669 Flamenco Pl, Davis, CA 95616"></div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="topright">
-                                                                <a class="mlsLogo" href="/about/terms-of-use#MetroList" target="_top">
-                                                                    <img alt="MetroList Services, Inc" src="https://ssl.cdn-redfin.com/v216.2.0/images/logos/metrolist.png">
-                                                                </a>
-                                                                <div class="DistanceIndicator">
-                                                                    <div class="distance-wrapper">
-                                                                        <span class="distance-amount">1.0</span>
-                                                                        <span class="distance-units">&nbsp;
-                                                                            <!-- -->mi.</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="topleft">
-                                                                <span class="HomeSash font-weight-bold" data-rf-test-id="home-sash"
-                                                                    style="background-color:#5D8ACB">SOLD 3/22/18</span>
-                                                            </div>
-                                                            <a class="bottom link-override" href="/CA/Davis/669-Flamenco-Pl-95616/home/19469148"
-                                                                title="669 Flamenco Pl, Davis, CA 95616" target="_self">
-                                                                <div class="left" role="heading">
-                                                                    <div>
-                                                                        <span class="homeIcon sold" data-rf-test-name="property-icon">
-                                                                            <svg class="SvgIcon rfSvg home property-icon">
-                                                                                <svg viewBox="0 0 24 24">
-                                                                                    <path d="M22.584 12.563L12.027 1.846 7.068 6.645V2.646H4.669v6.398L1.47 12.563h3.199v9.598h4.958v-6.399h4.799v6.399h4.959v-9.598z"></path>
-                                                                                </svg>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="homecardPrice font-size-small font-weight-bold"
-                                                                            data-rf-test-name="homecard-price">$839,000</span>
-                                                                    </div>
-                                                                    <div class="addressDisplay font-size-smaller" data-rf-test-id="abp-homeinfo-homeaddress">
-                                                                        <span data-rf-test-id="abp-streetLine">669 Flamenco Pl </span>
-                                                                        <span class="cityStateZip"
-                                                                            data-rf-test-id="abp-cityStateZip">Davis, CA 95616</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="right" role="heading">
-                                                                    <div class="HomeStats font-size-smaller">
-                                                                        <div>
-                                                                            <div class="value">4</div>
-                                                                            <div data-rf-test-name="homecardLabel">Beds</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">3.5</div>
-                                                                            <div data-rf-test-name="homecardLabel">Baths</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">2,576</div>
-                                                                            <div data-rf-test-name="homecardLabel">Sq. Ft.</div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="disclaimer" title="Coldwell Banker Select Real Estate, Coldwell Banker Select Real Estate">Coldwell Banker Select Real Estate, Coldwell Banker Select
-                                                                        Real Estate</div>
-                                                                </div>
-                                                                <script type="application/ld+json">{"@context":"http://schema.org","name":"669 Flamenco Pl, Davis, CA 95616","url":"/CA/Davis/669-Flamenco-Pl-95616/home/19469148","address":{"@type":"PostalAddress","streetAddress":"669 Flamenco Pl","addressLocality":"Davis","addressRegion":"CA","postalCode":"95616","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":38.567502,"longitude":-121.7575465},"numberOfRooms":"4","@type":"SingleFamilyResidence"}</script>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="SimilarHomeCardReact">
-                                                    <div class="homecard" data-rf-test-name="basicNode-homeCard">
-                                                        <div style="padding-top:52.13764337851929%">
-                                                            <a class="PhotoWrapper cover-all" href="/CA/Davis/814-Radcliffe-Dr-95616/home/19471536"
-                                                                target="_self" aria-label="814 Radcliffe Dr, Davis, CA 95616, 4 beds, 2 baths, 1,755 square feet, MLS# 18022079, Lyon RE Davis, 0.6 miles away, SOLD 5/22/18 ">
-                                                                <div class="photoContainer" data-rf-test-name="basic-card-photo">
-                                                                    <div style="height: 100%; background-size: cover; background-position: center center; background-image: url(&quot;https://ssl.cdn-redfin.com/photo/77/mbphoto/079/genMid.18022079_1.jpg&quot;);"
-                                                                        class="HomeCardImage" title="Photo of 814 Radcliffe Dr, Davis, CA 95616"></div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="topright">
-                                                                <a class="mlsLogo" href="/about/terms-of-use#MetroList" target="_top">
-                                                                    <img alt="MetroList Services, Inc" src="https://ssl.cdn-redfin.com/v216.2.0/images/logos/metrolist.png">
-                                                                </a>
-                                                                <div class="DistanceIndicator">
-                                                                    <div class="distance-wrapper">
-                                                                        <span class="distance-amount">0.6</span>
-                                                                        <span class="distance-units">&nbsp;
-                                                                            <!-- -->mi.</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="topleft">
-                                                                <span class="HomeSash font-weight-bold" data-rf-test-id="home-sash"
-                                                                    style="background-color:#5D8ACB">SOLD 5/22/18</span>
-                                                            </div>
-                                                            <a class="bottom link-override" href="/CA/Davis/814-Radcliffe-Dr-95616/home/19471536"
-                                                                title="814 Radcliffe Dr, Davis, CA 95616" target="_self">
-                                                                <div class="left" role="heading">
-                                                                    <div>
-                                                                        <span class="homeIcon sold" data-rf-test-name="property-icon">
-                                                                            <svg class="SvgIcon rfSvg home property-icon">
-                                                                                <svg viewBox="0 0 24 24">
-                                                                                    <path d="M22.584 12.563L12.027 1.846 7.068 6.645V2.646H4.669v6.398L1.47 12.563h3.199v9.598h4.958v-6.399h4.799v6.399h4.959v-9.598z"></path>
-                                                                                </svg>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="homecardPrice font-size-small font-weight-bold"
-                                                                            data-rf-test-name="homecard-price">$767,500</span>
-                                                                    </div>
-                                                                    <div class="addressDisplay font-size-smaller" data-rf-test-id="abp-homeinfo-homeaddress">
-                                                                        <span data-rf-test-id="abp-streetLine">814 Radcliffe Dr </span>
-                                                                        <span class="cityStateZip"
-                                                                            data-rf-test-id="abp-cityStateZip">Davis, CA 95616</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="right" role="heading">
-                                                                    <div class="HomeStats font-size-smaller">
-                                                                        <div>
-                                                                            <div class="value">4</div>
-                                                                            <div data-rf-test-name="homecardLabel">Beds</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">2</div>
-                                                                            <div data-rf-test-name="homecardLabel">Baths</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">1,755</div>
-                                                                            <div data-rf-test-name="homecardLabel">Sq. Ft.</div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="disclaimer" title="Lyon RE Davis">Lyon RE Davis</div>
-                                                                </div>
-                                                                <script type="application/ld+json">{"@context":"http://schema.org","name":"814 Radcliffe Dr, Davis, CA 95616","url":"/CA/Davis/814-Radcliffe-Dr-95616/home/19471536","address":{"@type":"PostalAddress","streetAddress":"814 Radcliffe Dr","addressLocality":"Davis","addressRegion":"CA","postalCode":"95616","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":38.5580298,"longitude":-121.760262},"numberOfRooms":"4","@type":"SingleFamilyResidence"}</script>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="SimilarHomeCardReact">
-                                                    <div class="homecard" data-rf-test-name="basicNode-homeCard">
-                                                        <div style="padding-top:52.13764337851929%">
-                                                            <a class="PhotoWrapper cover-all" href="/CA/Davis/1009-Oak-Ave-95616/home/19470995"
-                                                                target="_self" aria-label="1009 Oak Ave, Davis, CA 95616, 4 beds, 2 baths, 1,651 square feet, MLS# 18030660, Coldwell Banker Select Real Estate, 0.2 miles away, SOLD 6/13/18 ">
-                                                                <div class="photoContainer" data-rf-test-name="basic-card-photo">
-                                                                    <div style="height: 100%; background-size: cover; background-position: center center; background-image: url(&quot;https://ssl.cdn-redfin.com/photo/77/mbphoto/660/genMid.18030660_0.jpg&quot;);"
-                                                                        class="HomeCardImage" title="Photo of 1009 Oak Ave, Davis, CA 95616"></div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="topright">
-                                                                <a class="mlsLogo" href="/about/terms-of-use#MetroList" target="_top">
-                                                                    <img alt="MetroList Services, Inc" src="https://ssl.cdn-redfin.com/v216.2.0/images/logos/metrolist.png">
-                                                                </a>
-                                                                <div class="DistanceIndicator">
-                                                                    <div class="distance-wrapper">
-                                                                        <span class="distance-amount">0.2</span>
-                                                                        <span class="distance-units">&nbsp;
-                                                                            <!-- -->mi.</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="topleft">
-                                                                <span class="HomeSash font-weight-bold" data-rf-test-id="home-sash"
-                                                                    style="background-color:#5D8ACB">SOLD 6/13/18</span>
-                                                            </div>
-                                                            <a class="bottom link-override" href="/CA/Davis/1009-Oak-Ave-95616/home/19470995"
-                                                                title="1009 Oak Ave, Davis, CA 95616" target="_self">
-                                                                <div class="left" role="heading">
-                                                                    <div>
-                                                                        <span class="homeIcon sold" data-rf-test-name="property-icon">
-                                                                            <svg class="SvgIcon rfSvg home property-icon">
-                                                                                <svg viewBox="0 0 24 24">
-                                                                                    <path d="M22.584 12.563L12.027 1.846 7.068 6.645V2.646H4.669v6.398L1.47 12.563h3.199v9.598h4.958v-6.399h4.799v6.399h4.959v-9.598z"></path>
-                                                                                </svg>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="homecardPrice font-size-small font-weight-bold"
-                                                                            data-rf-test-name="homecard-price">$719,000</span>
-                                                                    </div>
-                                                                    <div class="addressDisplay font-size-smaller" data-rf-test-id="abp-homeinfo-homeaddress">
-                                                                        <span data-rf-test-id="abp-streetLine">1009 Oak Ave </span>
-                                                                        <span class="cityStateZip" data-rf-test-id="abp-cityStateZip">Davis, CA 95616</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="right" role="heading">
-                                                                    <div class="HomeStats font-size-smaller">
-                                                                        <div>
-                                                                            <div class="value">4</div>
-                                                                            <div data-rf-test-name="homecardLabel">Beds</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">2</div>
-                                                                            <div data-rf-test-name="homecardLabel">Baths</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">1,651</div>
-                                                                            <div data-rf-test-name="homecardLabel">Sq. Ft.</div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="disclaimer" title="Coldwell Banker Select Real Estate">Coldwell Banker Select Real Estate</div>
-                                                                </div>
-                                                                <script type="application/ld+json">{"@context":"http://schema.org","name":"1009 Oak Ave, Davis, CA 95616","url":"/CA/Davis/1009-Oak-Ave-95616/home/19470995","address":{"@type":"PostalAddress","streetAddress":"1009 Oak Ave","addressLocality":"Davis","addressRegion":"CA","postalCode":"95616","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":38.553747,"longitude":-121.7530058},"numberOfRooms":"4","@type":"SingleFamilyResidence"}</script>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="SimilarHomeCardReact">
-                                                    <div class="homecard" data-rf-test-name="basicNode-homeCard">
-                                                        <div style="padding-top:52.13764337851929%">
-                                                            <a class="PhotoWrapper cover-all" href="/CA/Davis/1200-Harvard-Dr-95616/home/19471007"
-                                                                target="_self" aria-label="1200 Harvard Dr, Davis, CA 95616, 4 beds, 3 baths, 2,012 square feet, MLS# 18007222, Lyon RE Davis, 0.7 miles away, SOLD 4/20/18 ">
-                                                                <div class="photoContainer" data-rf-test-name="basic-card-photo">
-                                                                    <div style="height: 100%; background-size: cover; background-position: center center; background-image: url(&quot;https://ssl.cdn-redfin.com/photo/77/mbphoto/222/genMid.18007222_0.jpg&quot;);"
-                                                                        class="HomeCardImage" title="Photo of 1200 Harvard Dr, Davis, CA 95616"></div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="topright">
-                                                                <a class="mlsLogo" href="/about/terms-of-use#MetroList" target="_top">
-                                                                    <img alt="MetroList Services, Inc" src="https://ssl.cdn-redfin.com/v216.2.0/images/logos/metrolist.png">
-                                                                </a>
-                                                                <div class="DistanceIndicator">
-                                                                    <div class="distance-wrapper">
-                                                                        <span class="distance-amount">0.7</span>
-                                                                        <span class="distance-units">&nbsp;
-                                                                            <!-- -->mi.</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="topleft">
-                                                                <span class="HomeSash font-weight-bold" data-rf-test-id="home-sash"
-                                                                    style="background-color:#5D8ACB">SOLD 4/20/18</span>
-                                                            </div>
-                                                            <a class="bottom link-override" href="/CA/Davis/1200-Harvard-Dr-95616/home/19471007"
-                                                                title="1200 Harvard Dr, Davis, CA 95616" target="_self">
-                                                                <div class="left" role="heading">
-                                                                    <div>
-                                                                        <span class="homeIcon sold" data-rf-test-name="property-icon">
-                                                                            <svg class="SvgIcon rfSvg rating badge">
-                                                                                <svg viewBox="0 0 24 24">
-                                                                                    <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                                                        fill-rule="evenodd"></path>
-                                                                                </svg>
-                                                                            </svg>
-                                                                            <svg class="SvgIcon rfSvg home property-icon">
-                                                                                <svg viewBox="0 0 24 24">
-                                                                                    <path d="M22.584 12.563L12.027 1.846 7.068 6.645V2.646H4.669v6.398L1.47 12.563h3.199v9.598h4.958v-6.399h4.799v6.399h4.959v-9.598z"></path>
-                                                                                </svg>
-                                                                            </svg>
-                                                                        </span>
-                                                                        <span class="homecardPrice font-size-small font-weight-bold"
-                                                                            data-rf-test-name="homecard-price">$707,000</span>
-                                                                    </div>
-                                                                    <div class="addressDisplay font-size-smaller" data-rf-test-id="abp-homeinfo-homeaddress">
-                                                                        <span data-rf-test-id="abp-streetLine">1200 Harvard Dr </span>
-                                                                        <span class="cityStateZip"
-                                                                            data-rf-test-id="abp-cityStateZip">Davis, CA 95616</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="right" role="heading">
-                                                                    <div class="HomeStats font-size-smaller">
-                                                                        <div>
-                                                                            <div class="value">4</div>
-                                                                            <div data-rf-test-name="homecardLabel">Beds</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">3</div>
-                                                                            <div data-rf-test-name="homecardLabel">Baths</div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="value">2,012</div>
-                                                                            <div data-rf-test-name="homecardLabel">Sq. Ft.</div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="disclaimer" title="Lyon RE Davis">Lyon RE Davis</div>
-                                                                </div>
-                                                                <script type="application/ld+json">{"@context":"http://schema.org","name":"1200 Harvard Dr, Davis, CA 95616","url":"/CA/Davis/1200-Harvard-Dr-95616/home/19471007","address":{"@type":"PostalAddress","streetAddress":"1200 Harvard Dr","addressLocality":"Davis","addressRegion":"CA","postalCode":"95616","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":38.5523191,"longitude":-121.7638676},"numberOfRooms":"4","@type":"SingleFamilyResidence"}</script>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <span>Nearby homes similar to
-                                                <!-- -->1221 Eureka Ave
-                                                <!-- -->have recently sold between
-                                                <!-- -->$707K
-                                                <!-- -->to
-                                                <!-- -->$1,020K
-                                                <!-- -->at an average of
-                                                <!-- -->$410
-                                                <!-- -->per square foot.</span>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -6168,309 +5589,9 @@
             </div>
         </div>
         <script>_tLAB.wait(function () { __reactServerClientController.nodeArrival(30, 30) });</script>
-        <div data-react-server-root-id="31" data-react-server-timing-offset="308">
-            <div class="delayLoadedComponentWrapper pageComponentsContainer" data-reactroot="">
-                <div class="dp-col-sm-12 dp-col-md-12">
-                    <section class="Section SmartInterlinksSection  ">
-                        <div class="sectionContainer">
-                            <div class="main-content SmartInterlinks" id="smart-interlinks-section">
-                                <div class="content-container">
-                                    <h2 class="h2 smart-interlinks-h2">More Real Estate Resources</h2>
-                                    <div class="columns">
-                                        <div class="resources-section">
-                                            <h3>Neighborhoods</h3>
-                                            <ul>
-                                                <li>
-                                                    <a class="link-text" href="/neighborhood/347196/CA/Davis/North-Davis">North Davis</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/neighborhood/110510/CA/Davis/Slide-Hill-Park">Slide Hill Park</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/neighborhood/347198/CA/Davis/East-Davis">East Davis</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/neighborhood/347200/CA/Davis/South-Davis">South Davis</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/neighborhood/43158/CA/Davis/1917-Core">1917 Core</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/neighborhood/3070/CA/Davis/Wildhorse">Wildhorse</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/neighborhood/1155/CA/Davis/Green-Meadows">Green Meadows</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/neighborhood/753/CA/Davis/Downtown-Davis">Downtown Davis</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/neighborhood/1129/CA/Davis/Grande">Grande</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/neighborhood/2002/CA/Davis/Oeste-Manor">Oeste Manor</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/neighborhood/319590/CA/Davis/Midtown-Condominiums">Midtown Condominiums</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/neighborhood/1435/CA/Davis/La-Buena-Vida">La Buena Vida</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/neighborhood/1148/CA/Davis/Greene-Terrace">Greene Terrace</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/neighborhood/38411/CA/Davis/Rose-Creek">Rose Creek</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/neighborhood/427/CA/Davis/Central-Davis">Central Davis</a>
-                                                </li>
-                                                <li class="link-text clickable" data-rf-test-name="expand-button">
-                                                    <span>Show More
-                                                        <svg class="SvgIcon rfSvg show-less show-more">
-                                                            <svg viewBox="0 0 24 24">
-                                                                <path d="M16.116 14.53L12 10.414 7.884 14.53a.25.25 0 0 1-.354 0l-1.06-1.06a.25.25 0 0 1 0-.354l5.353-5.353a.25.25 0 0 1 .354 0l5.353 5.353a.25.25 0 0 1 0 .354l-1.06 1.06a.25.25 0 0 1-.354 0"
-                                                                    fill-rule="evenodd"></path>
-                                                            </svg>
-                                                        </svg>
-                                                    </span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="resources-section">
-                                            <h3>Nearby Cities</h3>
-                                            <ul>
-                                                <li>
-                                                    <a class="link-text" href="/city/16146/CA/Roseville">Roseville Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/city/16409/CA/Sacramento">Sacramento Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/city/5672/CA/Elk-Grove">Elk Grove Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/city/20818/CA/West-Sacramento">West Sacramento Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/city/31458/CA/Antelope">Antelope Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/city/20361/CA/Vacaville">Vacaville Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/20935/CA/Winters">Winters Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/20957/CA/Woodland">Woodland Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/35837/CA/Elverta">Elverta Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/21251/CA/Arden-Arcade">Arden-Arcade Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/25247/CA/Rio-Linda">Rio Linda Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/32064/CA/Clarksburg">Clarksburg Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/23655/CA/Laguna">Laguna Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/25389/CA/Rosemont">Rosemont Real Estate</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/5007/CA/Dixon">Dixon Real Estate</a>
-                                                </li>
-                                                <li class="link-text clickable" data-rf-test-name="expand-button">
-                                                    <span>Show More
-                                                        <svg class="SvgIcon rfSvg show-less show-more">
-                                                            <svg viewBox="0 0 24 24">
-                                                                <path d="M16.116 14.53L12 10.414 7.884 14.53a.25.25 0 0 1-.354 0l-1.06-1.06a.25.25 0 0 1 0-.354l5.353-5.353a.25.25 0 0 1 .354 0l5.353 5.353a.25.25 0 0 1 0 .354l-1.06 1.06a.25.25 0 0 1-.354 0"
-                                                                    fill-rule="evenodd"></path>
-                                                            </svg>
-                                                        </svg>
-                                                    </span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="resources-section">
-                                            <h3>Zip Codes</h3>
-                                            <ul>
-                                                <li>
-                                                    <a class="link-text" href="/zipcode/95618">95618</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/zipcode/95617">95617</a>
-                                                </li>
-                                                <noscript></noscript>
-                                            </ul>
-                                        </div>
-                                        <div class="resources-section">
-                                            <h3>Popular Searches</h3>
-                                            <ul>
-                                                <li>
-                                                    <a class="link-text" href="/city/4690/CA/Davis/parking">Davis Homes with Parking</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/city/4690/CA/Davis/pools">Davis Homes with Pools</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/city/4690/CA/Davis/new-homes">Davis New Homes</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/city/4690/CA/Davis/condos">Davis Condos</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/city/4690/CA/Davis/new-listings">Davis New Listings</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/city/4690/CA/Davis/accessible">Davis Accessible Homes</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/views">Davis Homes with a View</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/green">Davis Green Homes</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/pending-listings">Davis Pending Listings</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/luxury-homes">Davis Luxury Homes</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/open-houses">Davis Open Houses</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/cheap-homes">Davis Cheap Homes</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/fixer-upper">Davis Fixer Upper</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/recently-sold">Davis Recently Sold Homes</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/garages">Davis Homes with Garages</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/homes-for-sale">Davis Homes</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/vintage">Davis Vintage</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/city/4690/CA/Davis/single-story">Davis Single Story Homes</a>
-                                                </li>
-                                                <li class="link-text clickable" data-rf-test-name="expand-button">
-                                                    <span>Show More
-                                                        <svg class="SvgIcon rfSvg show-less show-more">
-                                                            <svg viewBox="0 0 24 24">
-                                                                <path d="M16.116 14.53L12 10.414 7.884 14.53a.25.25 0 0 1-.354 0l-1.06-1.06a.25.25 0 0 1 0-.354l5.353-5.353a.25.25 0 0 1 .354 0l5.353 5.353a.25.25 0 0 1 0 .354l-1.06 1.06a.25.25 0 0 1-.354 0"
-                                                                    fill-rule="evenodd"></path>
-                                                            </svg>
-                                                        </svg>
-                                                    </span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="resources-section">
-                                            <h3>New Listings in 95616</h3>
-                                            <ul>
-                                                <li>
-                                                    <a class="link-text" href="/CA/Davis/1211-Menlo-Dr-95616/home/19448541">1211 Menlo Dr</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/CA/Davis/The-Cannery-Tilton/Tilton-Plan-2/home/144284861">Tilton Plan 2</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/CA/Davis/504-Hudson-Ct-95616/home/19466828">504 Hudson Ct</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/CA/Davis/1805-Drexel-Dr-95616/home/19447917">1805 Drexel Dr</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/CA/Davis/1629-Pacific-Dr-95616/home/19448305">1629 Pacific Dr</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text" href="/CA/Davis/The-Cannery-Tilton/Tilton-Plan-1/home/144284862">Tilton Plan 1</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/CA/Davis/1221-Eureka-Ave-95616/home/19449625">1221 Eureka Ave</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/CA/Davis/516-Marina-Cir-95616/home/19468492">516 Marina Cir</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/CA/Davis/2917-Tiber-Ave-95616/home/19465963">2917 Tiber Ave</a>
-                                                </li>
-                                                <li>
-                                                    <a class="link-text hidden" href="/CA/Davis/Gala-The-Cannery/Plan-5/home/144669748">Plan 5</a>
-                                                </li>
-                                                <li class="link-text clickable" data-rf-test-name="expand-button">
-                                                    <span>Show More
-                                                        <svg class="SvgIcon rfSvg show-less show-more">
-                                                            <svg viewBox="0 0 24 24">
-                                                                <path d="M16.116 14.53L12 10.414 7.884 14.53a.25.25 0 0 1-.354 0l-1.06-1.06a.25.25 0 0 1 0-.354l5.353-5.353a.25.25 0 0 1 .354 0l5.353 5.353a.25.25 0 0 1 0 .354l-1.06 1.06a.25.25 0 0 1-.354 0"
-                                                                    fill-rule="evenodd"></path>
-                                                            </svg>
-                                                        </svg>
-                                                    </span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
+        
         <script>_tLAB.wait(function () { __reactServerClientController.nodeArrival(31, 31) });</script>
-        <div data-react-server-root-id="32" data-react-server-timing-offset="308">
-            <div class="delayLoadedComponentWrapper pageComponentsContainer" data-reactroot="">
-                <div class="dp-col-sm-12 dp-col-md-12">
-                    <section class="Section DescriptiveParagraph  ">
-                        <div class="sectionContainer">
-                            <div class="main-content">
-                                <div class="clear-fix descriptive-paragraph" data-rf-test-id="descriptiveParagraph">
-                                    <div>
-                                        <span>1221 Eureka Ave is a house in Davis, CA 95616. This 2,175 square foot house sits
-                                            on a 8,276 square foot lot and features 4 bedrooms and 3 bathrooms. This house
-                                            has been listed on Redfin since June 27, 2018 and is currently priced at $785,000.
-                                            This property was built in 1961.
-                                            <!-- -->
-                                        </span>
-                                        <span>Based on Redfin's Davis data, we estimate the home's value is $790,816, which is
-                                            0.7% more than its current list price.
-                                            <!-- -->
-                                            <span>Comparable nearby homes include
-                                                <a class="link-text" href="/CA/Davis/810-Eureka-Ave-95616/home/19449581">810 Eureka Ave</a>,
-                                                <a class="link-text" href="/CA/Davis/653-Bianco-Ct-95616/home/19469852">653 Bianco Ct</a>, and
-                                                <a class="link-text" href="/CA/Davis/1308-Redwood-Ln-95616/home/19471089">1308 Redwood Ln</a>. </span>
-                                        </span>
-                                        <span>Nearby schools include Davis Senior High School, St James School and Leonardo Davinci
-                                            High School. The closest grocery stores are Save Mart Supermarkets, Trader Joe's
-                                            and Safeway. Nearby coffee shops include Easel cafe, OnTap and Starbucks. Nearby
-                                            restaurants include 411 N 16th st Sacramento, Dickey's Barbecue Pit and Fire
-                                            Wings Davis. 1221 Eureka Ave is near Community Park, College Park and Civic Center
-                                            Park. There are excellent bike lanes and the terrain is flat as a pancake. 1221
-                                            Eureka Ave is a Biker’s Paradise, daily errands can be accomplished on a bike.</span>
-                                        <span>
-                                            <!-- -->This address can also be written as 1221 Eureka Avenue, Davis, California 95616.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
+       
         <script>_tLAB.wait(function () { __reactServerClientController.nodeArrival(32, 32) });</script>
         <div data-react-server-root-id="33" data-react-server-timing-offset="308">
             <div class="delayLoadedComponentWrapper pageComponentsContainer" data-reactroot="">
@@ -6518,114 +5639,100 @@
         <script>_tLAB.wait(function () { __reactServerClientController.nodeArrival(42, 42) });</script>
         <div data-react-server-root-id="43" data-react-server-timing-offset="309">
             <div class="footer main-content " data-reactroot="">
-                <div class="links">
-                    <a href="http://press.redfin.com/phoenix.zhtml?c=252734&amp;p=irol-about">About</a>
-                    <a href="http://press.redfin.com/">Press</a>
-                    <a href="http://investors.redfin.com/">Investor Relations</a>
-                    <a href="/research/">Research</a>
-                    <a href="https://www.redfin.com/blog/">Blog</a>
-                    <a href="/about/jobs">Jobs</a>
-                    <a href="/about/redfin-partner-agents-application/?src=partner-application-footer">Referrals</a>
-                    <a href="/mobile">Mobile</a>
-                    <a href="" target="feedback" rel="nofollow">Feedback</a>
-                    <a href="/about/contact-us">Contact Us</a>
-                    <a href="http://support.redfin.com/">Help</a>
-                </div>
-                <div class="social">
-                    <ul class="footerSocialButtons inlineList">
-                        <li id="footerFacebookIcon">
-                            <a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/redfin" title="Redfin Facebook"
-                                alt="Redfin Facebook">
-                                <svg class="SvgIcon rfSvg facebook">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M21.252 1.6H2.747c-.633 0-1.147.514-1.147 1.148v18.504c0 .634.514 1.148 1.147 1.148h9.963v-8.055H9.999v-3.139h2.71V8.891c0-2.686 1.641-4.15 4.038-4.15 1.148 0 2.134.086 2.422.125v2.807h-1.662c-1.304 0-1.556.62-1.556 1.529v2.004h3.109l-.405 3.14h-2.704V22.4h5.3c.635 0 1.149-.514 1.149-1.148V2.748c0-.634-.514-1.148-1.148-1.148"
-                                            fill-rule="evenodd"></path>
-                                    </svg>
-                                </svg>
-                            </a>
-                        </li>
-                        <li id="footerTwitterIcon">
-                            <a class="icon icon-twitter" target="_blank" href="https://twitter.com/Redfin" title="Redfin Twitter"
-                                alt="Redfin Twitter">
-                                <svg class="SvgIcon rfSvg twitter">
-                                    <svg viewBox="0 0 25 24">
-                                        <path d="M21.863 6.828c.015.212.015.424.015.636 0 6.464-4.92 13.913-13.913 13.913-2.77 0-5.343-.802-7.508-2.195.393.045.772.061 1.18.061a9.78 9.78 0 0 0 6.07-2.09 4.896 4.896 0 0 1-4.571-3.391c.302.046.605.076.923.076.439 0 .878-.061 1.287-.167a4.89 4.89 0 0 1-3.92-4.799v-.061c.65.364 1.408.59 2.209.621a4.888 4.888 0 0 1-2.178-4.071c0-.909.24-1.741.664-2.468a13.904 13.904 0 0 0 10.084 5.116 5.426 5.426 0 0 1-.121-1.12A4.886 4.886 0 0 1 16.972 2c1.408 0 2.68.59 3.573 1.544a9.593 9.593 0 0 0 3.103-1.181 4.868 4.868 0 0 1-2.15 2.695 9.789 9.789 0 0 0 2.816-.757 10.522 10.522 0 0 1-2.451 2.527z"
-                                            fill-rule="evenodd"></path>
-                                    </svg>
-                                </svg>
-                            </a>
-                        </li>
-                        <li id="footerGooglePlusIcon">
-                            <a class="icon icon-gplus" target="_blank" href="https://plus.google.com/+redfin/posts" title="Redfin Google Plus"
-                                alt="Redfin Google Plus">
-                                <svg class="SvgIcon rfSvg google">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M2.916 16.756c-1.052-2.092-1.371-4.549-.912-6.85.185-.924.487-1.825.907-2.669C4.116 4.791 6.275 2.863 8.808 1.98a10.372 10.372 0 0 1 7.015.063 10.091 10.091 0 0 1 3.354 2.115c-.324.36-.677.695-1.013 1.044l-1.915 1.95a5.652 5.652 0 0 0-2.245-1.347 6.046 6.046 0 0 0-3.058-.125 6.198 6.198 0 0 0-3.113 1.762 6.6 6.6 0 0 0-1.508 2.49l.001.002a6.505 6.505 0 0 0 0 4.127l-.01.008A6.58 6.58 0 0 0 8.7 17.323a6.17 6.17 0 0 0 2.318 1.02c.817.172 1.663.15 2.486.006a5.91 5.91 0 0 0 2.295-.923l.003.002a5.008 5.008 0 0 0 2.08-3.277h-5.677c.006-1.378.006-2.758.006-4.138h9.798c.325 1.864.252 3.808-.263 5.633-.476 1.67-1.378 3.221-2.637 4.4l-.003-.001c-1.192 1.122-2.686 1.885-4.264 2.255-1.747.405-3.594.417-5.33-.057A10.234 10.234 0 0 1 5.726 20.3a10.684 10.684 0 0 1-2.821-3.536l.01-.008z"
-                                            fill-rule="evenodd"></path>
-                                    </svg>
-                                </svg>
-                            </a>
-                        </li>
-                        <li id="footerPinterestIcon">
-                            <a class="icon icon-pinterest" target="_blank" href="https://www.pinterest.com/redfin/" title="Redfin Pinterest"
-                                alt="Redfin Pinterest">
-                                <svg class="SvgIcon rfSvg pinterest">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M11.865 22.13c-1.015 0-1.978-.148-2.912-.429.387-.613.828-1.402 1.042-2.19 0 0 .118-.456.72-2.82.347.68 1.389 1.28 2.5 1.28 3.3 0 5.545-3.005 5.545-7.042 0-3.033-2.577-5.88-6.508-5.88-4.865 0-7.324 3.502-7.324 6.414 0 1.764.668 3.343 2.099 3.932.229.093.44 0 .51-.269.051-.174.157-.628.211-.815.067-.268.04-.347-.147-.574-.414-.495-.682-1.123-.682-2.02 0-2.592 1.94-4.917 5.054-4.917 2.752 0 4.276 1.683 4.276 3.944 0 2.951-1.31 5.451-3.261 5.451-1.071 0-1.872-.882-1.618-1.978.308-1.296.91-2.7.91-3.636 0-.84-.457-1.55-1.39-1.55-1.097 0-1.979 1.137-1.979 2.661 0 0 0 .976.335 1.629-1.125 4.759-1.325 5.589-1.325 5.589-.187.774-.2 1.643-.173 2.365a10.267 10.267 0 0 1-6.148-9.41C1.6 6.197 6.199 1.6 11.865 1.6S22.13 6.197 22.13 11.865 17.53 22.13 11.865 22.13"
-                                            fill-rule="evenodd"></path>
-                                    </svg>
-                                </svg>
-                            </a>
-                        </li>
-                        <li id="footerInstagramIcon">
-                            <a class="icon icon-instagram" target="_blank" href="https://www.instagram.com/redfinrealestate/"
-                                title="Redfin Instagram" alt="Redfin Instagram">
-                                <svg class="SvgIcon rfSvg instagram">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M12 1c-2.987 0-3.362.013-4.535.066-1.171.054-1.971.24-2.67.511a5.412 5.412 0 0 0-1.949 1.269 5.412 5.412 0 0 0-1.269 1.949c-.271.699-.457 1.499-.511 2.67C1.013 8.638 1 9.013 1 12s.013 3.362.066 4.535c.054 1.171.24 1.971.511 2.67a5.412 5.412 0 0 0 1.269 1.949 5.412 5.412 0 0 0 1.949 1.269c.699.271 1.499.457 2.67.511C8.638 22.987 9.013 23 12 23s3.362-.013 4.535-.066c1.171-.054 1.971-.24 2.67-.511a5.412 5.412 0 0 0 1.949-1.269 5.412 5.412 0 0 0 1.269-1.949c.271-.699.457-1.499.511-2.67.053-1.173.066-1.548.066-4.535s-.013-3.362-.066-4.535c-.054-1.171-.24-1.971-.511-2.67a5.412 5.412 0 0 0-1.269-1.949 5.412 5.412 0 0 0-1.949-1.269c-.699-.271-1.499-.457-2.67-.511C15.362 1.013 14.987 1 12 1m0 1.982c2.937 0 3.285.011 4.445.064 1.072.049 1.655.228 2.042.379.514.199.88.438 1.265.823.385.385.624.751.823 1.265.151.387.33.97.379 2.042.053 1.16.064 1.508.064 4.445 0 2.937-.011 3.285-.064 4.445-.049 1.072-.228 1.655-.379 2.042-.199.514-.438.88-.823 1.265a3.398 3.398 0 0 1-1.265.823c-.387.151-.97.33-2.042.379-1.16.053-1.508.064-4.445.064-2.937 0-3.285-.011-4.445-.064-1.072-.049-1.655-.228-2.042-.379a3.398 3.398 0 0 1-1.265-.823 3.398 3.398 0 0 1-.823-1.265c-.151-.387-.33-.97-.379-2.042-.053-1.16-.064-1.508-.064-4.445 0-2.937.011-3.285.064-4.445.049-1.072.228-1.655.379-2.042.199-.514.438-.88.823-1.265a3.398 3.398 0 0 1 1.265-.823c.387-.151.97-.33 2.042-.379 1.16-.053 1.508-.064 4.445-.064zm0 3.37a5.649 5.649 0 1 0 0 11.297 5.649 5.649 0 0 0 0-11.297zm0 9.315a3.667 3.667 0 1 1 0-7.335 3.667 3.667 0 0 1 0 7.335zm7.192-9.539a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0z"
-                                            fill-rule="evenodd"></path>
-                                    </svg>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="legal">
-                    <p class="tos-eula">Updated February 2018: By searching, you agree to the
-                        <a href="/about/terms-of-use">Terms of Use</a>, and&nbsp;
-                        <a href="/about/privacy-policy ">Privacy Policy</a>.</p>
-                    <p class="copyright">Copyright: ©
-                        <!-- -->2018
-                        <!-- -->Redfin. All rights reserved. Patent pending.</p>
-                    <p class="eho">
-                        <a class="icon ehoLogo" href="/about/terms-of-use#Equal_Housing_Opportunity" title="Equal Housing Opportunity">
-                            <svg class="SvgIcon rfSvg equal-housing">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M8.157 16.553h7.715v-2H8.157v2zm10.849 3.64V8.83l-6.982-4.522-6.976 4.516v9.114l.013 2.256h13.945zm2.008 2.001H3.024v-12.16H1v-.97L12.024 2l11.024 7.064v.97H21.03l-.016 12.16zM8.157 12.551h7.715v-2H8.157v2z"
-                                        fill-rule="evenodd"></path>
-                                </svg>
-                            </svg>
-                        </a>
-                        <span>California BRE #01521930</span>
-                    </p>
-                    <p class="trec">TREC:
-                        <a href="https://ssl.cdn-redfin.com/static-images/about/ibs-statement-texas-2015.pdf">Info About Brokerage Services</a>,
-                        <a href="https://www.trec.texas.gov/forms/consumer-protection-notice">Consumer Protection Notice</a>
-                    </p>
-                    <p class="helpReading">If you are using a screen reader, or having trouble reading this website, please call Redfin Customer
-                        Support for help at
-                        <!-- -->1-844-759-7732
-                        <!-- -->.</p>
-                </div>
-                <div class="disclaimers">
-                    <div class="disclaimer">GreatSchools Ratings provided by
-                        <a href="http://www.greatschools.org/" rel="nofollow">GreatSchools.org</a>.</div>
-                    <div class="disclaimer">
-                        <div class="lazyload-placeholder"></div>
-                    </div>
-                </div>
+                    <div class="legal">
+                            <div class="searchRow" data-rf-test-name="ghostTownSearchbox">
+                                <div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1">
+                                    <form class="SearchBoxForm" action="?">
+                                        <div data-rf-test-name="search-container" class="search-container inline-block">
+                                            <div class="InputBox"><noscript></noscript><input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="NGN"
+                                                    title="NGN" type="search">
+                                                <div role="button" class="inline-block clear-button-block"><input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button"><svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.772 8.288l-1.06-1.06a.25.25 0 0 0-.354 0L12 10.586 8.642 7.228a.25.25 0 0 0-.354 0l-1.06 1.06a.25.25 0 0 0 0 .354L10.586 12l-3.358 3.358a.25.25 0 0 0 0 .354l1.06 1.06a.25.25 0 0 0 .354 0L12 13.414l3.358 3.358a.25.25 0 0 0 .354 0l1.06-1.06a.25.25 0 0 0 0-.354L13.414 12l3.358-3.358a.25.25 0 0 0 0-.354z"></path></g></svg></svg>
+                                                </div>
+                                            </div><button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2"><svg class="SvgIcon rfSvg search"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path></g></svg></svg></button></div>
+                                    </form><noscript></noscript></div>
+                            </div>
+                        </div>
+            
+                        <div class="links">
+                            <a href="http://press.redfin.com/phoenix.zhtml?c=252734&amp;p=irol-about">About</a>
+                            <a href="http://press.redfin.com/">Help</a>
+                            <a href="http://investors.redfin.com/">Investors</a>
+                            <a href="partners.html">Partners</a>
+                            <a href="https://www.redfin.com/blog/">Cities</a>
+                            <a href="/about/jobs">Polices</a>
+                            <a href="/about/redfin-partner-agents-application/?src=partner-application-footer">Countries</a>
+                            <a href="/mobile">Safety</a>
+                            <a href="" target="feedback" rel="nofollow">Media</a>
+                            <a href="/about/contact-us">How it Works</a>
+                            <a href="http://support.redfin.com/">Intelligent Investing</a>
+                            <a href="http://support.redfin.com/">Insight</a>
+                        </div>
             </div>
         </div>
+
+        <div data-react-server-root-id="43" data-react-server-timing-offset="309">
+                
+             <div id='custom_footer_2' class="footer main-content " data-reactroot="">
+                                <div class="legal" style="padding-left:15px;">
+                                    <h4>AvetiZ is a service mark of AvetiZ © 2017. All Rights Reserved.</h4>
+                                </div>
+                    
+                                <div class="social" style="float:right;">
+                                    <ul class="footerSocialButtons inlineList">
+                                        <li id="footerFacebookIcon">
+                                            <a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/redfin" title="Redfin Facebook" alt="Redfin Facebook">
+                                                <svg class="SvgIcon rfSvg facebook">
+                                                                        <svg viewBox="0 0 24 24">
+                                                                            <path d="M21.252 1.6H2.747c-.633 0-1.147.514-1.147 1.148v18.504c0 .634.514 1.148 1.147 1.148h9.963v-8.055H9.999v-3.139h2.71V8.891c0-2.686 1.641-4.15 4.038-4.15 1.148 0 2.134.086 2.422.125v2.807h-1.662c-1.304 0-1.556.62-1.556 1.529v2.004h3.109l-.405 3.14h-2.704V22.4h5.3c.635 0 1.149-.514 1.149-1.148V2.748c0-.634-.514-1.148-1.148-1.148" fill-rule="evenodd"></path>
+                                                                        </svg>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li id="footerTwitterIcon">
+                                            <a class="icon icon-twitter" target="_blank" href="https://twitter.com/Redfin" title="Redfin Twitter" alt="Redfin Twitter">
+                                                <svg class="SvgIcon rfSvg twitter">
+                                                                        <svg viewBox="0 0 25 24">
+                                                                            <path d="M21.863 6.828c.015.212.015.424.015.636 0 6.464-4.92 13.913-13.913 13.913-2.77 0-5.343-.802-7.508-2.195.393.045.772.061 1.18.061a9.78 9.78 0 0 0 6.07-2.09 4.896 4.896 0 0 1-4.571-3.391c.302.046.605.076.923.076.439 0 .878-.061 1.287-.167a4.89 4.89 0 0 1-3.92-4.799v-.061c.65.364 1.408.59 2.209.621a4.888 4.888 0 0 1-2.178-4.071c0-.909.24-1.741.664-2.468a13.904 13.904 0 0 0 10.084 5.116 5.426 5.426 0 0 1-.121-1.12A4.886 4.886 0 0 1 16.972 2c1.408 0 2.68.59 3.573 1.544a9.593 9.593 0 0 0 3.103-1.181 4.868 4.868 0 0 1-2.15 2.695 9.789 9.789 0 0 0 2.816-.757 10.522 10.522 0 0 1-2.451 2.527z" fill-rule="evenodd"></path>
+                                                                        </svg>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li id="footerGooglePlusIcon">
+                                            <a class="icon icon-gplus" target="_blank" href="https://plus.google.com/+redfin/posts" title="Redfin Google Plus" alt="Redfin Google Plus">
+                                                <svg class="SvgIcon rfSvg google">
+                                                                        <svg viewBox="0 0 24 24">
+                                                                            <path d="M2.916 16.756c-1.052-2.092-1.371-4.549-.912-6.85.185-.924.487-1.825.907-2.669C4.116 4.791 6.275 2.863 8.808 1.98a10.372 10.372 0 0 1 7.015.063 10.091 10.091 0 0 1 3.354 2.115c-.324.36-.677.695-1.013 1.044l-1.915 1.95a5.652 5.652 0 0 0-2.245-1.347 6.046 6.046 0 0 0-3.058-.125 6.198 6.198 0 0 0-3.113 1.762 6.6 6.6 0 0 0-1.508 2.49l.001.002a6.505 6.505 0 0 0 0 4.127l-.01.008A6.58 6.58 0 0 0 8.7 17.323a6.17 6.17 0 0 0 2.318 1.02c.817.172 1.663.15 2.486.006a5.91 5.91 0 0 0 2.295-.923l.003.002a5.008 5.008 0 0 0 2.08-3.277h-5.677c.006-1.378.006-2.758.006-4.138h9.798c.325 1.864.252 3.808-.263 5.633-.476 1.67-1.378 3.221-2.637 4.4l-.003-.001c-1.192 1.122-2.686 1.885-4.264 2.255-1.747.405-3.594.417-5.33-.057A10.234 10.234 0 0 1 5.726 20.3a10.684 10.684 0 0 1-2.821-3.536l.01-.008z" fill-rule="evenodd"></path>
+                                                                        </svg>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li id="footerPinterestIcon">
+                                            <a class="icon icon-pinterest" target="_blank" href="https://www.pinterest.com/redfin/" title="Redfin Pinterest" alt="Redfin Pinterest">
+                                                <svg class="SvgIcon rfSvg pinterest">
+                                                                        <svg viewBox="0 0 24 24">
+                                                                            <path d="M11.865 22.13c-1.015 0-1.978-.148-2.912-.429.387-.613.828-1.402 1.042-2.19 0 0 .118-.456.72-2.82.347.68 1.389 1.28 2.5 1.28 3.3 0 5.545-3.005 5.545-7.042 0-3.033-2.577-5.88-6.508-5.88-4.865 0-7.324 3.502-7.324 6.414 0 1.764.668 3.343 2.099 3.932.229.093.44 0 .51-.269.051-.174.157-.628.211-.815.067-.268.04-.347-.147-.574-.414-.495-.682-1.123-.682-2.02 0-2.592 1.94-4.917 5.054-4.917 2.752 0 4.276 1.683 4.276 3.944 0 2.951-1.31 5.451-3.261 5.451-1.071 0-1.872-.882-1.618-1.978.308-1.296.91-2.7.91-3.636 0-.84-.457-1.55-1.39-1.55-1.097 0-1.979 1.137-1.979 2.661 0 0 0 .976.335 1.629-1.125 4.759-1.325 5.589-1.325 5.589-.187.774-.2 1.643-.173 2.365a10.267 10.267 0 0 1-6.148-9.41C1.6 6.197 6.199 1.6 11.865 1.6S22.13 6.197 22.13 11.865 17.53 22.13 11.865 22.13" fill-rule="evenodd">
+                                
+                                                                            </path>
+                                                                        </svg>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li id="footerInstagramIcon">
+                                            <a class="icon icon-instagram" target="_blank" href="https://www.instagram.com/redfinrealestate/" title="Redfin Instagram" alt="Redfin Instagram">
+                                                <svg class="SvgIcon rfSvg instagram">
+                                                                        <svg viewBox="0 0 24 24">
+                                                                            <path d="M12 1c-2.987 0-3.362.013-4.535.066-1.171.054-1.971.24-2.67.511a5.412 5.412 0 0 0-1.949 1.269 5.412 5.412 0 0 0-1.269 1.949c-.271.699-.457 1.499-.511 2.67C1.013 8.638 1 9.013 1 12s.013 3.362.066 4.535c.054 1.171.24 1.971.511 2.67a5.412 5.412 0 0 0 1.269 1.949 5.412 5.412 0 0 0 1.949 1.269c.699.271 1.499.457 2.67.511C8.638 22.987 9.013 23 12 23s3.362-.013 4.535-.066c1.171-.054 1.971-.24 2.67-.511a5.412 5.412 0 0 0 1.949-1.269 5.412 5.412 0 0 0 1.269-1.949c.271-.699.457-1.499.511-2.67.053-1.173.066-1.548.066-4.535s-.013-3.362-.066-4.535c-.054-1.171-.24-1.971-.511-2.67a5.412 5.412 0 0 0-1.269-1.949 5.412 5.412 0 0 0-1.949-1.269c-.699-.271-1.499-.457-2.67-.511C15.362 1.013 14.987 1 12 1m0 1.982c2.937 0 3.285.011 4.445.064 1.072.049 1.655.228 2.042.379.514.199.88.438 1.265.823.385.385.624.751.823 1.265.151.387.33.97.379 2.042.053 1.16.064 1.508.064 4.445 0 2.937-.011 3.285-.064 4.445-.049 1.072-.228 1.655-.379 2.042-.199.514-.438.88-.823 1.265a3.398 3.398 0 0 1-1.265.823c-.387.151-.97.33-2.042.379-1.16.053-1.508.064-4.445.064-2.937 0-3.285-.011-4.445-.064-1.072-.049-1.655-.228-2.042-.379a3.398 3.398 0 0 1-1.265-.823 3.398 3.398 0 0 1-.823-1.265c-.151-.387-.33-.97-.379-2.042-.053-1.16-.064-1.508-.064-4.445 0-2.937.011-3.285.064-4.445.049-1.072.228-1.655.379-2.042.199-.514.438-.88.823-1.265a3.398 3.398 0 0 1 1.265-.823c.387-.151.97-.33 2.042-.379 1.16-.053 1.508-.064 4.445-.064zm0 3.37a5.649 5.649 0 1 0 0 11.297 5.649 5.649 0 0 0 0-11.297zm0 9.315a3.667 3.667 0 1 1 0-7.335 3.667 3.667 0 0 1 0 7.335zm7.192-9.539a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0z" fill-rule="evenodd"></path>
+                                                                        </svg>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+            </div>
+                
+        </div>
+
+
         <script>_tLAB.wait(function () { __reactServerClientController.nodeArrival(43, 43) });</script>
     </div>
     <script type="text/javascript" id="">!function (b, e, f, g, a, c, d) { b.fbq || (a = b.fbq = function () { a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments) }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d)) }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js"); fbq("init", "851728468185585"); fbq("track", "PageView");</script>
