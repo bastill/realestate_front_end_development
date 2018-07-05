@@ -1,3 +1,4 @@
+
 #custom_footer {
     background: white;
 }
@@ -14,7 +15,7 @@
 #custom_redfin_logo {
     color: #4682B4;
     font-size: 30px;
-    font-family: 'IM Fell English SC', serif !important;
+    font-family: 'Lato, sans-serif'  !important;
 }
 
 .custom_subheadLinkContent {
@@ -34,7 +35,7 @@
 }
 
 body {
-    font-family: 'Fira Sans', sans-serif !important;
+    font-family: 'Lato', sans-serif !important;
 }
 
 .SavedSearchesPageGhostTown {

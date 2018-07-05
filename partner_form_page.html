@@ -25,9 +25,9 @@
         <div class="sidebar-collapse">
             <ul class="nav metismenu" id="side-menu">
                 
-                <li>
-                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Become A partner</span> <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level collapse">
+                <li class="active">
+                    <a href="#"  aria-expanded="true" ><i class="fa fa-th-large"></i> <span class="nav-label">Become A partner</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse in" aria-expanded="true">
                         <li><a href="index.html">Benefits</a></li>
                         <li><a href="dashboard_2.html">Mission</a></li>
                         <li><a href="dashboard_3.html">Values</a></li>
@@ -58,6 +58,14 @@
             </div>
         <div class="wrapper wrapper-content animated fadeInRight">
 
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 style="color:steelblue;"> Join us to simplify real estate business </h2>
+                </div>
+            </div>
+
+            <br/>
+
             
             <div class="row">
                 <div class="col-lg-12">
@@ -87,7 +95,7 @@
 
                             <form id="form" action="#" class="wizard-big">
                                 <h1>Account</h1>
-                                <fieldset>
+                                <fieldset id="form-p-0" style="display:none" role="tabpanel"  aria-labelledby="form-h-0" aria-hidden="false">
                                     <h2>Account Information</h2>
                                     <div class="row">
                                         <div class="col-lg-8">
@@ -154,6 +162,8 @@
                                     <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">I agree with the Terms and Conditions.</label>
                                 </fieldset>
                             </form>
+
+
                         </div>
                     </div>
                     </div>
@@ -174,9 +184,9 @@
 
     <!-- Mainly scripts -->
     <script src="partner_form_styles/js/jquery-3.1.1.min.js"></script>
-    <script src="partner_form_styles/js/popper.min.js"></script>
+   
     <script src="partner_form_styles/js/bootstrap.js"></script>
-    <script src="partner_form_styles/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    
     <script src="partner_form_styles/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
     <!-- Custom and plugin javascript -->
