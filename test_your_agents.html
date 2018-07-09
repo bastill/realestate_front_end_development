@@ -7,8 +7,7 @@
     <script src="https://js-agent.newrelic.com/nr-1071.min.js"></script>
     <script src="https://www.google-analytics.com/cx/api.js"></script>
     <script async="" src="https://d21cvz3pxk3jih.cloudfront.net/eedBxki3dCdMi44LjI.js"></script>
-    <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.-oflFoeMflQ.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=wQ/rs=AGLTcCO3mzOGb_qPufOKJw3yeqghEbWhkg/cb=gapi.loaded_0"
-        async=""></script>
+    <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.en_US.-oflFoeMflQ.O/m=auth2/rt=j/sv=1/d=1/ed=1/am=wQ/rs=AGLTcCO3mzOGb_qPufOKJw3yeqghEbWhkg/cb=gapi.loaded_0" async=""></script>
     <script src="https://connect.facebook.net/signals/config/851728468185585?v=2.8.18&amp;r=stable" async=""></script>
     <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
     <script type="text/javascript" async="" src="//bat.bing.com/bat.js"></script>
@@ -28,7 +27,7 @@
                             v2.0.3 (c) Kyle Simpson
                             MIT License
                         */
-        ! function (t) {
+        ! function(t) {
             function e(t, e) {
                 u.push([t, +(e || 0), +new Date])
             }
@@ -42,15 +41,15 @@
                 var i = new Date,
                     r = "unknown",
                     c = n;
-                n = function () {
+                n = function() {
                     return e("request_script.byMethod." + r, i), e("request_script.overall", i), c.apply(this, arguments)
-                }, setTimeout(function () {
+                }, setTimeout(function() {
                     var e, i = t.src;
                     if ("item" in a) {
                         if (!a[0]) return void setTimeout(arguments.callee, 25);
                         a = a[0]
                     }
-                    e = document.createElement("script"), t.type && (e.type = t.type), t.charset && (e.charset = t.charset), t.crossOrigin && (e.crossOrigin = t.crossOrigin), r = "script_async", e.async = !1, e.onload = e.onreadystatechange = function () {
+                    e = document.createElement("script"), t.type && (e.type = t.type), t.charset && (e.charset = t.charset), t.crossOrigin && (e.crossOrigin = t.crossOrigin), r = "script_async", e.async = !1, e.onload = e.onreadystatechange = function() {
                         e.readyState && "complete" != e.readyState && "loaded" != e.readyState || (e.onload = e.onreadystatechange = null, n())
                     }, e.src = i, a.insertBefore(e, a.firstChild)
                 }, 0)
@@ -64,7 +63,7 @@
                 function e(e) {
                     var r = e.script,
                         c = r.src = n(r.src);
-                    o[c] ? e.script = o[c] : (o[c] = r, i(r, function () {
+                    o[c] ? e.script = o[c] : (o[c] = r, i(r, function() {
                         t(r)
                     }))
                 }
@@ -79,8 +78,8 @@
                             if (s[t].wait) {
                                 s[t] = s[t].wait, s[t].started = !0;
                                 var n = [],
-                                    i = function (t) {
-                                        return function () {
+                                    i = function(t) {
+                                        return function() {
                                             t.finished = !0, r()
                                         }
                                     }(s[t]);
@@ -88,7 +87,7 @@
                                 try {
                                     s[t].apply(this, n)
                                 } catch (t) {
-                                    setTimeout(function () {
+                                    setTimeout(function() {
                                         throw t
                                     }, 1)
                                 }
@@ -100,22 +99,22 @@
                 var c, s = [],
                     a = 0;
                 return c = {
-                    script: function (t) {
+                    script: function(t) {
                         return "string" == typeof t && (t = {
                             src: t
                         }), t.finished = !1, s.push({
                             script: t
                         }), r(), c
                     },
-                    wait: function (t) {
+                    wait: function(t) {
                         return s.push({
-                            wait: t || function () { }
+                            wait: t || function() {}
                         }), r(), c
                     }
                 }, {
-                        script: c.script,
-                        wait: c.wait
-                    }
+                    script: c.script,
+                    wait: c.wait
+                }
             }
             var c = (t.$LAB, /^[^?#]*\//.exec(location.href)[0]),
                 s = /^\w+\:\/\/\/?[^\/]+/.exec(c)[0],
@@ -123,22 +122,22 @@
                 o = {},
                 u = [];
             t.$LAB = {
-                script: function (t) {
+                script: function(t) {
                     return r().script(t)
                 },
-                wait: function (t) {
+                wait: function(t) {
                     return r().wait(t)
                 }
             }, t.$LAB.timings = u
         }(this);
 
-        window._tLAB = $LAB.wait(function (c) {
+        window._tLAB = $LAB.wait(function(c) {
             if (document.readyState === 'complete') {
                 c();
             } else {
                 document.addEventListener('DOMContentLoaded', c);
             }
-        }).wait(function () {
+        }).wait(function() {
             window.NREUM || (NREUM = {});
             NREUM.info = {
                 "agent": "",
@@ -152,13 +151,13 @@
                 "ttGuid": "f3f2b4d2026e48",
                 "agentToken": null
             };
-            window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
+            window.NREUM || (NREUM = {}), __nr_require = function(e, t, n) {
                 function r(n) {
                     if (!t[n]) {
                         var o = t[n] = {
                             exports: {}
                         };
-                        e[n][0].call(o.exports, function (t) {
+                        e[n][0].call(o.exports, function(t) {
                             var o = e[n][1][t];
                             return r(o || t)
                         }, o, o.exports)
@@ -169,11 +168,11 @@
                 for (var o = 0; o < n.length; o++) r(n[o]);
                 return r
             }({
-                1: [function (e, t, n) {
-                    function r() { }
+                1: [function(e, t, n) {
+                    function r() {}
 
                     function o(e, t, n) {
-                        return function () {
+                        return function() {
                             return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
                         }
                     }
@@ -187,35 +186,35 @@
                     var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
                         d = "api-",
                         l = d + "ixn-";
-                    a(p, function (e, t) {
+                    a(p, function(e, t) {
                         s[t] = o(d + t, !0, "api")
-                    }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function () {
+                    }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function() {
                         return (new r).get()
                     };
                     var m = r.prototype = {
-                        createTracer: function (e, t) {
+                        createTracer: function(e, t) {
                             var n = {},
                                 r = this,
                                 o = "function" == typeof t;
                             return i(l + "tracer", [f.now(), e, n], r),
-                                function () {
+                                function() {
                                     if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try {
                                         return t.apply(this, arguments)
                                     } catch (e) {
                                         throw c.emit("fn-err", [arguments, this, e], n), e
                                     } finally {
-                                            c.emit("fn-end", [f.now()], n)
-                                        }
+                                        c.emit("fn-end", [f.now()], n)
+                                    }
                                 }
                         }
                     };
-                    a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) {
+                    a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, t) {
                         m[t] = o(l + t)
-                    }), newrelic.noticeError = function (e) {
+                    }), newrelic.noticeError = function(e) {
                         "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
                     }
                 }, {}],
-                2: [function (e, t, n) {
+                2: [function(e, t, n) {
                     function r(e, t) {
                         var n = [],
                             r = "",
@@ -226,7 +225,7 @@
                     var o = Object.prototype.hasOwnProperty;
                     t.exports = r
                 }, {}],
-                3: [function (e, t, n) {
+                3: [function(e, t, n) {
                     function r(e, t, n) {
                         t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
                         for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r];
@@ -234,13 +233,13 @@
                     }
                     t.exports = r
                 }, {}],
-                4: [function (e, t, n) {
+                4: [function(e, t, n) {
                     t.exports = {
                         exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
                     }
                 }, {}],
-                ee: [function (e, t, n) {
-                    function r() { }
+                ee: [function(e, t, n) {
+                    function r() {}
 
                     function o(e) {
                         function t(e) {
@@ -269,7 +268,7 @@
                         }
 
                         function g(e, t) {
-                            f(e, function (e, n) {
+                            f(e, function(e, n) {
                                 t = t || "feature", y[n] = t, t in s || (s[t] = [])
                             })
                         }
@@ -303,7 +302,7 @@
                         d = t.exports = o();
                     d.backlog = s
                 }, {}],
-                gos: [function (e, t, n) {
+                gos: [function(e, t, n) {
                     function r(e, t, n) {
                         if (o.call(e, t)) return e[t];
                         var r = n();
@@ -313,23 +312,23 @@
                                 writable: !0,
                                 enumerable: !1
                             }), r
-                        } catch (i) { }
+                        } catch (i) {}
                         return e[t] = r, r
                     }
                     var o = Object.prototype.hasOwnProperty;
                     t.exports = r
                 }, {}],
-                handle: [function (e, t, n) {
+                handle: [function(e, t, n) {
                     function r(e, t, n, r) {
                         o.buffer([e], r), o.emit(e, t, n)
                     }
                     var o = e("ee").get("handle");
                     t.exports = r, r.ee = o
                 }, {}],
-                id: [function (e, t, n) {
+                id: [function(e, t, n) {
                     function r(e) {
                         var t = typeof e;
-                        return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () {
+                        return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function() {
                             return o++
                         })
                     }
@@ -338,13 +337,13 @@
                         a = e("gos");
                     t.exports = r
                 }, {}],
-                loader: [function (e, t, n) {
+                loader: [function(e, t, n) {
                     function r() {
                         if (!x++) {
                             var e = h.info = NREUM.info,
                                 t = d.getElementsByTagName("script")[0];
                             if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort();
-                            f(y, function (t, n) {
+                            f(y, function(t, n) {
                                 e[t] || (e[t] = n)
                             }), c("mark", ["onload", a() + h.offset], null, "api");
                             var n = d.createElement("script");
@@ -402,7 +401,7 @@
                         E = e(4)
                 }, {}]
             }, {}, ["loader"]);
-        }).wait(function () {
+        }).wait(function() {
             window.__corvairVersion = "215.3.2"
         }).script("/corv/data/environment/21bb517fb6e46b85ab4d654b3d350634bc9a812d/customer-pages.js").script({
             "src": "https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/vendor.cf74a1bdffd9a6f4ba30.bundle.js",
@@ -413,7 +412,7 @@
         }).script({
             "src": "https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/TourDashboardPage.c7738afed385e0ea3da7.bundle.js",
             "crossOrigin": "anonymous"
-        }).wait(function () {
+        }).wait(function() {
             window.__rfBrowserClassification = {
                 "family": "Firefox",
                 "major": "60",
@@ -437,17 +436,13 @@
     </script>
 
     <title>Agents | Avetiz</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
 
 
-    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/long-cache.c39b758a4e83393ee827.styles.css"
-        data-react-server-css="">
+    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/long-cache.c39b758a4e83393ee827.styles.css" data-react-server-css="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" media="" href="styles/styles.css" data-react-server-css="">
-    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/MyAgentPage.a406246bb6ebebbdd29f.styles.css"
-        data-react-server-css="">
-    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/v217.3.0/images/text/csso/agent/RegionalAgentPage.profile.css"
-        data-react-server-css="">
+    <link rel="stylesheet" type="text/css" media="" href="https://ssl.cdn-redfin.com/vLATEST/corvstatic/customer-pages/MyAgentPage.a406246bb6ebebbdd29f.styles.css" data-react-server-css="">
     <link rel="stylesheet" type="text/css" media="" href="custom.css">
     <link data-react-server-link="" rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
     <link data-react-server-link="" rel="apple-touch-icon" href="https://ssl.cdn-redfin.com/v215.3.2/images/logos/Touch-icon-60.png">
@@ -474,16 +469,16 @@
             top: -10000px;
             z-index: 10001
         }
-
+        
         .fb_reposition {
             overflow: hidden;
             position: relative
         }
-
+        
         .fb_invisible {
             display: none
         }
-
+        
         .fb_reset {
             background: none;
             border: 0;
@@ -510,15 +505,15 @@
             white-space: normal;
             word-spacing: normal
         }
-
+        
         .fb_reset>div {
             overflow: hidden
         }
-
+        
         .fb_link img {
             border: none
         }
-
+        
         @keyframes fb_transform {
             from {
                 opacity: 0;
@@ -529,32 +524,32 @@
                 transform: scale(1)
             }
         }
-
+        
         .fb_animate {
             animation: fb_transform .3s forwards
         }
-
+        
         .fb_dialog {
             background: rgba(82, 82, 82, .7);
             position: absolute;
             top: -10000px;
             z-index: 10001
         }
-
+        
         .fb_reset .fb_dialog_legacy {
             overflow: visible
         }
-
+        
         .fb_dialog_advanced {
             padding: 10px;
             border-radius: 8px
         }
-
+        
         .fb_dialog_content {
             background: #fff;
             color: #333
         }
-
+        
         .fb_dialog_close_icon {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
             cursor: pointer;
@@ -565,35 +560,35 @@
             top: 17px;
             width: 15px
         }
-
+        
         .fb_dialog_mobile .fb_dialog_close_icon {
             top: 5px;
             left: 5px;
             right: auto
         }
-
+        
         .fb_dialog_padding {
             background-color: transparent;
             position: absolute;
             width: 1px;
             z-index: -1
         }
-
+        
         .fb_dialog_close_icon:hover {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
         }
-
+        
         .fb_dialog_close_icon:active {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
         }
-
+        
         .fb_dialog_loader {
             background-color: #f6f7f9;
             border: 1px solid #606060;
             font-size: 24px;
             padding: 20px
         }
-
+        
         .fb_dialog_top_left,
         .fb_dialog_top_right,
         .fb_dialog_bottom_left,
@@ -603,31 +598,31 @@
             overflow: hidden;
             position: absolute
         }
-
+        
         .fb_dialog_top_left {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;
             left: -10px;
             top: -10px
         }
-
+        
         .fb_dialog_top_right {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;
             right: -10px;
             top: -10px
         }
-
+        
         .fb_dialog_bottom_left {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;
             bottom: -10px;
             left: -10px
         }
-
+        
         .fb_dialog_bottom_right {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;
             right: -10px;
             bottom: -10px
         }
-
+        
         .fb_dialog_vert_left,
         .fb_dialog_vert_right,
         .fb_dialog_horiz_top,
@@ -637,41 +632,41 @@
             filter: alpha(opacity=70);
             opacity: .7
         }
-
+        
         .fb_dialog_vert_left,
         .fb_dialog_vert_right {
             width: 10px;
             height: 100%
         }
-
+        
         .fb_dialog_vert_left {
             margin-left: -10px
         }
-
+        
         .fb_dialog_vert_right {
             right: 0;
             margin-right: -10px
         }
-
+        
         .fb_dialog_horiz_top,
         .fb_dialog_horiz_bottom {
             width: 100%;
             height: 10px
         }
-
+        
         .fb_dialog_horiz_top {
             margin-top: -10px
         }
-
+        
         .fb_dialog_horiz_bottom {
             bottom: 0;
             margin-bottom: -10px
         }
-
+        
         .fb_dialog_iframe {
             line-height: 0
         }
-
+        
         .fb_dialog_content .dialog_title {
             background: #6d84b4;
             border: 1px solid #365899;
@@ -680,13 +675,13 @@
             font-weight: bold;
             margin: 0
         }
-
+        
         .fb_dialog_content .dialog_title>span {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
             float: left;
             padding: 5px 0 7px 26px
         }
-
+        
         body.fb_hidden {
             -webkit-transform: none;
             height: 100%;
@@ -697,7 +692,7 @@
             left: 0;
             width: 100%
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
             min-height: 100%;
@@ -707,7 +702,7 @@
             top: 0;
             z-index: 10001
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading.centered {
             width: auto;
             height: auto;
@@ -715,15 +710,15 @@
             min-width: initial;
             background: none
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
             width: 100%
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
             background: none
         }
-
+        
         .loading.centered #fb_dialog_loader_close {
             color: #fff;
             display: block;
@@ -731,7 +726,7 @@
             clear: both;
             font-size: 18px
         }
-
+        
         #fb-root #fb_dialog_ipad_overlay {
             background: rgba(0, 0, 0, .45);
             position: absolute;
@@ -743,15 +738,15 @@
             min-height: 100%;
             z-index: 10000
         }
-
+        
         #fb-root #fb_dialog_ipad_overlay.hidden {
             display: none
         }
-
+        
         .fb_dialog.fb_dialog_mobile.loading iframe {
             visibility: hidden
         }
-
+        
         .fb_dialog_content .dialog_header {
             -webkit-box-shadow: white 0 1px 1px -1px inset;
             background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));
@@ -765,27 +760,27 @@
             vertical-align: middle;
             white-space: nowrap
         }
-
+        
         .fb_dialog_content .dialog_header table {
             -webkit-font-smoothing: subpixel-antialiased;
             height: 43px;
             width: 100%
         }
-
+        
         .fb_dialog_content .dialog_header td.header_left {
             font-size: 12px;
             padding-left: 5px;
             vertical-align: middle;
             width: 60px
         }
-
+        
         .fb_dialog_content .dialog_header td.header_right {
             font-size: 12px;
             padding-right: 5px;
             vertical-align: middle;
             width: 60px
         }
-
+        
         .fb_dialog_content .touchable_button {
             background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));
             border: 1px solid #29487d;
@@ -799,7 +794,7 @@
             padding: 4px 12px;
             position: relative
         }
-
+        
         .fb_dialog_content .dialog_header .touchable_button input {
             border: none;
             background: none;
@@ -810,7 +805,7 @@
             padding: 2px 6px 3px 6px;
             text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
         }
-
+        
         .fb_dialog_content .dialog_header .header_center {
             color: #fff;
             font-size: 16px;
@@ -819,7 +814,7 @@
             text-align: center;
             vertical-align: middle
         }
-
+        
         .fb_dialog_content .dialog_content {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
             border: 1px solid #555;
@@ -827,26 +822,26 @@
             border-top: 0;
             height: 150px
         }
-
+        
         .fb_dialog_content .dialog_footer {
             background: #f6f7f9;
             border: 1px solid #555;
             border-top-color: #ccc;
             height: 40px
         }
-
+        
         #fb_dialog_loader_close {
             float: left
         }
-
+        
         .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
             text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
         }
-
+        
         .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
             visibility: hidden
         }
-
+        
         #fb_dialog_loader_spinner {
             animation: rotateSpinner 1.2s linear infinite;
             background-color: transparent;
@@ -856,7 +851,7 @@
             height: 24px;
             width: 24px
         }
-
+        
         @keyframes rotateSpinner {
             0% {
                 transform: rotate(0deg)
@@ -865,61 +860,61 @@
                 transform: rotate(360deg)
             }
         }
-
+        
         .fb_iframe_widget {
             display: inline-block;
             position: relative
         }
-
+        
         .fb_iframe_widget span {
             display: inline-block;
             position: relative;
             text-align: justify
         }
-
+        
         .fb_iframe_widget iframe {
             position: absolute
         }
-
+        
         .fb_iframe_widget_fluid_desktop,
         .fb_iframe_widget_fluid_desktop span,
         .fb_iframe_widget_fluid_desktop iframe {
             max-width: 100%
         }
-
+        
         .fb_iframe_widget_fluid_desktop iframe {
             min-width: 220px;
             position: relative
         }
-
+        
         .fb_iframe_widget_lift {
             z-index: 1
         }
-
+        
         .fb_hide_iframes iframe {
             position: relative;
             left: -10000px
         }
-
+        
         .fb_iframe_widget_loader {
             position: relative;
             display: inline-block
         }
-
+        
         .fb_iframe_widget_fluid {
             display: inline
         }
-
+        
         .fb_iframe_widget_fluid span {
             width: 100%
         }
-
+        
         .fb_iframe_widget_loader iframe {
             min-height: 32px;
             z-index: 2;
             zoom: 1
         }
-
+        
         .fb_iframe_widget_loader .FB_Loader {
             background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;
             height: 32px;
@@ -929,71 +924,71 @@
             left: 50%;
             z-index: 4
         }
-
+        
         .fb_customer_chat_bounce_in_v1 {
             animation-duration: 250ms;
             animation-name: fb_bounce_in_v1
         }
-
+        
         .fb_customer_chat_bounce_out_v1 {
             animation-duration: 250ms;
             animation-name: fb_bounce_out_v1
         }
-
+        
         .fb_customer_chat_bounce_in_v2 {
             animation-duration: 300ms;
             animation-name: fb_bounce_in_v2;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bounce_out_v2 {
             animation-duration: 300ms;
             animation-name: fb_bounce_out_v2;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bounce_in_v2_mobile_chat_started {
             animation-duration: 300ms;
             animation-name: fb_bounce_in_v2_mobile_chat_started;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bounce_out_v2_mobile_chat_started {
             animation-duration: 300ms;
             animation-name: fb_bounce_out_v2_mobile_chat_started;
             transition-timing-function: ease-in
         }
-
+        
         .fb_customer_chat_bubble_pop_in {
             animation-duration: 250ms;
             animation-name: fb_customer_chat_bubble_bounce_in_animation
         }
-
+        
         .fb_customer_chat_bubble_animated_no_badge {
             box-shadow: 0 3px 12px rgba(0, 0, 0, .15);
             transition: box-shadow 150ms linear
         }
-
+        
         .fb_customer_chat_bubble_animated_no_badge:hover {
             box-shadow: 0 5px 24px rgba(0, 0, 0, .3)
         }
-
+        
         .fb_customer_chat_bubble_animated_with_badge {
             box-shadow: -5px 4px 14px rgba(0, 0, 0, .15);
             transition: box-shadow 150ms linear
         }
-
+        
         .fb_customer_chat_bubble_animated_with_badge:hover {
             box-shadow: -5px 8px 24px rgba(0, 0, 0, .2)
         }
-
+        
         .fb_invisible_flow {
             display: inherit;
             height: 0;
             overflow-x: hidden;
             width: 0
         }
-
+        
         .fb_mobile_overlay_active {
             background-color: #fff;
             height: 100%;
@@ -1002,7 +997,7 @@
             visibility: hidden;
             width: 100%
         }
-
+        
         @keyframes fb_bounce_in_v1 {
             0% {
                 opacity: 0;
@@ -1018,7 +1013,7 @@
                 transform: scale(1, 1)
             }
         }
-
+        
         @keyframes fb_bounce_in_v2 {
             0% {
                 opacity: 0;
@@ -1035,7 +1030,7 @@
                 transform-origin: bottom right
             }
         }
-
+        
         @keyframes fb_bounce_in_v2_mobile_chat_started {
             0% {
                 opacity: 0;
@@ -1046,7 +1041,7 @@
                 top: 0
             }
         }
-
+        
         @keyframes fb_bounce_out_v1 {
             from {
                 opacity: 1
@@ -1055,7 +1050,7 @@
                 opacity: 0
             }
         }
-
+        
         @keyframes fb_bounce_out_v2 {
             0% {
                 opacity: 1;
@@ -1068,7 +1063,7 @@
                 transform-origin: bottom right
             }
         }
-
+        
         @keyframes fb_bounce_out_v2_mobile_chat_started {
             0% {
                 opacity: 1;
@@ -1079,7 +1074,7 @@
                 top: 20px
             }
         }
-
+        
         @keyframes fb_customer_chat_bubble_bounce_in_animation {
             0% {
                 bottom: 6pt;
@@ -1129,7 +1124,7 @@
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <script>
-        (function (w, d, s, l, i) {
+        (function(w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
                 'gtm.start': new Date().getTime(),
@@ -1146,7 +1141,7 @@
     <script>
         if ('PerformanceLongTaskTiming' in window) {
             var o = window._corvLT = {
-                o: new PerformanceObserver(function (l) {
+                o: new PerformanceObserver(function(l) {
                     o.pre = (o.pre || []).concat(l.getEntries())
                 })
             };
@@ -1167,7 +1162,7 @@
                         #header header.LargeHeader {
                             display: none;
                         }
-
+                        
                         @media (min-width: 600px) {
                             #header header.LargeHeader {
                                 display: flex;
@@ -1194,9 +1189,8 @@
                                         <div data-rf-test-name="search-container" class="search-container inline-block">
                                             <div class="InputBox">
                                                 <noscript></noscript>
-                                                <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off"
-                                                    aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP"
-                                                    title="City, Address, School, Agent, ZIP" type="search">
+                                                <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP" title="City, Address, School, Agent, ZIP"
+                                                    type="search">
                                                 <div role="button" class="inline-block clear-button-block">
                                                     <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button">
                                                     <svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px">
@@ -1210,8 +1204,7 @@
                                             </div>
 
                                             <a href="#">
-                                                <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" value="" title="Search"
-                                                    tabindex="2">
+                                                <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" value="" title="Search" tabindex="2">
                                                     <svg class="SvgIcon rfSvg search">
                                                         <svg viewBox="0 0 24 24">
                                                             <g fill-rule="evenodd">
@@ -1351,11 +1344,8 @@
                             <div class="logo-div menuItemAlign verticallyCenterFlexContent" itemscope="" itemtype="http://schema.org/Organization">
                                 <meta itemprop="name" content="Redfin">
                                 <link itemprop="logo" href="https://ssl.cdn-redfin.com/static-images/images/redfin-logo-transparent-bg-260x66.png" type="image/png">
-                                <a class="logo-link clickable inheritColor fill-redfin-red" data-rf-test-name="LogoLink" itemprop="url" href="owner_dashboard.html"
-                                    target="_top">
-                                    <span id='custom_redfin_logo' class="RedfinLogo">
-                                        <b>AVETIZ</b>
-                                    </span>
+                                <a class="logo-link clickable inheritColor fill-redfin-red" data-rf-test-name="LogoLink" itemprop="url" href="owner_dashboard.html" target="_top">
+                                    <span id='custom_redfin_logo' class="RedfinLogo"><b>AVETIZ</b></span>
 
                                 </a>
                             </div>
@@ -1365,9 +1355,8 @@
                                         <div data-rf-test-name="search-container" class="search-container inline-block">
                                             <div class="InputBox">
                                                 <noscript></noscript>
-                                                <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off"
-                                                    aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP"
-                                                    title="City, Address, School, Agent, ZIP" type="search">
+                                                <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="City, Address, School, Agent, ZIP" title="City, Address, School, Agent, ZIP"
+                                                    type="search">
                                                 <div role="button" class="inline-block clear-button-block">
                                                     <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button">
                                                     <svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px">
@@ -1379,8 +1368,7 @@
                                                     </svg>
                                                 </div>
                                             </div>
-                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search"
-                                                tabindex="2">
+                                            <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2">
                                                 <svg class="SvgIcon rfSvg search">
                                                     <svg viewBox="0 0 24 24">
                                                         <g fill-rule="evenodd">
@@ -1402,21 +1390,16 @@
                                 </div>
                             </div>
                             <div class="menuItemClickable verticallyCenterFlexContent menuItemAlign clickable withHoverShim withHoverBoxShadow" data-rf-test-name="BuyMenu">
-                                <a class="inheritColor" href="#">Buy
-                                    <i class="fa fa-credit-card"></i>
-                                </a>
+                                <a class="inheritColor" href="#">Buy <i class="fa fa-credit-card"></i></a>
                             </div>
                             <div class="menuItemClickable verticallyCenterFlexContent menuItemAlign clickable withHoverShim withHoverBoxShadow" data-rf-test-name="SellMenu">
-                                <a class="inheritColor" href="#">Sell
-                                    <i class="fa fa-money"></i>
-                                </a>
+                                <a class="inheritColor" href="#">Sell <i class="fa fa-money"></i></a>
                             </div>
-                            <div id="userMenu" class="UserMenu menuItemClickable menuItemAlign verticallyCenterFlexContent clickable withHoverShim withHoverBoxShadow"
-                                data-rf-test-name="UserMenu">
+                            <div id="userMenu" class="UserMenu menuItemClickable menuItemAlign verticallyCenterFlexContent clickable withHoverShim withHoverBoxShadow" data-rf-test-name="UserMenu">
                                 <div class="item NameAndThumbnail verticallyCenterFlexContent">
                                     <span class="clickable nameNode">
                                         <span class="name">Simon</span>
-                                        <span>▾</span>
+                                    <span>▾</span>
                                     </span>
                                     <div class="user-photo">
                                         <img alt="" class="userPhoto small loginId16487221" src="https://ssl.cdn-redfin.com/system_files/images/38/338/10904338_615_0.jpg">
@@ -1436,39 +1419,31 @@
                     <div id='custom_overflowHiddeWrapper' class="overflowHideWrapper">
                         <ul class="SubheadNavLinks mainNavigation">
                             <li class="SubheadLink ">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="favorites.html">
-                                    <b style='color:whitesmoke;' class='fa fa-star'></b> Favorites </a>
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="favorites.html"><b  style='color:whitesmoke;' class='fa fa-star'></b> Favorites </a>
                             </li>
                             <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="user_saved_searches.html">
-                                    <b style='color:whitesmoke' class='fa fa-search'></b> Saved Searches</a>
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="user_saved_searches.html"><b  style='color:whitesmoke'class='fa fa-search'></b> Saved Searches</a>
                             </li>
                             <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="home_tour.html">
-                                    <b style='color:whitesmoke;' class='fa fa-home'></b> Scheduled Tour</a>
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="home_tour.html"> <b style='color:whitesmoke;' class='fa fa-home'></b> Scheduled Tour</a>
                             </li>
 
                             <li class="SubheadLink active">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="your_agents.html">
-                                    <b style='color:whitesmoke;' class='fa fa-users'></b> Your Consultant</a>
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="your_agents.html"><b style='color:whitesmoke;' class='fa fa-users'></b> Your Consultant</a>
                             </li>
                             <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="offers.html">
-                                    <b style='color:whitesmoke' class='fa fa-credit-card'></b> Offers</a>
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="offers.html"><b style='color:whitesmoke' class='fa fa-credit-card'></b> Offers</a>
                             </li>
 
                             <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="owner_dashboard.html">
-                                    <b style='color:whitesmoke' class='fa fa-dashboard'></b> Owner Dashboard</a>
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="owner_dashboard.html"><b style='color:whitesmoke' class='fa fa-dashboard'></b>   Owner Dashboard</a>
                             </li>
                             <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="Email_Settings.html">
-                                    <b style='color:whitesmoke' class='fa fa-envelope-open'></b> Email Settings</a>
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="Email_Settings.html"><b style='color:whitesmoke'  class='fa fa-envelope-open'></b> Email Settings</a>
                             </li>
 
                             <li class="SubheadLink">
-                                <a class="subheadLinkContent custom_subheadLinkContent" href="Settings.html">
-                                    <b style='color:whitesmoke' class='fa fa-wrench'> </b> Account Settings</a>
+                                <a class="subheadLinkContent custom_subheadLinkContent" href="Settings.html"><b style='color:whitesmoke' class='fa fa-wrench'> </b> Account Settings</a>
                             </li>
                         </ul>
                     </div>
@@ -1492,8 +1467,7 @@
                                 <div data-rf-test-name="search-container" class="search-container inline-block">
                                     <div class="InputBox">
                                         <noscript></noscript>
-                                        <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off"
-                                            aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="Find Redfin real estate agents in your area"
+                                        <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value="" placeholder="Find Redfin real estate agents in your area"
                                             title="Find Redfin real estate agents in your area" type="search">
                                         <div role="button" class="inline-block clear-button-block">
                                             <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button">
@@ -1506,8 +1480,7 @@
                                             </svg>
                                         </div>
                                     </div>
-                                    <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search"
-                                        tabindex="2">
+                                    <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2">
                                         <svg class="SvgIcon rfSvg search">
                                             <svg viewBox="0 0 24 24">
                                                 <g fill-rule="evenodd">
@@ -1524,435 +1497,7 @@
                 </div>
                 <div class="ChangeAgentSection row-center"></div>
             </div>
-            <!-- Start Your Consultant -->
-
-            <div class="MyAgent">
-                <div class="">
-                    <h1 style="color:steelblue; text-decoration:underline">Your Consultants</h1><br/>
-                    <div class="agent-cards">
-                        <div data-rf-test-name="recommended-agent-card" data-cms-slug="vickie-blanding" class="agentCard">
-                            <div class="agent-photo-card clickable photo320x230">
-                                <div class="photo320x230">
-                                    <a href="https://www.redfin.com/real-estate-agents/vickie-blanding">
-                                        <img class="" alt="Dallas Real Estate Agent Vickie Blanding" title="" src="https://ssl.cdn-redfin.com/system_files/images/13541/640x460/6_72.jpg">
-                                    </a>
-                                </div>
-                                <div class="agentTypeBadge">
-                                    <div class="buyside">Redfin Buyer's Agent</div>
-                                </div>
-                                <div class="recentDeals">
-                                    <span class="dealCount">4</span>Recent
-                                    <br>Deal
-                                    <!-- -->s</div>
-                                <div class="recommendedAgentBadge">
-                                    <span>Recommended</span>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                            <button type="button" class="button Button  compact v3 contact-button website" tabindex="0" data-rf-test-name="recommended-agent-card-contact-button">
-                                <span>Contact</span>
-                            </button>
-                            <button type="button" class="button Button  v3 contact-button mobile" tabindex="0" data-rf-test-name="recommended-agent-card-contact-button">
-                                <span>Contact</span>
-                            </button>
-                            <div class="basicInfo">
-                                <a href="/real-estate-agents/vickie-blanding" class="agentName">Vickie Blanding</a>
-                                <div class="agentPhone">
-                                    <svg class="SvgIcon rfSvg call" style="fill:black;height:18px;width:18px">
-                                        <svg viewBox="0 0 24 24">
-                                            <g fill-rule="evenodd">
-                                                <path d="M5.741 3l2.151 3.999L6.26 9.924l.701 1.023c.076.111.803 1.144 2.88 3.252 2.087 2.056 3.12 2.783 3.231 2.859l1.023.701 2.925-1.632 3.999 2.151-2.441 2.721c-1.435-.13-4.951-.991-9.731-5.85-4.857-4.778-5.693-8.365-5.826-9.708L5.737 3h.001m0-2c-.471 0-.946.165-1.333.512L1.334 4.268A.981.981 0 0 0 1 5c-.003 1.374.517 5.744 6.444 11.575 5.212 5.175 9.842 6.069 11.498 6.348a.996.996 0 0 0 .913-.323l2.652-2.986a2 2 0 0 0-.541-3.097l-4.481-2.41a1 1 0 0 0-.961.007l-2.321 1.295s-.937-.643-2.958-2.635c-1.991-2.021-2.634-2.958-2.634-2.958l1.294-2.321a1 1 0 0 0 .008-.961l-2.41-4.481A1.995 1.995 0 0 0 5.738 1"></path>
-                                            </g>
-                                        </svg>
-                                    </svg>
-                                    <a href="tel:(469) 854-0777" class="agentPhoneString">(469) 854-0777</a>
-                                </div>
-                                <span class="ratingDecimal">5.0</span>
-                                <span data-rf-test-name="star-rating" class="StarRating small">
-                                    <div href="/real-estate-agents/vickie-blanding" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/vickie-blanding" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/vickie-blanding" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/vickie-blanding" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/vickie-blanding" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                </span>
-                                <a href="/real-estate-agents/vickie-blanding?show=reviews&amp;star=all" class="reviews">2 Reviews</a>
-                            </div>
-                        </div>
-                        <script type="application/ld+json">{"@context":"http://schema.org","@type":"RealEstateAgent","name":"Vickie Blanding","url":"https://www.redfin.com/real-estate-agents/vickie-blanding","aggregateRating":{"@type":"AggregateRating","reviewCount":2},"image":"https://ssl.cdn-redfin.com/system_files/images/13541/150x150/gen120x120/1_59.jpg","telephone":"214-493-3382","review":null}</script>
-                        <div data-rf-test-name="recommended-agent-card" data-cms-slug="susan-priebe" class="agentCard">
-                            <div class="agent-photo-card clickable photo320x230">
-                                <div class="photo320x230">
-                                    <a href="https://www.redfin.com/real-estate-agents/susan-priebe">
-                                        <img class="" alt="Dallas Real Estate Agent Susan Priebe" title="" src="https://ssl.cdn-redfin.com/system_files/images/14410/640x460/6_98.jpg">
-                                    </a>
-                                </div>
-                                <div class="agentTypeBadge">
-                                    <div class="buyside">Redfin Buyer's Agent</div>
-                                </div>
-                                <div class="recentDeals">
-                                    <span class="dealCount">1</span>Recent
-                                    <br>Deal</div>
-                                <div class="clear"></div>
-                            </div>
-                            <button type="button" class="button Button  compact v3 contact-button website" tabindex="0" data-rf-test-name="recommended-agent-card-contact-button">
-                                <span>Contact</span>
-                            </button>
-                            <button type="button" class="button Button  v3 contact-button mobile" tabindex="0" data-rf-test-name="recommended-agent-card-contact-button">
-                                <span>Contact</span>
-                            </button>
-                            <div class="basicInfo">
-                                <a href="/real-estate-agents/susan-priebe" class="agentName">Susan Priebe</a>
-                                <div class="agentPhone">
-                                    <svg class="SvgIcon rfSvg call" style="fill:black;height:18px;width:18px">
-                                        <svg viewBox="0 0 24 24">
-                                            <g fill-rule="evenodd">
-                                                <path d="M5.741 3l2.151 3.999L6.26 9.924l.701 1.023c.076.111.803 1.144 2.88 3.252 2.087 2.056 3.12 2.783 3.231 2.859l1.023.701 2.925-1.632 3.999 2.151-2.441 2.721c-1.435-.13-4.951-.991-9.731-5.85-4.857-4.778-5.693-8.365-5.826-9.708L5.737 3h.001m0-2c-.471 0-.946.165-1.333.512L1.334 4.268A.981.981 0 0 0 1 5c-.003 1.374.517 5.744 6.444 11.575 5.212 5.175 9.842 6.069 11.498 6.348a.996.996 0 0 0 .913-.323l2.652-2.986a2 2 0 0 0-.541-3.097l-4.481-2.41a1 1 0 0 0-.961.007l-2.321 1.295s-.937-.643-2.958-2.635c-1.991-2.021-2.634-2.958-2.634-2.958l1.294-2.321a1 1 0 0 0 .008-.961l-2.41-4.481A1.995 1.995 0 0 0 5.738 1"></path>
-                                            </g>
-                                        </svg>
-                                    </svg>
-                                    <a href="tel:(972) 299-8631" class="agentPhoneString">(972) 299-8631</a>
-                                </div>
-                                <span class="ratingDecimal">5.0</span>
-                                <span data-rf-test-name="star-rating" class="StarRating small">
-                                    <div href="/real-estate-agents/susan-priebe" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/susan-priebe" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/susan-priebe" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/susan-priebe" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/susan-priebe" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                </span>
-                                <a href="/real-estate-agents/susan-priebe?show=reviews&amp;star=all" class="reviews">1 Review</a>
-                            </div>
-                        </div>
-                        <script type="application/ld+json">{"@context":"http://schema.org","@type":"RealEstateAgent","name":"Susan Priebe","url":"https://www.redfin.com/real-estate-agents/susan-priebe","aggregateRating":{"@type":"AggregateRating","reviewCount":1},"image":"https://ssl.cdn-redfin.com/system_files/images/14410/150x150/gen120x120/1_92.jpg","telephone":"214-476-0079","review":null}</script>
-                        <div data-rf-test-name="recommended-agent-card" data-cms-slug="rachael-wang" class="agentCard">
-                            <div class="agent-photo-card clickable photo320x230">
-                                <div class="photo320x230">
-                                    <a href="https://www.redfin.com/real-estate-agents/rachael-wang">
-                                        <img class="" alt="Dallas Real Estate Agent Rachael Wang" title="" src="https://ssl.cdn-redfin.com/system_files/images/11576/640x460/6_2.jpg">
-                                    </a>
-                                </div>
-                                <div class="agentTypeBadge">
-                                    <div class="buyside">Redfin Buyer's Agent</div>
-                                </div>
-                                <div class="recentDeals">
-                                    <span class="dealCount">44</span>Recent
-                                    <br>Deal
-                                    <!-- -->s</div>
-                                <div class="clear"></div>
-                            </div>
-                            <button type="button" class="button Button  compact v3 contact-button website" tabindex="0" data-rf-test-name="recommended-agent-card-contact-button">
-                                <span>Contact</span>
-                            </button>
-                            <button type="button" class="button Button  v3 contact-button mobile" tabindex="0" data-rf-test-name="recommended-agent-card-contact-button">
-                                <span>Contact</span>
-                            </button>
-                            <div class="basicInfo">
-                                <a href="/real-estate-agents/rachael-wang" class="agentName">Rachael Wang</a>
-                                <div class="agentPhone">
-                                    <svg class="SvgIcon rfSvg call" style="fill:black;height:18px;width:18px">
-                                        <svg viewBox="0 0 24 24">
-                                            <g fill-rule="evenodd">
-                                                <path d="M5.741 3l2.151 3.999L6.26 9.924l.701 1.023c.076.111.803 1.144 2.88 3.252 2.087 2.056 3.12 2.783 3.231 2.859l1.023.701 2.925-1.632 3.999 2.151-2.441 2.721c-1.435-.13-4.951-.991-9.731-5.85-4.857-4.778-5.693-8.365-5.826-9.708L5.737 3h.001m0-2c-.471 0-.946.165-1.333.512L1.334 4.268A.981.981 0 0 0 1 5c-.003 1.374.517 5.744 6.444 11.575 5.212 5.175 9.842 6.069 11.498 6.348a.996.996 0 0 0 .913-.323l2.652-2.986a2 2 0 0 0-.541-3.097l-4.481-2.41a1 1 0 0 0-.961.007l-2.321 1.295s-.937-.643-2.958-2.635c-1.991-2.021-2.634-2.958-2.634-2.958l1.294-2.321a1 1 0 0 0 .008-.961l-2.41-4.481A1.995 1.995 0 0 0 5.738 1"></path>
-                                            </g>
-                                        </svg>
-                                    </svg>
-                                    <a href="tel:(214) 974-4530" class="agentPhoneString">(214) 974-4530</a>
-                                </div>
-                                <span class="ratingDecimal">5.0</span>
-                                <span data-rf-test-name="star-rating" class="StarRating small">
-                                    <div href="/real-estate-agents/rachael-wang" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/rachael-wang" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/rachael-wang" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/rachael-wang" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/rachael-wang" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                </span>
-                                <a href="/real-estate-agents/rachael-wang?show=reviews&amp;star=all" class="reviews">41 Reviews</a>
-                            </div>
-                        </div>
-                        <script type="application/ld+json">{"@context":"http://schema.org","@type":"RealEstateAgent","name":"Rachael Wang","url":"https://www.redfin.com/real-estate-agents/rachael-wang","aggregateRating":{"@type":"AggregateRating","reviewCount":41},"image":"https://ssl.cdn-redfin.com/system_files/images/11576/150x150/gen120x120/1_71.jpg","telephone":"972-352-9337","review":null}</script>
-                        <div data-rf-test-name="recommended-agent-card" data-cms-slug="chris-venable" class="agentCard">
-                            <div class="agent-photo-card clickable photo320x230">
-                                <div class="photo320x230">
-                                    <a href="https://www.redfin.com/real-estate-agents/chris-venable">
-                                        <img class="" alt="Dallas Real Estate Agent Chris Venable" title="" src="https://ssl.cdn-redfin.com/system_files/images/7048/640x460/6_9.jpg">
-                                    </a>
-                                </div>
-                                <div class="agentTypeBadge">
-                                    <div class="buyside">Redfin Buyer's Agent</div>
-                                </div>
-                                <div class="recentDeals">
-                                    <span class="dealCount">12</span>Recent
-                                    <br>Deal
-                                    <!-- -->s</div>
-                                <div class="clear"></div>
-                            </div>
-                            <button type="button" class="button Button  compact v3 contact-button website" tabindex="0" data-rf-test-name="recommended-agent-card-contact-button">
-                                <span>Contact</span>
-                            </button>
-                            <button type="button" class="button Button  v3 contact-button mobile" tabindex="0" data-rf-test-name="recommended-agent-card-contact-button">
-                                <span>Contact</span>
-                            </button>
-                            <div class="basicInfo">
-                                <a href="/real-estate-agents/chris-venable" class="agentName">Chris Venable</a>
-                                <div class="agentPhone">
-                                    <svg class="SvgIcon rfSvg call" style="fill:black;height:18px;width:18px">
-                                        <svg viewBox="0 0 24 24">
-                                            <g fill-rule="evenodd">
-                                                <path d="M5.741 3l2.151 3.999L6.26 9.924l.701 1.023c.076.111.803 1.144 2.88 3.252 2.087 2.056 3.12 2.783 3.231 2.859l1.023.701 2.925-1.632 3.999 2.151-2.441 2.721c-1.435-.13-4.951-.991-9.731-5.85-4.857-4.778-5.693-8.365-5.826-9.708L5.737 3h.001m0-2c-.471 0-.946.165-1.333.512L1.334 4.268A.981.981 0 0 0 1 5c-.003 1.374.517 5.744 6.444 11.575 5.212 5.175 9.842 6.069 11.498 6.348a.996.996 0 0 0 .913-.323l2.652-2.986a2 2 0 0 0-.541-3.097l-4.481-2.41a1 1 0 0 0-.961.007l-2.321 1.295s-.937-.643-2.958-2.635c-1.991-2.021-2.634-2.958-2.634-2.958l1.294-2.321a1 1 0 0 0 .008-.961l-2.41-4.481A1.995 1.995 0 0 0 5.738 1"></path>
-                                            </g>
-                                        </svg>
-                                    </svg>
-                                    <a href="tel:(940) 324-0827" class="agentPhoneString">(940) 324-0827</a>
-                                </div>
-                                <span class="ratingDecimal">4.8</span>
-                                <span data-rf-test-name="star-rating" class="StarRating small">
-                                    <div href="/real-estate-agents/chris-venable" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/chris-venable" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/chris-venable" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/chris-venable" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/chris-venable" class="starHalfSvg">
-                                        <svg class="SvgIcon rfSvg rating-half">
-                                            <svg viewBox="0 0 24 24">
-                                                <path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path>
-                                                <path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                </span>
-                                <a href="/real-estate-agents/chris-venable?show=reviews&amp;star=all" class="reviews">13 Reviews</a>
-                            </div>
-                        </div>
-                        <script type="application/ld+json">{"@context":"http://schema.org","@type":"RealEstateAgent","name":"Chris Venable","url":"https://www.redfin.com/real-estate-agents/chris-venable","aggregateRating":{"@type":"AggregateRating","reviewCount":13},"image":"https://ssl.cdn-redfin.com/system_files/images/7048/150x150/gen120x120/1_8.jpg","telephone":"214-605-3389","review":null}</script>
-                        <div data-rf-test-name="recommended-agent-card" data-cms-slug="justin-knauss" class="agentCard">
-                            <div class="agent-photo-card clickable photo320x230">
-                                <div class="photo320x230">
-                                    <a href="https://www.redfin.com/real-estate-agents/justin-knauss">
-                                        <img class="" alt="Dallas Real Estate Agent Justin Knauss" title="" src="https://ssl.cdn-redfin.com/system_files/images/7374/640x460/6_20.jpg">
-                                    </a>
-                                </div>
-                                <div class="agentTypeBadge">
-                                    <div class="buyside">Redfin Buyer's Agent</div>
-                                </div>
-                                <div class="recentDeals">
-                                    <span class="dealCount">55</span>Recent
-                                    <br>Deal
-                                    <!-- -->s</div>
-                                <div class="clear"></div>
-                            </div>
-                            <button type="button" class="button Button  compact v3 contact-button website" tabindex="0" data-rf-test-name="recommended-agent-card-contact-button">
-                                <span>Contact</span>
-                            </button>
-                            <button type="button" class="button Button  v3 contact-button mobile" tabindex="0" data-rf-test-name="recommended-agent-card-contact-button">
-                                <span>Contact</span>
-                            </button>
-                            <div class="basicInfo">
-                                <a href="/real-estate-agents/justin-knauss" class="agentName">Justin Knauss</a>
-                                <div class="agentPhone">
-                                    <svg class="SvgIcon rfSvg call" style="fill:black;height:18px;width:18px">
-                                        <svg viewBox="0 0 24 24">
-                                            <g fill-rule="evenodd">
-                                                <path d="M5.741 3l2.151 3.999L6.26 9.924l.701 1.023c.076.111.803 1.144 2.88 3.252 2.087 2.056 3.12 2.783 3.231 2.859l1.023.701 2.925-1.632 3.999 2.151-2.441 2.721c-1.435-.13-4.951-.991-9.731-5.85-4.857-4.778-5.693-8.365-5.826-9.708L5.737 3h.001m0-2c-.471 0-.946.165-1.333.512L1.334 4.268A.981.981 0 0 0 1 5c-.003 1.374.517 5.744 6.444 11.575 5.212 5.175 9.842 6.069 11.498 6.348a.996.996 0 0 0 .913-.323l2.652-2.986a2 2 0 0 0-.541-3.097l-4.481-2.41a1 1 0 0 0-.961.007l-2.321 1.295s-.937-.643-2.958-2.635c-1.991-2.021-2.634-2.958-2.634-2.958l1.294-2.321a1 1 0 0 0 .008-.961l-2.41-4.481A1.995 1.995 0 0 0 5.738 1"></path>
-                                            </g>
-                                        </svg>
-                                    </svg>
-                                    <a href="tel:(214) 954-8720" class="agentPhoneString">(214) 954-8720</a>
-                                </div>
-                                <span class="ratingDecimal">4.8</span>
-                                <span data-rf-test-name="star-rating" class="StarRating small">
-                                    <div href="/real-estate-agents/justin-knauss" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/justin-knauss" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/justin-knauss" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/justin-knauss" class="starFullSvg">
-                                        <svg class="SvgIcon rfSvg rating">
-                                            <svg viewBox="0 0 24 24">
-                                                <path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2"
-                                                    fill-rule="evenodd"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                    <div href="/real-estate-agents/justin-knauss" class="starHalfSvg">
-                                        <svg class="SvgIcon rfSvg rating-half">
-                                            <svg viewBox="0 0 24 24">
-                                                <path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path>
-                                                <path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd"
-                                                    d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path>
-                                            </svg>
-                                        </svg>
-                                    </div>
-                                </span>
-                                <a href="/real-estate-agents/justin-knauss?show=reviews&amp;star=all" class="reviews">73 Reviews</a>
-                            </div>
-                            
-                        </div>
-
-                       
-                        <script type="application/ld+json">{"@context":"http://schema.org","@type":"RealEstateAgent","name":"Karen Nesbit","url":"https://www.redfin.com/real-estate-agents/karen-nesbit","aggregateRating":{"@type":"AggregateRating","reviewCount":142},"image":"https://ssl.cdn-redfin.com/system_files/images/83/383/gen120x120/1166383_343_0.jpg","telephone":"214-202-8012","review":null}</script>
-                        <div class="clear"></div>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <!-- End Of Consultant -->
         </div>
-
 
 
         <div data-react-server-container="9">
@@ -1970,37 +1515,12 @@
                         <div data-rf-test-name="search-box" class="SearchBox loggedIn" tabindex="-1">
                             <form class="SearchBoxForm" action="?">
                                 <div data-rf-test-name="search-container" class="search-container inline-block">
-                                    <div class="InputBox">
-                                        <noscript></noscript>
-                                        <input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box"
-                                            name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false"
-                                            value="" placeholder="NGN" title="NGN" type="search">
-                                        <div role="button" class="inline-block clear-button-block">
-                                            <input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear"
-                                                title="Clear" type="button">
-                                            <svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px">
-                                                <svg viewBox="0 0 24 24">
-                                                    <g fill-rule="evenodd">
-                                                        <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.772 8.288l-1.06-1.06a.25.25 0 0 0-.354 0L12 10.586 8.642 7.228a.25.25 0 0 0-.354 0l-1.06 1.06a.25.25 0 0 0 0 .354L10.586 12l-3.358 3.358a.25.25 0 0 0 0 .354l1.06 1.06a.25.25 0 0 0 .354 0L12 13.414l3.358 3.358a.25.25 0 0 0 .354 0l1.06-1.06a.25.25 0 0 0 0-.354L13.414 12l3.358-3.358a.25.25 0 0 0 0-.354z"></path>
-                                                    </g>
-                                                </svg>
-                                            </svg>
+                                    <div class="InputBox"><noscript></noscript><input data-rf-test-name="search-box-input" id="search-box-input" class="search-input-box" name="searchInputBox" autocomplete="off" aria-haspopup="true" tabindex="1" aria-invalid="false" value=""
+                                            placeholder="NGN" title="NGN" type="search">
+                                        <div role="button" class="inline-block clear-button-block"><input class="btn-clear-search-input clickable hidden" data-rf-test-name="search-box-clear" title="Clear" type="button"><svg class="SvgIcon rfSvg clear clear-icon-search-input hidden" style="height:18px;width:18px"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m0-2C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.772 8.288l-1.06-1.06a.25.25 0 0 0-.354 0L12 10.586 8.642 7.228a.25.25 0 0 0-.354 0l-1.06 1.06a.25.25 0 0 0 0 .354L10.586 12l-3.358 3.358a.25.25 0 0 0 0 .354l1.06 1.06a.25.25 0 0 0 .354 0L12 13.414l3.358 3.358a.25.25 0 0 0 .354 0l1.06-1.06a.25.25 0 0 0 0-.354L13.414 12l3.358-3.358a.25.25 0 0 0 0-.354z"></path></g></svg></svg>
                                         </div>
-                                    </div>
-                                    <button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right"
-                                        type="submit" value="" title="Search" tabindex="2">
-                                        <svg class="SvgIcon rfSvg search">
-                                            <svg viewBox="0 0 24 24">
-                                                <g fill-rule="evenodd">
-                                                    <path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path>
-                                                </g>
-                                            </svg>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </form>
-                            <noscript></noscript>
-                        </div>
+                                    </div><button data-rf-test-name="searchButton" class="inline-block SearchButton clickable float-right" type="submit" value="" title="Search" tabindex="2"><svg class="SvgIcon rfSvg search"><svg viewBox="0 0 24 24"><g fill-rule="evenodd"><path d="M23.884 21.763l-7.554-7.554a8.976 8.976 0 0 0 1.526-6.835C17.203 3.68 14.204.72 10.502.122a9.01 9.01 0 0 0-10.38 10.38c.598 3.702 3.558 6.7 7.252 7.354a8.976 8.976 0 0 0 6.835-1.526l7.554 7.554a.25.25 0 0 0 .353 0l1.768-1.768a.25.25 0 0 0 0-.353zM2 9c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7-7-3.14-7-7z"></path></g></svg></svg></button></div>
+                            </form><noscript></noscript></div>
                     </div>
                 </div>
 
@@ -2033,53 +1553,47 @@
                         <li id="footerFacebookIcon">
                             <a class="icon icon-facebook" target="_blank" href="https://www.facebook.com/redfin" title="Redfin Facebook" alt="Redfin Facebook">
                                 <svg class="SvgIcon rfSvg facebook">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M21.252 1.6H2.747c-.633 0-1.147.514-1.147 1.148v18.504c0 .634.514 1.148 1.147 1.148h9.963v-8.055H9.999v-3.139h2.71V8.891c0-2.686 1.641-4.15 4.038-4.15 1.148 0 2.134.086 2.422.125v2.807h-1.662c-1.304 0-1.556.62-1.556 1.529v2.004h3.109l-.405 3.14h-2.704V22.4h5.3c.635 0 1.149-.514 1.149-1.148V2.748c0-.634-.514-1.148-1.148-1.148"
-                                            fill-rule="evenodd"></path>
-                                    </svg>
+                                                    <svg viewBox="0 0 24 24">
+                                                        <path d="M21.252 1.6H2.747c-.633 0-1.147.514-1.147 1.148v18.504c0 .634.514 1.148 1.147 1.148h9.963v-8.055H9.999v-3.139h2.71V8.891c0-2.686 1.641-4.15 4.038-4.15 1.148 0 2.134.086 2.422.125v2.807h-1.662c-1.304 0-1.556.62-1.556 1.529v2.004h3.109l-.405 3.14h-2.704V22.4h5.3c.635 0 1.149-.514 1.149-1.148V2.748c0-.634-.514-1.148-1.148-1.148" fill-rule="evenodd"></path>
+                                                    </svg>
                                 </svg>
                             </a>
                         </li>
                         <li id="footerTwitterIcon">
                             <a class="icon icon-twitter" target="_blank" href="https://twitter.com/Redfin" title="Redfin Twitter" alt="Redfin Twitter">
                                 <svg class="SvgIcon rfSvg twitter">
-                                    <svg viewBox="0 0 25 24">
-                                        <path d="M21.863 6.828c.015.212.015.424.015.636 0 6.464-4.92 13.913-13.913 13.913-2.77 0-5.343-.802-7.508-2.195.393.045.772.061 1.18.061a9.78 9.78 0 0 0 6.07-2.09 4.896 4.896 0 0 1-4.571-3.391c.302.046.605.076.923.076.439 0 .878-.061 1.287-.167a4.89 4.89 0 0 1-3.92-4.799v-.061c.65.364 1.408.59 2.209.621a4.888 4.888 0 0 1-2.178-4.071c0-.909.24-1.741.664-2.468a13.904 13.904 0 0 0 10.084 5.116 5.426 5.426 0 0 1-.121-1.12A4.886 4.886 0 0 1 16.972 2c1.408 0 2.68.59 3.573 1.544a9.593 9.593 0 0 0 3.103-1.181 4.868 4.868 0 0 1-2.15 2.695 9.789 9.789 0 0 0 2.816-.757 10.522 10.522 0 0 1-2.451 2.527z"
-                                            fill-rule="evenodd"></path>
-                                    </svg>
+                                                    <svg viewBox="0 0 25 24">
+                                                        <path d="M21.863 6.828c.015.212.015.424.015.636 0 6.464-4.92 13.913-13.913 13.913-2.77 0-5.343-.802-7.508-2.195.393.045.772.061 1.18.061a9.78 9.78 0 0 0 6.07-2.09 4.896 4.896 0 0 1-4.571-3.391c.302.046.605.076.923.076.439 0 .878-.061 1.287-.167a4.89 4.89 0 0 1-3.92-4.799v-.061c.65.364 1.408.59 2.209.621a4.888 4.888 0 0 1-2.178-4.071c0-.909.24-1.741.664-2.468a13.904 13.904 0 0 0 10.084 5.116 5.426 5.426 0 0 1-.121-1.12A4.886 4.886 0 0 1 16.972 2c1.408 0 2.68.59 3.573 1.544a9.593 9.593 0 0 0 3.103-1.181 4.868 4.868 0 0 1-2.15 2.695 9.789 9.789 0 0 0 2.816-.757 10.522 10.522 0 0 1-2.451 2.527z" fill-rule="evenodd"></path>
+                                                    </svg>
                                 </svg>
                             </a>
                         </li>
                         <li id="footerGooglePlusIcon">
                             <a class="icon icon-gplus" target="_blank" href="https://plus.google.com/+redfin/posts" title="Redfin Google Plus" alt="Redfin Google Plus">
                                 <svg class="SvgIcon rfSvg google">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M2.916 16.756c-1.052-2.092-1.371-4.549-.912-6.85.185-.924.487-1.825.907-2.669C4.116 4.791 6.275 2.863 8.808 1.98a10.372 10.372 0 0 1 7.015.063 10.091 10.091 0 0 1 3.354 2.115c-.324.36-.677.695-1.013 1.044l-1.915 1.95a5.652 5.652 0 0 0-2.245-1.347 6.046 6.046 0 0 0-3.058-.125 6.198 6.198 0 0 0-3.113 1.762 6.6 6.6 0 0 0-1.508 2.49l.001.002a6.505 6.505 0 0 0 0 4.127l-.01.008A6.58 6.58 0 0 0 8.7 17.323a6.17 6.17 0 0 0 2.318 1.02c.817.172 1.663.15 2.486.006a5.91 5.91 0 0 0 2.295-.923l.003.002a5.008 5.008 0 0 0 2.08-3.277h-5.677c.006-1.378.006-2.758.006-4.138h9.798c.325 1.864.252 3.808-.263 5.633-.476 1.67-1.378 3.221-2.637 4.4l-.003-.001c-1.192 1.122-2.686 1.885-4.264 2.255-1.747.405-3.594.417-5.33-.057A10.234 10.234 0 0 1 5.726 20.3a10.684 10.684 0 0 1-2.821-3.536l.01-.008z"
-                                            fill-rule="evenodd"></path>
-                                    </svg>
+                                                    <svg viewBox="0 0 24 24">
+                                                        <path d="M2.916 16.756c-1.052-2.092-1.371-4.549-.912-6.85.185-.924.487-1.825.907-2.669C4.116 4.791 6.275 2.863 8.808 1.98a10.372 10.372 0 0 1 7.015.063 10.091 10.091 0 0 1 3.354 2.115c-.324.36-.677.695-1.013 1.044l-1.915 1.95a5.652 5.652 0 0 0-2.245-1.347 6.046 6.046 0 0 0-3.058-.125 6.198 6.198 0 0 0-3.113 1.762 6.6 6.6 0 0 0-1.508 2.49l.001.002a6.505 6.505 0 0 0 0 4.127l-.01.008A6.58 6.58 0 0 0 8.7 17.323a6.17 6.17 0 0 0 2.318 1.02c.817.172 1.663.15 2.486.006a5.91 5.91 0 0 0 2.295-.923l.003.002a5.008 5.008 0 0 0 2.08-3.277h-5.677c.006-1.378.006-2.758.006-4.138h9.798c.325 1.864.252 3.808-.263 5.633-.476 1.67-1.378 3.221-2.637 4.4l-.003-.001c-1.192 1.122-2.686 1.885-4.264 2.255-1.747.405-3.594.417-5.33-.057A10.234 10.234 0 0 1 5.726 20.3a10.684 10.684 0 0 1-2.821-3.536l.01-.008z" fill-rule="evenodd"></path>
+                                                    </svg>
                                 </svg>
                             </a>
                         </li>
                         <li id="footerPinterestIcon">
                             <a class="icon icon-pinterest" target="_blank" href="https://www.pinterest.com/redfin/" title="Redfin Pinterest" alt="Redfin Pinterest">
                                 <svg class="SvgIcon rfSvg pinterest">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M11.865 22.13c-1.015 0-1.978-.148-2.912-.429.387-.613.828-1.402 1.042-2.19 0 0 .118-.456.72-2.82.347.68 1.389 1.28 2.5 1.28 3.3 0 5.545-3.005 5.545-7.042 0-3.033-2.577-5.88-6.508-5.88-4.865 0-7.324 3.502-7.324 6.414 0 1.764.668 3.343 2.099 3.932.229.093.44 0 .51-.269.051-.174.157-.628.211-.815.067-.268.04-.347-.147-.574-.414-.495-.682-1.123-.682-2.02 0-2.592 1.94-4.917 5.054-4.917 2.752 0 4.276 1.683 4.276 3.944 0 2.951-1.31 5.451-3.261 5.451-1.071 0-1.872-.882-1.618-1.978.308-1.296.91-2.7.91-3.636 0-.84-.457-1.55-1.39-1.55-1.097 0-1.979 1.137-1.979 2.661 0 0 0 .976.335 1.629-1.125 4.759-1.325 5.589-1.325 5.589-.187.774-.2 1.643-.173 2.365a10.267 10.267 0 0 1-6.148-9.41C1.6 6.197 6.199 1.6 11.865 1.6S22.13 6.197 22.13 11.865 17.53 22.13 11.865 22.13"
-                                            fill-rule="evenodd">
-
-                                        </path>
-                                    </svg>
+                                                    <svg viewBox="0 0 24 24">
+                                                        <path d="M11.865 22.13c-1.015 0-1.978-.148-2.912-.429.387-.613.828-1.402 1.042-2.19 0 0 .118-.456.72-2.82.347.68 1.389 1.28 2.5 1.28 3.3 0 5.545-3.005 5.545-7.042 0-3.033-2.577-5.88-6.508-5.88-4.865 0-7.324 3.502-7.324 6.414 0 1.764.668 3.343 2.099 3.932.229.093.44 0 .51-.269.051-.174.157-.628.211-.815.067-.268.04-.347-.147-.574-.414-.495-.682-1.123-.682-2.02 0-2.592 1.94-4.917 5.054-4.917 2.752 0 4.276 1.683 4.276 3.944 0 2.951-1.31 5.451-3.261 5.451-1.071 0-1.872-.882-1.618-1.978.308-1.296.91-2.7.91-3.636 0-.84-.457-1.55-1.39-1.55-1.097 0-1.979 1.137-1.979 2.661 0 0 0 .976.335 1.629-1.125 4.759-1.325 5.589-1.325 5.589-.187.774-.2 1.643-.173 2.365a10.267 10.267 0 0 1-6.148-9.41C1.6 6.197 6.199 1.6 11.865 1.6S22.13 6.197 22.13 11.865 17.53 22.13 11.865 22.13" fill-rule="evenodd">
+            
+                                                        </path>
+                                                    </svg>
                                 </svg>
                             </a>
                         </li>
                         <li id="footerInstagramIcon">
-                            <a class="icon icon-instagram" target="_blank" href="https://www.instagram.com/redfinrealestate/" title="Redfin Instagram"
-                                alt="Redfin Instagram">
+                            <a class="icon icon-instagram" target="_blank" href="https://www.instagram.com/redfinrealestate/" title="Redfin Instagram" alt="Redfin Instagram">
                                 <svg class="SvgIcon rfSvg instagram">
-                                    <svg viewBox="0 0 24 24">
-                                        <path d="M12 1c-2.987 0-3.362.013-4.535.066-1.171.054-1.971.24-2.67.511a5.412 5.412 0 0 0-1.949 1.269 5.412 5.412 0 0 0-1.269 1.949c-.271.699-.457 1.499-.511 2.67C1.013 8.638 1 9.013 1 12s.013 3.362.066 4.535c.054 1.171.24 1.971.511 2.67a5.412 5.412 0 0 0 1.269 1.949 5.412 5.412 0 0 0 1.949 1.269c.699.271 1.499.457 2.67.511C8.638 22.987 9.013 23 12 23s3.362-.013 4.535-.066c1.171-.054 1.971-.24 2.67-.511a5.412 5.412 0 0 0 1.949-1.269 5.412 5.412 0 0 0 1.269-1.949c.271-.699.457-1.499.511-2.67.053-1.173.066-1.548.066-4.535s-.013-3.362-.066-4.535c-.054-1.171-.24-1.971-.511-2.67a5.412 5.412 0 0 0-1.269-1.949 5.412 5.412 0 0 0-1.949-1.269c-.699-.271-1.499-.457-2.67-.511C15.362 1.013 14.987 1 12 1m0 1.982c2.937 0 3.285.011 4.445.064 1.072.049 1.655.228 2.042.379.514.199.88.438 1.265.823.385.385.624.751.823 1.265.151.387.33.97.379 2.042.053 1.16.064 1.508.064 4.445 0 2.937-.011 3.285-.064 4.445-.049 1.072-.228 1.655-.379 2.042-.199.514-.438.88-.823 1.265a3.398 3.398 0 0 1-1.265.823c-.387.151-.97.33-2.042.379-1.16.053-1.508.064-4.445.064-2.937 0-3.285-.011-4.445-.064-1.072-.049-1.655-.228-2.042-.379a3.398 3.398 0 0 1-1.265-.823 3.398 3.398 0 0 1-.823-1.265c-.151-.387-.33-.97-.379-2.042-.053-1.16-.064-1.508-.064-4.445 0-2.937.011-3.285.064-4.445.049-1.072.228-1.655.379-2.042.199-.514.438-.88.823-1.265a3.398 3.398 0 0 1 1.265-.823c.387-.151.97-.33 2.042-.379 1.16-.053 1.508-.064 4.445-.064zm0 3.37a5.649 5.649 0 1 0 0 11.297 5.649 5.649 0 0 0 0-11.297zm0 9.315a3.667 3.667 0 1 1 0-7.335 3.667 3.667 0 0 1 0 7.335zm7.192-9.539a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0z"
-                                            fill-rule="evenodd"></path>
-                                    </svg>
+                                                    <svg viewBox="0 0 24 24">
+                                                        <path d="M12 1c-2.987 0-3.362.013-4.535.066-1.171.054-1.971.24-2.67.511a5.412 5.412 0 0 0-1.949 1.269 5.412 5.412 0 0 0-1.269 1.949c-.271.699-.457 1.499-.511 2.67C1.013 8.638 1 9.013 1 12s.013 3.362.066 4.535c.054 1.171.24 1.971.511 2.67a5.412 5.412 0 0 0 1.269 1.949 5.412 5.412 0 0 0 1.949 1.269c.699.271 1.499.457 2.67.511C8.638 22.987 9.013 23 12 23s3.362-.013 4.535-.066c1.171-.054 1.971-.24 2.67-.511a5.412 5.412 0 0 0 1.949-1.269 5.412 5.412 0 0 0 1.269-1.949c.271-.699.457-1.499.511-2.67.053-1.173.066-1.548.066-4.535s-.013-3.362-.066-4.535c-.054-1.171-.24-1.971-.511-2.67a5.412 5.412 0 0 0-1.269-1.949 5.412 5.412 0 0 0-1.949-1.269c-.699-.271-1.499-.457-2.67-.511C15.362 1.013 14.987 1 12 1m0 1.982c2.937 0 3.285.011 4.445.064 1.072.049 1.655.228 2.042.379.514.199.88.438 1.265.823.385.385.624.751.823 1.265.151.387.33.97.379 2.042.053 1.16.064 1.508.064 4.445 0 2.937-.011 3.285-.064 4.445-.049 1.072-.228 1.655-.379 2.042-.199.514-.438.88-.823 1.265a3.398 3.398 0 0 1-1.265.823c-.387.151-.97.33-2.042.379-1.16.053-1.508.064-4.445.064-2.937 0-3.285-.011-4.445-.064-1.072-.049-1.655-.228-2.042-.379a3.398 3.398 0 0 1-1.265-.823 3.398 3.398 0 0 1-.823-1.265c-.151-.387-.33-.97-.379-2.042-.053-1.16-.064-1.508-.064-4.445 0-2.937.011-3.285.064-4.445.049-1.072.228-1.655.379-2.042.199-.514.438-.88.823-1.265a3.398 3.398 0 0 1 1.265-.823c.387-.151.97-.33 2.042-.379 1.16-.053 1.508-.064 4.445-.064zm0 3.37a5.649 5.649 0 1 0 0 11.297 5.649 5.649 0 0 0 0-11.297zm0 9.315a3.667 3.667 0 1 1 0-7.335 3.667 3.667 0 0 1 0 7.335zm7.192-9.539a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0z" fill-rule="evenodd"></path>
+                                                    </svg>
                                 </svg>
                             </a>
                         </li>
@@ -2097,8 +1611,8 @@
         </script>
 
         <script>
-            _tLAB.wait(function () {
-                (function (root) {
+            _tLAB.wait(function() {
+                (function(root) {
                     // -- Data --
                     root.__reactServerState || (root.__reactServerState = {});
                     root.__reactServerState.InitialContext = {
@@ -2346,14 +1860,14 @@
             });
         </script>
         <script>
-            _tLAB.wait(function () {
+            _tLAB.wait(function() {
                 __reactServerClientController.nodeArrival(0, 13)
             });
         </script>
     </div>
     <script type="text/javascript" id="">
-        ! function (b, e, f, g, a, c, d) {
-            b.fbq || (a = b.fbq = function () {
+        ! function(b, e, f, g, a, c, d) {
+            b.fbq || (a = b.fbq = function() {
                 a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
             }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d))
         }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
@@ -2367,10 +1881,8 @@
     <div id="fb-root" class=" fb_reset">
         <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
             <div>
-                <iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media"
-                    id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1"
-                    style="border: medium none;" src="https://staticxx.facebook.com/connect/xd_arbiter/r/xaOI6zd9HW9.js?version=42#channel=f15e3177ebb9522&amp;origin=https%3A%2F%2Fwww.redfin.com"
-                    frameborder="0"></iframe>
+                <iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;"
+                    src="https://staticxx.facebook.com/connect/xd_arbiter/r/xaOI6zd9HW9.js?version=42#channel=f15e3177ebb9522&amp;origin=https%3A%2F%2Fwww.redfin.com" frameborder="0"></iframe>
             </div>
         </div>
         <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
@@ -2381,8 +1893,7 @@
         <img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon0.06122815037333207" alt="" src="https://bat.bing.com/action/0?ti=5220234&amp;Ver=2&amp;mid=f2207db4-390d-19bd-7ab0-d70f02ebdf48&amp;evt=pageLoad&amp;sid=1fd3132a-1&amp;lt=1443&amp;pi=0&amp;lg=en-US&amp;sw=1280&amp;sh=800&amp;sc=24&amp;tl=My%20Redfin%20-%20Home%20Tours%20%7C%20Redfin&amp;r=https%3A%2F%2Fwww.redfin.com%2Fmyredfin%2Fopen-houses&amp;p=https%3A%2F%2Fwww.redfin.com%2Fmyredfin%2Ftours&amp;msclkid=N&amp;rn=837570"
             width="0" height="0">
     </div>
-    <iframe style="position: absolute; width: 1px; height: 1px; left: -9999px; display: none;" aria-hidden="true" id="ssIFrame_google"
-        sandbox="allow-scripts allow-same-origin" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fwww.redfin.com&amp;rpcToken=853919737.0556833"></iframe>
+    <iframe style="position: absolute; width: 1px; height: 1px; left: -9999px; display: none;" aria-hidden="true" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fwww.redfin.com&amp;rpcToken=853919737.0556833"></iframe>
 </body>
 
 </html>
